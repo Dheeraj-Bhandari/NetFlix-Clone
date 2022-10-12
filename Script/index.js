@@ -136,7 +136,7 @@ function buildMovieSection(list,categoryName){
                                 <button><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
                             </div>
                             <div id="textlasticon">
-                                <button><i class="fa-1x fa-solid fa-arrow-down"></i></button>
+                                <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-arrow-down"></i></button>
                             </div>
                         </div>
         
@@ -212,3 +212,8 @@ function changebackgifonhover(){
     element.style.background = 'url(https://img.buzzfeed.com/buzzfeed-static/static/2021-07/22/16/enhanced/5cdbc5809df1/anigif_enhanced-8810-1626970483-2.gif)';
 }
 
+const MovieDetailsPage = (id)=>{
+    localStorage.setItem('movieId', id);
+    console.log(id);
+    location.href = "/Pages/Detail_Page.html"
+}
