@@ -1,3 +1,7 @@
+import navbar from "../Components/navbar.js";
+
+document.getElementById('header').innerHTML = navbar;
+
 const apiKey = '9e997fe8c2efd000188bc88e3dda6d23';
 const youtubeApiKey = 'AIzaSyC7bWr31DArqVECDyRJbH-g106fKypGKRE'
 const apiEndPoint = 'https://api.themoviedb.org/3'
@@ -6,7 +10,7 @@ const apiPath = {
     fetchAllCategories: `${apiEndPoint}/genre/movie/list?api_key=${apiKey}`,
     fecthTrending: `${apiEndPoint}/trending/all/week?api_key=${apiKey}&language=en-US`,
     fetchMoviesList: (id) => `${apiEndPoint}/discover/movie?api_key=${apiKey}&with_genres=${id}`,
-    searchMovieTraileronYoutube :(query)=> `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=AIzaSyC7bWr31DArqVECDyRJbH-g106fKypGKRE`
+    searchMovieTraileronYoutube :(query)=> `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${youtubeApiKey}`
 }
 
 
@@ -123,10 +127,11 @@ function buildMovieSection(list,categoryName){
     const moviesListHtml = list.map(item=>{
         // onmouseenter="searchMovieTrailer('${item.title} trailer','yt${item.id}')"
         // onmouseenter="changebackgifonhover()"
+        // onmouseover="changebackgifonhover(coverid${item.id})"
         return `
         <div class="square one">
-                    <div class="cover" id="cover" onmouseenter="changebackgifonhover()" >
-                    <img   src="${imgPath}${item.backdrop_path}" alt="${item.title}" />
+                    <div class="cover" id="cover"  >
+                    <img  id="coverid${item.id}" src="${imgPath}${item.backdrop_path}" alt="${item.title}" />
                     </div>
                     <div class="text">
                         <div id="texticon">
@@ -136,7 +141,7 @@ function buildMovieSection(list,categoryName){
                                 <button><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
                             </div>
                             <div id="textlasticon">
-                                <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-arrow-down"></i></button>
+                                <button onclick="MovieDetailsPage(${item.id})"><i class="fa-1x fa-solid fa-arrow-down"></i></button>
                             </div>
                         </div>
         
@@ -207,13 +212,20 @@ document.getElementById('brandlogo').addEventListener('click', function(){
     location.reload();
 })
 
-function changebackgifonhover(){
-    const element = document.getElementById('cover');
-    element.style.background = 'url(https://img.buzzfeed.com/buzzfeed-static/static/2021-07/22/16/enhanced/5cdbc5809df1/anigif_enhanced-8810-1626970483-2.gif)';
-}
 
-const MovieDetailsPage = (id)=>{
+
+
+window.MovieDetailsPage= MovieDetailsPage;
+window.changebackgifonhover= changebackgifonhover;
+
+function MovieDetailsPage(id){
     localStorage.setItem('movieId', id);
     console.log(id);
     location.href = "/Pages/Detail_Page.html"
 }
+
+// function changebackgifonhover(itemid){
+    
+//     itemid.src = 'https://img.buzzfeed.com/buzzfeed-static/static/2021-07/22/16/enhanced/5cdbc5809df1/anigif_enhanced-8810-1626970483-2.gif'
+//     // element.style.background = 'url(https://img.buzzfeed.com/buzzfeed-static/static/2021-07/22/16/enhanced/5cdbc5809df1/anigif_enhanced-8810-1626970483-2.gif)';
+// }
