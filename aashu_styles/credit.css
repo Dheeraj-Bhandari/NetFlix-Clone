@@ -1,0 +1,42 @@
+#child_container{
+    width: 40%;
+    margin: auto;
+}
+form{
+   width: 90%;
+   margin: auto;
+   align-items: center;
+   position: relative;
+}
+input{
+    width: 80%;
+    padding: 20px 0;
+    margin-bottom: 10px;
+    
+}
+
+label{
+    display: inline block;
+    position:absolute;
+    padding: 20px 0;
+    left:1vw;
+}
+
+input:focus +label{
+    transform: translateY(-1em);
+}
+#check_box >input{
+    width: 10%;
+}
+#check_box{
+    display: flex;
+    justify-content: flex-start;
+}
+#next{
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 20px;
+    width: 80%;
+    font-size: 24px;
+}
