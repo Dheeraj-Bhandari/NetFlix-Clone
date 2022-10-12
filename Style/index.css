@@ -9,8 +9,10 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1250px;
+    max-width: 1550px;
     margin: 0 auto;
+
+
 }
 
 *::-webkit-scrollbar {
@@ -28,8 +30,8 @@ header {
     transition: all ease 1000ms;
 }
 
-.black-bg{
-    background-color: rgb(20,20,20);
+.black-bg {
+    background-color: rgb(20, 20, 20);
 }
 
 .header-cont {
@@ -90,36 +92,38 @@ header {
 
 
 /* Menu on Hover */
-#menuItem{
+#menuItem {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
-    
+
+
 
 }
-#menuItem:hover #menupages a{
+
+#menuItem:hover #menupages a {
     display: flex;
     flex-direction: column;
     display: block;
 }
 
-#menupages a{
+#menupages a {
     display: flex;
     flex-direction: column;
-    
+
     border: 2px solid red;
     width: 150px;
     text-decoration: none;
     color: white;
- 
+
     padding: 5px;
-    
+
 
     display: none;
 }
-#menupages{
+
+#menupages {
     margin-top: 180px;
     background-color: #141414;
     position: absolute;
@@ -128,20 +132,21 @@ header {
 
 
 /* Banner Section */
-.banne-section{
+.banne-section {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 98vh;
     padding-top: 80px;
     position: relative;
 }
+
 .banner-content {
     display: flex;
     flex-direction: column;
     /* max-width: 100%; */
     padding-top: 70px;
- 
- 
+
+
 
 }
 
@@ -155,61 +160,66 @@ header {
 
 }
 
-.banner-info{
-margin-bottom: 14px;
-font-size: 22px;
-font-weight: 700;
-line-height: 1.5;
-color: white;
-max-width: 40%;
+.banner-info {
+    margin-bottom: 14px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: white;
+    max-width: 40%;
 }
-.banner-overview{
-font-size: 16.4px;
-color: white;
-line-height: 1.3;
-max-width: 40%;
+
+.banner-overview {
+    font-size: 16.4px;
+    color: white;
+    line-height: 1.3;
+    max-width: 40%;
 
 }
 
-.action-button-cont{
-display: flex;
-flex-direction: row;
-align-items: center;
+.action-button-cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-.action-button{
-border: none;
-background-color: white;
-padding: 8px 23px;
-margin-right: 11px;
-border-radius: 4px;
-display: flex;
-flex-direction: row;
-font-size: 16px;
-font-weight: 700;
-cursor: pointer;
+
+.action-button {
+    border: none;
+    background-color: white;
+    padding: 8px 23px;
+    margin-right: 11px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 
-.action-button:last-child{
-    background-color: rgba(109,109,110,0.7);
+.action-button:last-child {
+    background-color: rgba(109, 109, 110, 0.7);
     color: white;
 }
-.banner-fadebottom{
+
+.banner-fadebottom {
     height: 120px;
-    background: linear-gradient(180deg, transparent,rgba(37,37,37,.61),#141414 );
+    background: linear-gradient(180deg, transparent, rgba(37, 37, 37, .61), #141414);
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
 }
+
 /* Movies Section */
 
-#movies-cont{
+/* #movies-cont {
     margin-top: -20px;
+
 }
 
-.movie-section{
-   margin: 41px 0;
+.movie-section {
+    margin: 41px 0;
 }
 
 .movie-section-heading {
@@ -233,8 +243,8 @@ cursor: pointer;
     display: inline-block;
     cursor: pointer;
     margin-left: 5px;
- 
-    
+
+
 }
 
 .movies-row {
@@ -253,36 +263,194 @@ cursor: pointer;
     border-radius: 4px;
     position: relative;
     cursor: pointer;
+
 }
 
-.movie-item-img{
+.movie-item-img {
     width: inherit;
 }
-.movie-item:hover{
-    /* display: none; */
+
+
+.movie-item iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none;
+    border: none;
+    outline: none;
 }
 
-.movie-item iframe{
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-z-index: 10;
-display: none;
-border: none;
-outline: none;
-}
-
-.movie-item:hover iframe{
+.movie-item:hover iframe {
     display: block;
+    transform: scale(1.9);
+
+    overflow: visible;
+
 }
 
 .movie-item:hover {
     transform: scale(1.3);
-    transition: transform linear 300ms;
+    transition: linear 300ms;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: visible;
+
+
+
+} */
+
+
+
+/* Movie-Cont Css My  */
+
+
+#movieh3{
+    color: white;
+margin-left: 50px;
+
+
+}
+.explore-nudge {
+    color: #54b9c5;
+    font-size: 12px;
+    display: none;
+
 }
 
+#movieh3:hover .explore-nudge {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 5px;
+
+
+}
+
+#movieSection{
+    margin-bottom: -100px;
+}
+
+#movieRow{
+    display: flex;
+    flex-direction: row;
+    margin: 0 10px 0 10px;
+}
+
+.cover img{
+    width: inherit;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.square {
+    width: 300px;
+    height: 150px;
+    transition: transform 300ms ease-out, border-radius 200ms ease-out;
+    margin: 0 10px 0 10px;
+    margin-bottom: 150px;
+    
+}
+
+.square .cover {
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    background-size: cover !important;
+    background-position: center !important;
+}
+/* my css */
+#texticon {
+    width: 250px;
+    /* border: 2px solid red; */
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: -10px;
+
+}
+
+#textfirst3icon {
+    /* margin-left: 0px; */
+}
+
+#textlasticon {
+    /* margin-right: 10px; */
+}
+
+.text button {
+    border-radius: 50px;
+    padding: 5px;
+}
+.text button:hover{
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.text i {
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+}
+
+#textcontent{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3px;
+    justify-content: center;
+    align-items: center;
+
+}
+#textp{
+ font-size: smaller;
+ display: flex;
+ align-items: center;
+ justify-content: space-around; 
+ 
+ margin-bottom: -20px; 
+}
+#textp span{
+    font-weight: bold;
+    color: green;
+}
+#itemgenres{
+    font-size: small;
+    
+}
+
+.square .text {
+    display: none;
+    background: #181818;
+    color: #fff;
+    width: 100%;
+    height: fit-content;
+    padding: 5px;
+    box-sizing: border-box;
+    transition: opacity 300ms ease-out, border-radius 200ms ease-out;
+    border-radius: 0 0 10px 10px;
+}
+
+.square:hover {
+    border-radius: 10px;
+    transform: scale(1.3);
+    box-shadow: 0 0 2px #000a;
+}
+
+.square:hover .text {
+    display: block;
+}
+
+
+
+.square.one:hover .cover {
+    background: url(https://img.buzzfeed.com/buzzfeed-static/static/2021-07/22/16/enhanced/5cdbc5809df1/anigif_enhanced-8810-1626970483-2.gif) skyblue;
+}
+
+
+/* Movie-Cont Css My  End */
 
 /* Responsive CSS */
 
@@ -290,11 +458,14 @@ outline: none;
     .main-nav {
         display: none;
     }
-    .banner-overview,.banner-title,.banner-info {
-      
+
+    .banner-overview,
+    .banner-title,
+    .banner-info {
+
         max-width: 100%;
-    
+
     }
-   
-    
+
+
 }

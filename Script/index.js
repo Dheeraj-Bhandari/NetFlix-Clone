@@ -80,43 +80,97 @@ function fecthAndbuildMovieSection(fecthUrl, categoryName) {
             // console.table(res.results)
             const movies = res.results;
             if(Array.isArray(movies) && movies.length){
-                buildMovieSection(movies.slice(0,6), categoryName);
+                buildMovieSection(movies.slice(0,9), categoryName);
             }
             return movies;
         })
         .catch(err => console.log(err));
 }
 
+// function buildMovieSection(list,categoryName){
+// console.log(list, categoryName);
+// const movieCont = document.getElementById("movies-cont");
+// const moviesListHtml = list.map(item=>{
+//     // onmouseenter="searchMovieTrailer('${item.title} trailer','yt${item.id}')"
+//     return `
+//     <div class="movie-item"  >
+//         <img  class="movie-item-img"  src="${imgPath}${item.backdrop_path}" alt="${item.title}" />
+//         <iframe  width="245" height="150" src="" id="yt${item.id}" ></iframe>
+//         </div>
+       
+//     `;
+// }).join('');
+
+// const movieSectionHtml = `
+// <h2 class="movie-section-heading" >${categoryName}<span class="explore-nudge">Explore All</span> </h2>
+// <div class="movies-row">
+//    ${moviesListHtml}
+// </div>
+// `;
+
+// const div = document.createElement('div');
+// div.className = 'movie-section'
+// div.innerHTML = movieSectionHtml;
+
+// movieCont.append(div);
+
+// // console.log(movieSectionHtml);
+
+// }
 function buildMovieSection(list,categoryName){
-console.log(list, categoryName);
-const movieCont = document.getElementById("movies-cont");
-const moviesListHtml = list.map(item=>{
-    return `
-    <div class="movie-item" onmouseenter="searchMovieTrailer('${item.title} trailer','yt${item.id}')">
-        <img  class="movie-item-img" src="${imgPath}${item.backdrop_path}" alt="${item.title}" />
-        <iframe  width="245px" height="150px" src="" id="yt${item.id}" ></iframe>
+    console.log(list, categoryName);
+    const movieCont = document.getElementById("movies-cont");
+    const moviesListHtml = list.map(item=>{
+        // onmouseenter="searchMovieTrailer('${item.title} trailer','yt${item.id}')"
+        // onmouseenter="changebackgifonhover()"
+        return `
+        <div class="square one">
+                    <div class="cover" id="cover" onmouseenter="changebackgifonhover()" >
+                    <img   src="${imgPath}${item.backdrop_path}" alt="${item.title}" />
+                    </div>
+                    <div class="text">
+                        <div id="texticon">
+                            <div id="textfirst3icon">
+                                <button><i class="fa-1x fa-solid fa-play"></i></button>
+                                <button><i class="fa-1x fa-plus" aria-hidden="true"></i></button>
+                                <button><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
+                            </div>
+                            <div id="textlasticon">
+                                <button><i class="fa-1x fa-solid fa-arrow-down"></i></button>
+                            </div>
+                        </div>
+        
+        
+                        <div id="textcontent">
+                            <div id="textp"><span>97% Match</span>
+                                <p> &nbsp U/A 13+ 3 Season</p>
+                            </div>
+                            <div id="itemgenres">
+                                <p>Quirky. Feel-Good. Teen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+        `;
+    }).join('');
+    
+    const movieSectionHtml = `
+    <h2 id="movieh3" >${categoryName}<span class="explore-nudge">Explore All</span> </h2>
+    <div id="movieRow">
+       ${moviesListHtml}
     </div>
     `;
-}).join('');
-
-const movieSectionHtml = `
-
-<h2 class="movie-section-heading" >${categoryName}<span class="explore-nudge">Explore All</span> </h2>
-<div class="movies-row">
-   ${moviesListHtml}
-</div>
-
-`;
-
-const div = document.createElement('div');
-div.className = 'movie-section'
-div.innerHTML = movieSectionHtml;
-
-movieCont.append(div);
-
-// console.log(movieSectionHtml);
-
-}
+    
+    const div = document.createElement('div');
+    div.id = 'movieSection'
+    div.innerHTML = movieSectionHtml;
+    
+    movieCont.append(div);
+    
+    // console.log(movieSectionHtml);
+    
+    }
 
 
 
@@ -152,3 +206,9 @@ window.addEventListener('load', function () {
 document.getElementById('brandlogo').addEventListener('click', function(){
     location.reload();
 })
+
+function changebackgifonhover(){
+    const element = document.getElementById('cover');
+    element.style.background = 'url(https://img.buzzfeed.com/buzzfeed-static/static/2021-07/22/16/enhanced/5cdbc5809df1/anigif_enhanced-8810-1626970483-2.gif)';
+}
+
