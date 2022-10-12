@@ -8,7 +8,7 @@
             <li>Tv Shows</li>
             <li>Movies</li>
             <li>News & Popular</li>
-            <li>My List</li>
+            <li><a href="list.html">My List</a></li>
             <li>Browse by Languages</li>
         </ul>
     </div>
