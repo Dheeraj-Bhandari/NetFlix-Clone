@@ -1,0 +1,125 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#footer{
+    background-color: rgba(0,0,0,.8);
+    width: 100%;
+    height: 300px;
+   padding: 0px 0px;
+   margin: 0px 0px;
+   
+   /* margin-bottom: 100px; */
+   
+}
+#child{
+    padding-top: 50px;
+    /* margin-bottom: 100px; */
+    margin-top: 100px;
+    margin-left: 200px;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      /* margin-bottom: 100px; */
+
+}
+li{
+    /* color: white; */
+  color: #737373;
+}
+#st {
+display:flex;
+margin: auto;
+justify-content: space-between;
+padding: 20px;
+margin-left: 28px;
+padding-right: 50px;
+margin-right: 200px;
+/* list-style-type: disc;
+margin-block-start: 1em;
+margin-block-end: 1em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+padding-inline-start: 40px; */
+}
+#nd{
+display:flex;
+/* justify-content: space-between; */
+gap: 160px;
+/* padding-left: -10px; */
+ margin-left: -30px; 
+padding: 20px; 
+}
+#faq{
+/* margin-right:270px ; */
+}
+#cook{
+margin-left: 50px;
+}
+#cor{
+
+/* margin-right:650px; */
+/* margin-bottom: 1px solid white; */
+
+}
+#q{
+padding-left: 35px;
+margin-left: 5px;
+color: #737373;
+}
+#eng{
+display: flex;
+width: 130px;
+height: 35px;
+padding-top: 10px;
+padding: 10px;
+margin-left: 35px;
+/* padding: 15px; */
+border: 1px solid #737373;
+/* color: white; */
+text-align: center;
+/* padding-bottom: 100px; */
+}
+#logo{
+width: 40px;
+height: 30px;
+ 
+/* color: white; */
+}
+h4{
+margin-bottom: 30px;
+margin-left: 10px;
+margin-top: 6px;
+color:  #737373;
+
+}
+li{
+list-style: none;
+cursor: pointer;
+font-size: 12px;
+
+/* margin-inline: 1px solid red; */
+}
+li:hover{
+    text-decoration: underline;
+
+
+}
+img{
+    /* margin-top: 0px; */
+    width: 180px;
+    background-color: transparent;
+}
+#img{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+#sign{
+    width: 100px;
+    height: 35px;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    margin-right: 30px;
+    border-radius: 5px;
+}
