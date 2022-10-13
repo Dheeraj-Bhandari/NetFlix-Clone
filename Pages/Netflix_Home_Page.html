@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Masai</title>
+    <link rel="stylesheet" href="/Style/Netflix_Home_Page.css">
+    <link rel="shortcut icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Search movie page CSS-->
+
+    <link rel="stylesheet" href="../Style/search_Movie.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+
+
+</head>
+
+<body  >
+    <!-- Header Start -->
+
+    <header id="header" class="black-bg">
+       
+    </header>
+    <!-- Header end -->
+
+    <!-- banner section -->
+
+    <div class="banne-section" id="banner-section">
+       
+        <div class="banner-fadebottom">
+
+        </div>
+    </div>
+
+
+
+    <div class="movies-cont  " id="movies-cont">
+
+      
+     
+        
+    </div>
+
+
+
+
+
+
+
+</body>
+<!-- Swiper JS -->
+<script type="module" src="/Script/Netflix_Home_Page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 0,
+        slidesPerGroup: 4,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+
+</html>
