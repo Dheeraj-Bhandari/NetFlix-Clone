@@ -1,0 +1,128 @@
+body{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://assets.nflxext.com/ffe/siteui/vlv3/afc06103-4d6a-4236-b496-34b671a7e9ba/383fc36a-aa04-4dfd-95a0-a4b71bc21eed/IN-en-20221003-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+}
+#container{
+    display: block;
+    margin: auto;
+    width: 450px;
+    height: 600px;
+    /* border: 2px solid red; */
+    text-align: center;
+    background: rgba(0,0,0,.8);
+    padding: 10px;
+}
+#email{
+    width: 70%;
+    height: 40px;
+    padding: 10px;
+    /* padding-left: 20px; */
+    border-radius: 6px;
+    margin-bottom: 35px;
+    outline: none;
+    /* color: #737373; */
+    /* gap: 20px; */
+}
+#password{
+    width: 70%;
+    height: 40px;
+    padding: 10px;
+    /* padding-left: 20px; */
+    border-radius: 6px;
+    margin-bottom: 35px;
+    outline: none;
+    /* color: #737373; */
+    /* gap: 20px; */
+}
+input:focus {
+  background-color:#737373;
+  color: white;
+  border-bottom: 2px solid orange;
+}
+#btn{
+    width: 75%;
+    padding: 10px;
+    height: 50px;
+    /* padding-left: 10px; */
+    border-radius: 6px;
+    margin-bottom: 45px;
+    background-color: red;
+    color: white;
+}
+
+h3{
+    /* margin-right: 90px; */
+    margin-left:55px; 
+    color: #737373;
+   font-size: 18px;
+   margin-bottom: 20px;
+    font-weight: 400;
+    text-align: left;
+   /* margin-top: 16px; */
+  }
+
+p{
+    /* color: white; */
+    color: #737373;
+    /* padding-left: 10px; */
+    margin-left:55px; 
+    /* padding-right: 35px;  */
+    text-align: left;
+}
+#more{
+ color:#0080ff;
+}
+#now{
+    color:white ;
+}
+h2{
+    
+    padding-top: 60px;
+     padding-left: 55px;
+    /* color: white; */
+    text-align: left;
+    color: #fff;
+     font-size: 32px;
+     margin-bottom: 30px;
+      font-weight: 700;
+       /* margin-bottom: 28px */
+}
+form{
+ /* border: 2px solid red; */
+ position: relative;
+}
+input{
+    /* width: 100%; */
+    display: inline-block;
+}
+label{
+     margin-left: 65px;   
+    position: absolute;
+    left: 0;
+    top: 30%;
+}
+
+input:focus+label{
+    transform: translateY(-1em);
+
+}
+#pass{
+    margin-left: 65px;   
+    position: absolute;
+    left: 0;
+    top: 49%;
+}
+input:focus+label{
+    transform: translateY(-1em);
+}
+ 
+img{
+    /* margin-top: 0px; */
+    width: 180px;
+    background-color: transparent;
+}
+a{
+   text-decoration: none; 
+}
+@media(max-width:820px){
+    
+}
