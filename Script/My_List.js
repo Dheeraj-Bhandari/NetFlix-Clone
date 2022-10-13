@@ -203,19 +203,28 @@ function buildMovieSection(item) {
     textfirst3icon.id = 'textfirst3icon';
 
     const button1 = document.createElement('button');
-    button1.addEventListener('onclick', MovieDetailsPage(item.id));
+    button1.addEventListener('click', function () {
+        localStorage.setItem('movieId', item.id);
+        location.href = "/Pages/Detail_Page.html"
+    });
     const i1 = document.createElement('i');
     i1.className = 'fa-1x fa-solid fa-play';
     button1.append(i1);
 
     const button2 = document.createElement('button');
-   button2.id="deltitembutton"
+    button2.addEventListener('click', function () {
+        const savedlist = JSON.parse(localStorage.getItem('SavedList')) || [];
+        const index = savedlist.indexOf(item.id);
+        savedlist.splice(index, 1);
+        localStorage.setItem('SavedList', JSON.stringify(savedlist));
+        location.reload();
+    });
     const i2 = document.createElement('i');
-    i2.className = 'fa-1x fa-plus';
+    i2.className = 'fa fa-trash';
     button2.append(i2);
 
     const button3 = document.createElement('button');
-   
+
     const i3 = document.createElement('i');
     i3.className = 'fa-1x fa-solid fa-thumbs-up';
     button3.append(i3);
@@ -227,7 +236,11 @@ function buildMovieSection(item) {
     textlasticon.id = 'textlasticon';
 
     const button4 = document.createElement('button');
-    button4.addEventListener('click', MovieDetailsPage(item.id));
+    button4.addEventListener('click', function () {
+        localStorage.setItem('movieId', item.id);
+
+        location.href = "/Pages/Detail_Page.html"
+    });
     const i4 = document.createElement('i');
     i4.className = 'fa-1x fa-solid fa-arrow-down';
     button4.append(i4)
@@ -239,15 +252,15 @@ function buildMovieSection(item) {
     const textcontent = document.createElement('div');
     textcontent.id = 'textcontent';
 
-    
+
 
     const textp = document.createElement('div');
     textp.id = 'textp';
     const span = document.createElement('span');
-    span.innerText ='97% Match ';
+    span.innerText = '97% Match ';
     const text1 = document.createElement('p');
-    text1.innerText =  ' U/A 13+ 3 Season'
-    textp.append(span,text1);
+    text1.innerText = ' U/A 13+ 3 Season'
+    textp.append(span, text1);
 
     const itemgenres = document.createElement('div');
     itemgenres.id = 'itemgenres';
@@ -264,39 +277,13 @@ function buildMovieSection(item) {
 
 
 
-    movieRow.append (sqone);
+    movieRow.append(sqone);
 
     // console.log(sqone);
 
 }
 
-window.MovieDetailsPage = MovieDetailsPage;
-window.delFromsavedList = delFromsavedList;
+
 // window.changebackgifonhover= changebackgifonhover;
 
-function MovieDetailsPage(id) {
-    localStorage.setItem('movieId', id);
-    console.log(id);
-    location.href = "/Pages/Detail_Page.html"
-}
-
-const savedlist = JSON.parse(localStorage.getItem('SavedList')) || [];
-
-// document.getElementById('deltitembutton').addEventListener('click', function(){
-    
-// })
-function delFromsavedList(item){
-    
-        if (savedlist.includes(item)) {
-            savedlist.pop(item)
-            localStorage.setItem('SavedList', JSON.stringify(savedlist));
-        }
-        else {
-            const index = savedlist.indexOf(item);
-            console.log(index)
-            const newarr = savedlist.splice(index,1);
-            localStorage.setItem('SavedList', JSON.stringify(newarr));
-        }
-  
-}
 

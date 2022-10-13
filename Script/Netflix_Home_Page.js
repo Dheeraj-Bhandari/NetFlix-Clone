@@ -139,7 +139,7 @@ function buildMovieSection(list,categoryName){
                         <div id="texticon">
                             <div id="textfirst3icon">
                                 <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-play"></i></button>
-                                <button id="saveToMyList" onclick="saveToMyList(${item.id})" ><i class="fa-1x fa-plus" aria-hidden="true"></i></button>
+                                <button id="${item.id}" onclick="saveToMyList(${item.id})" ><i class="fa-1x fa-plus" aria-hidden="true"></i></button>
                                 <button><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
                             </div>
                             <div id="textlasticon">
@@ -234,8 +234,8 @@ function saveToMyList(id){
         saveListItems.push(id);
         localStorage.setItem('SavedList', JSON.stringify(saveListItems));
     }
-    // const button   = document.getElementById('saveToMyList');
-    // const i = `<i class="fa fa-check" aria-hidden="true"></i>`;
+    const button   = document.getElementById(id);
+    const i = `<i class="fa fa-check" aria-hidden="true"></i>`;
 
     button.innerHTML =i;
     
