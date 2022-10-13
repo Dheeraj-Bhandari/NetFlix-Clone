@@ -126,7 +126,7 @@ function buildMovieSection(list,categoryName){
                                 <p> &nbsp U/A 13+ 3 Season</p>
                             </div>
                             <div id="itemgenres">
-                                <p>Quirky. Feel-Good. Teen</p>
+                                <p><span id='avgrating' >Avg Rating ${(item.vote_average).toFixed(1)}</span> Quirky. Feel-Good. Teen</p>
                             </div>
                         </div>
                     </div>
