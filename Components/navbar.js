@@ -2,16 +2,16 @@ function navbar(){
  return  `
     <div class="header-cont container">
             <div class="left-cont">
-            <a href="/index.html"> <img class="brandlogo" id="brandlogo"
+            <a href="/"> <img class="brandlogo" id="brandlogo"
             src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt=""> </a>
                
                 <ul class="main-nav ">
                     
-                    <a href="/index.html"><li class="nav-item active">Home</li> </a>
+                    <a href="/Pages/Netflix_Home_Page.html"><li class="nav-item active">Home</li> </a>
                     <a href="/Pages/Tv_Shows.html"><li class="nav-item active">Tv Shows</li> </a>
                     <a href="/Pages/Movie.html"><li class="nav-item active">Movie</li> </a>
                     <a href="/Pages/Movie.html"><li class="nav-item active">News & Popular</li> </a>
-                    <a href="/Pages/Movie.html"><li class="nav-item active">My List</li> </a>
+                    <a href="/Pages/My_List.html"><li class="nav-item active">My List</li> </a>
                     <a href="/Pages/Movie.html"><li class="nav-item active">Browse by Languages</li> </a>
                   
                 </ul>

@@ -138,8 +138,8 @@ function buildMovieSection(list,categoryName){
                     <div class="text">
                         <div id="texticon">
                             <div id="textfirst3icon">
-                                <button><i class="fa-1x fa-solid fa-play"></i></button>
-                                <button><i class="fa-1x fa-plus" aria-hidden="true"></i></button>
+                                <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-play"></i></button>
+                                <button id="saveToMyList" onclick="saveToMyList(${item.id})" ><i class="fa-1x fa-plus" aria-hidden="true"></i></button>
                                 <button><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
                             </div>
                             <div id="textlasticon">
@@ -211,19 +211,38 @@ window.addEventListener('load', function () {
 
 
 document.getElementById('brandlogo').addEventListener('click', function(){
-    location.reload();
+    Window.location.href = "Pages/Netflix_Home_Page.html"
+    
 })
 
 
 
 
 window.MovieDetailsPage= MovieDetailsPage;
+window.saveToMyList= saveToMyList;
 // window.changebackgifonhover= changebackgifonhover;
 
 function MovieDetailsPage(id){
     localStorage.setItem('movieId', id);
     console.log(id);
     location.href = "/Pages/Detail_Page.html"
+}
+
+const saveListItems = JSON.parse(localStorage.getItem("SavedList")) || [];
+function saveToMyList(id){
+    if(!saveListItems.includes(id)){
+        saveListItems.push(id);
+        localStorage.setItem('SavedList', JSON.stringify(saveListItems));
+    }
+    // const button   = document.getElementById('saveToMyList');
+    // const i = `<i class="fa fa-check" aria-hidden="true"></i>`;
+
+    button.innerHTML =i;
+    
+    console.log(saveListItems);
+
+    
+   
 }
 
 // function changebackgifonhover(itemid){
