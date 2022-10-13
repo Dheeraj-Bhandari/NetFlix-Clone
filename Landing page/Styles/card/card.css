@@ -1,0 +1,125 @@
+/*Main section starts*/
+
+.main-section .section-container{
+    border-top:8px solid #222;
+    background-color: black;
+    display:flex;
+    padding: 0px 80px;
+    padding-bottom:70px;
+
+}
+
+.main-section .section-container .left-column{
+    padding-top: 13%;
+    padding-right: 2%;
+
+}
+.main-section .section-container .left-column h1{
+    color:white;
+}
+.main-section .section-container .left-column h3{
+    color:white;
+    font-size:1.4rem;
+    font-weight:normal;
+    margin-top:5%;
+}
+.main-section .section-container .right-column{
+    overflow: hidden;
+    position: relative;
+    width:80%;
+    height: 500px;
+}
+.main-section .section-container .right-column img{
+    position: absolute;
+    width: 100%;
+
+}
+.main-section .section-container .right-column .vedio-1{
+    margin-left: 13%;
+    margin-top: 16%;
+    width:73%;
+}
+/* download your show */
+.main-section .section2-container{
+border-top: 8px solid #222;
+background-color: black;
+display: flex;
+padding:0px 80px;
+padding-bottom: 90px;
+}
+.main-section .section2-container .right-column{
+    padding-top: 13%;
+    padding-right: 2%;
+    width: 50%;
+}
+.main-section .section2-container .left-column img{
+    width:100%;
+}
+.main-section .section2-container .right-column h1{
+    color:white;
+}
+.main-section .section2-container .right-column h3{
+    color: white;
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin-top:5% ;
+}
+.main-section .section2-container .left-column  .box{
+    border: 2px solid rgba(255,255,255,.25);
+    background-color: black;
+    border-radius: 10px;
+    width: 60%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    margin-top: -22px;
+}
+.main-section .section2-container .left-column  .box    .boxs{
+    width:15%;
+
+}
+.main-section .section2-container .left-column  .box  p{
+    margin-left: 5%;
+    margin-top: 3%;
+}
+.main-section .section2-container .left-column  .box  p a{
+    text-decoration: none;
+}
+.main-section .section-container .right-column .vedio-2{
+margin-left: 19%;
+margin-top: 8%;
+width:61%;
+}
+/*Responsive ness section*/
+@media (max-width:943px) {
+    /* card section*/  
+    .main-section .section2-container{
+        display: block;
+    }
+    .main-section .section2-container .left-column{
+        width: 100%;
+    }
+    .main-section .section-container .right-column{
+        width: 100%;
+        text-align: center;
+    }
+  }
+  @media (max-width:659px) {
+      
+  }
+  @media (max-width:774px) {
+      padding-bottom: 0px;
+}
+@media (max-width:346px) {
+      .main-section .section-container .right-column{
+        height: 270px;
+      }
+      .main-section .section2-container .left-column .box{
+        width: 100%;
+      }
+}
+  @media (max-width:346px) {
+      
+  }
