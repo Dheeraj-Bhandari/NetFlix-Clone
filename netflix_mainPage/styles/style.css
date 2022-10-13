@@ -4,6 +4,10 @@ html, body {
     margin: 0;
     font-family: Helvetica,Helvetica,Arial,sans-serif;
 }
+
+
+
+
 *::-webkit-scrollbar {
     display: none;
 }
@@ -169,4 +173,24 @@ html, body {
     color: #fff;
 }
 
+#searchImg {
+    width: 230px;
+    height: 130px;
+    
+    padding: 2px;
+    align-items: center;
+    border-radius: 4px;
+}
+#search_div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+    
+}
 
+#movie_box {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 90px;
+   
+}
