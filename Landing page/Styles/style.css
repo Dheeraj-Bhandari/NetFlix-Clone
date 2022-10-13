@@ -298,3 +298,59 @@ img{
     font-size: medium;
 }
 /*EMAIL ADDRESS ENDS*/
+
+
+
+/*RESPONSIVE CSS CODE*/
+
+  
+@media (max-width: 943px){
+   
+    /*ENJOY ON YOUR TV*/
+    .main-section .section-container{
+        display: block;
+    }
+    .main-section .section-container .left-column{
+        width: 100%;
+        text-align: center;
+    }
+    .main-section .section-container .right-column{
+        width: 100%;
+    }
+    /*DOWNLOAD YOU SHOW TO WATCH OFFLINE*/
+    .main-section .section2-container{
+        display: block;
+    }
+    .main-section .section2-container .left-column{
+        width: 100%;
+    }
+    .main-section .section2-container .right-column{
+        width: 100%;
+        text-align: center;
+    }
+    
+}
+
+@media (max-width:  774px){
+    /* ENJOY ON YOUR TV */
+    .main-section .section-container{
+        padding-bottom: 0px;
+    }
+}
+
+
+   
+   
+
+@media (max-width: 500px){
+    
+    /*ENJOY ON YOUR TV*/
+    .main-section .section-container .right-column{
+        height: 270px;
+    }
+    /* DOWNLOAD YOUR SHOW TO WATCH OFFLINE */
+    .main-section .section2-container .left-column .box{
+        width: 100%;
+    }
+ 
+}
