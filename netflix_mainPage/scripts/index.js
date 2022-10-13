@@ -2,6 +2,8 @@ import { navbar } from "../components/navbar.js";
 document.getElementById("header").innerHTML = navbar;
 
 
+  
+
 const api_key = "c711fb267186115e70fda43ea1f1972c";
 const api_Endpoint = "https://api.themoviedb.org/3";
 const imgPath = `https://image.tmdb.org/t/p/original/`;
@@ -86,10 +88,6 @@ function buildMovieSection(list, categoryName) {
     console.log(item) ;
     return `<img class = "movie_item" src = "${imgPath}${item.backdrop_path}" alt="">
             <button id = "wishList" onclick = "addToWishList(${item.id})">Add to Wishlist</button>` 
-    // const img = document.createElement("img");
-    // img.setAttribute("class","movie_item"
-    // img.setAttribute("src", "${imgPath}${item.backdrop_path}");
-    // return img;
     
     });
     const movieSectionHtml = `
@@ -129,3 +127,7 @@ window.addEventListener('load', function() {
 
 });
 
+window.searchMovies = searchMovies;
+function searchMovies() {
+    var input
+}
