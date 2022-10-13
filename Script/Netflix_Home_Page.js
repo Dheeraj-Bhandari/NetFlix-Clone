@@ -247,6 +247,32 @@ function saveToMyList(id){
    
 }
 
+
+
+
+
+
+let debounceMovies = debounce(searchMovies,300);
+
+function debounce(fn, delay){
+    let timerId;
+    return function(){
+        clearTimeout(timerId);
+        timerId = setTimeout(function(){
+            fn();
+        },delay);
+        // console.log(timerId);
+    }
+}
+
+window.searchMovies = searchMovies;
+
+//* DEBOUNCING ON SEARCH MOVIES//
+
+function searchMovies() {
+    location.href = "../Pages/search_movies.html";
+}
+
 // function changebackgifonhover(itemid){
     
 //     itemid.src = 'https://img.buzzfeed.com/buzzfeed-static/static/2021-07/22/16/enhanced/5cdbc5809df1/anigif_enhanced-8810-1626970483-2.gif'
