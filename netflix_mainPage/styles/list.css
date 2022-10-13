@@ -49,6 +49,7 @@ body, html {
 }
 .right-container {
     width: 200px;
+    padding-right: 40px;
     justify-content: space-evenly;
 }
 @media (max-width: 767px) {
@@ -58,13 +59,17 @@ body, html {
 }
 
 #listImg {
-    width: 245px;
+    width: 220px;
+    border-radius: 4px;
+    margin-bottom: 40px;
 }
 #box {
-    display: flex;
-    flex-direction: row;
-    margin-top: 110px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    margin-top: 90px;
     padding-left: 40px;
+    padding-right: 40px;
+   
 }
 #title {
     color: white;
