@@ -27,15 +27,15 @@ function init() {
     fecthAndBuildAllTVSection();
 }
 
-function fecthTrendingMovies(){
-    fecthAndbuildMovieSection(apiPath.fecthTrending, 'Trending Now')
-    .then(list=>{
-        const randomMInd = parseInt(Math.random()*list.length);
-        buildBannerSection(list[randomMInd]);
-    }).catch(err=>{
-        console.error(err)
-    });
-}
+// function fecthTrendingMovies(){
+//     fecthAndbuildMovieSection(apiPath.fecthTrending, 'Trending Now')
+//     .then(list=>{
+//         const randomMInd = parseInt(Math.random()*list.length);
+//         buildBannerSection(list[randomMInd]);
+//     }).catch(err=>{
+//         console.error(err)
+//     });
+// }
 
 
 
@@ -101,7 +101,7 @@ function buildMovieSection(list,categoryName){
                     <div class="text">
                         <div id="texticon">
                             <div id="textfirst3icon">
-                                <button><i class="fa-1x fa-solid fa-play"></i></button>
+                                <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-play"></i></button>
                                 <button><i class="fa-1x fa-plus" aria-hidden="true"></i></button>
                                 <button><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
                             </div>
