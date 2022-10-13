@@ -1,0 +1,142 @@
+
+#child_container{
+    width: 26%;
+    margin: auto;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#opt{
+    width: 100%;
+    margin: auto;
+    margin-top: 2vh;
+}
+#select{
+    margin: auto;
+    padding: 15px 0;
+    font-size: 18px;
+    border: 2px solid #8c8c8c;
+}
+
+.payment_m{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    align-items: center;
+    padding: 5px 0 5px 5px;
+}
+.payment_m >img{
+    width: 13%;
+}
+
+#main{
+    width: 26%;
+    margin: auto;
+    display: none;
+    position: absolute;
+    margin-top: 12px;
+    font-size: 17px;
+    z-index: 11;
+    background-color: #fff;
+}
+#select:hover #main{
+    display: block;
+}
+.blue{
+    color: lightseagreen;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#app{
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    justify-content: space-around;
+    padding: 5px 0;
+}
+#app >img{
+    width: 12%;
+}
+#footer{
+    z-index: -1;
+}
+
+#UPI_ID{
+    width:100% ;
+    margin-top: 10px;
+    padding: 15px 5px; 
+    font-size: 22px;
+}
+
+#next{
+    width:100%;
+    color: white;
+    background-color: red;
+    font-size: 24px;
+    padding: 15px 0;
+    border: none;
+    border-radius: 3px;
+    margin-top:3vh ;
+}
+
+#main_container{
+    margin-top: 10vh;
+}
+#child_container >p,h1{
+    margin-top: 2vh;
+}
+
+@media screen and (max-width:1230px) {
+    #child_container{
+        width: 41%;
+    }
+    #next{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    #child_container{
+        width: 50%;
+    }
+    #next{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:830px) {
+    #child_container{
+        width: 55%;
+    }
+
+    #next{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    #child_container{
+        width: 70%;
+    }
+
+    #next{
+        width: 100%;
+    }
+} 
+
+@media screen and (max-width:430px) {
+    #child_container{
+        width: 90%;
+    }
+
+    #next{
+        width: 100%;
+    }
+}
