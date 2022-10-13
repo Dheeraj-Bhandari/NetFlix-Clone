@@ -1,0 +1,109 @@
+
+#main_container{
+    margin-top: 3vh;
+
+}
+
+#child_container{
+    width: 35%;
+    margin: auto;
+}
+
+#child_container >h1{
+    margin-bottom: 2vh;
+}
+#child_container >p{
+    margin-top: 2vh;
+}
+
+#span_text{
+    color: blue;
+}
+#plan_choosen{
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 20px 10px;
+    font-size: 20px;
+}
+
+#check{
+    margin-bottom: 3vh;
+}
+
+#payment_choosen{
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    margin-top: 2px;
+    padding: 20px 10px;
+    font-size: 20px;
+}
+
+#conte{
+    margin-top: 5vh;
+}
+
+#check{
+    margin-top: 5vh;
+}
+
+#next{
+    display: block;
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 20px;
+    width: 100%;
+    font-size: 24px;
+}
+
+@media screen and (max-width:1230px) {
+    #child_container{
+        width: 41%;
+    }
+    #next{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    #child_container{
+        width: 50%;
+    }
+    #next{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:830px) {
+    #child_container{
+        width: 55%;
+    }
+
+    #next{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    #child_container{
+        width: 70%;
+    }
+
+    #next{
+        width: 100%;
+    }
+} 
+
+@media screen and (max-width:430px) {
+    #child_container{
+        width: 90%;
+    }
+
+    #next{
+        width: 100%;
+    }
+}

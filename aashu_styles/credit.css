@@ -1,0 +1,102 @@
+#child_container{
+    width: 35%;
+    margin: auto;
+    margin-top: 5vh;
+}
+form{
+   width: 90%;
+   margin: auto;
+   align-items: center;
+   position: relative;
+}
+input{
+    width: 80%;
+    padding: 20px 0;
+    margin-bottom: 10px;
+    
+}
+
+label{
+    display: inline block;
+    position:absolute;
+    padding: 20px 0;
+    left:1vw;
+}
+
+input:focus +label{
+    transform: translateY(-1em);
+}
+#check_box >input{
+    width: 10%;
+    height: 20px;
+}
+#check_box{
+    display: flex;
+}
+#next{
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 20px;
+    width: 80%;
+    font-size: 24px;
+}
+#text_display{
+    width: 90%;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+#text_display > p{
+ margin-top: 2vh;
+}
+
+#blue_color{
+    color: blue;
+}
+#child_container >p,h1{
+    margin-top: 1vh;
+}
+
+ @media screen and (max-width:1286px) {
+    #child_container{
+        width: 45%;
+    }
+    #text_display{
+        width: 85%;
+    }
+   
+}
+
+@media screen and (max-width:1000px) {
+    #child_container{
+        width: 60%;
+    }
+    #text_display{
+        width: 85%;
+    }
+}
+
+
+@media screen and (max-width:830px) {
+    #child_container{
+        width: 70%;
+    }
+    #text_display{
+        width: 80%;
+    }
+} 
+
+
+@media screen and (max-width:600px) {
+    #child_container{
+        width: 80%;
+    }
+   
+} 
+
+@media screen and (max-width:430px) {
+    #child_container{
+        width: 90%;
+    }
+   
+}
