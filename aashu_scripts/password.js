@@ -64,3 +64,9 @@ document.querySelector("#email").value=email;
 //     ema.style.transform="translateY(0)";
 //  }
 
+
+
+document.querySelector("#right_menu").addEventListener("click",()=>{
+    event.preventDefault();
+    window.location.href="./Signup/signup.html";
+})

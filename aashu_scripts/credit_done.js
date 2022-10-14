@@ -6,3 +6,10 @@ import {footer} from "../aashu_components/footer.js"
 document.querySelector("#footer").innerHTML=footer();
 
 document.querySelector("#right_menu").innerText="Sign Out"
+
+
+
+document.querySelector("#right_menu").addEventListener("click",()=>{
+    event.preventDefault();
+    window.location.href="./Signout/signout.html";
+})

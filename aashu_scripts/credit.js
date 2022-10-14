@@ -11,3 +11,9 @@ document.querySelector("#right_menu").innerText="Sign Out"
 document.querySelector("#next").addEventListener("click",()=>{
     window.location.href="./credit_done.html"
 })
+
+
+document.querySelector("#right_menu").addEventListener("click",()=>{
+    event.preventDefault();
+    window.location.href="./Signout/signout.html";
+})

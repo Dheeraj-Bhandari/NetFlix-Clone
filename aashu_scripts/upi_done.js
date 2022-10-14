@@ -19,3 +19,9 @@ document.querySelector("#next").addEventListener("click",()=>{
         alert("Please do the payment ! After that OTP will come")
     }
 })
+
+
+document.querySelector("#right_menu").addEventListener("click",()=>{
+    event.preventDefault();
+    window.location.href="./Signout/signout.html";
+})

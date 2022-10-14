@@ -10,3 +10,8 @@ document.querySelector("#right_menu").innerText="Sign Out"
 document.querySelector("#next").addEventListener("click",()=>{
     window.location.href="./plan.html"
 })
+
+document.querySelector("#right_menu").addEventListener("click",()=>{
+    event.preventDefault();
+    window.location.href="./Signout/signout.html";
+})
