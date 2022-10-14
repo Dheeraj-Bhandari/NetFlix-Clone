@@ -13,7 +13,8 @@ document.querySelector("#next").addEventListener("click",()=>{
     let fourth=document.querySelector("#fourth_input").value;
 
     if(first==="1" && second==="2" && third==="3" && fourth==="4"){
-        window.location.href="./home_page.html";
+        window.location.href="./Pages/Netflix_Home_Page.html";
+        localStorage.setItem("login_user",true);
     }
     else{
         alert("Please do the payment ! After that OTP will come")
