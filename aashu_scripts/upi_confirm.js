@@ -21,3 +21,10 @@ document.querySelector("#next").addEventListener("click",()=>{
 let upi_text=localStorage.getItem("payment_check_upi");
 
 document.querySelector("#upi_pay").innerText=upi_text;
+
+
+
+document.querySelector("#right_menu").addEventListener("click",()=>{
+    event.preventDefault();
+    window.location.href="./Signout/signout.html";
+})

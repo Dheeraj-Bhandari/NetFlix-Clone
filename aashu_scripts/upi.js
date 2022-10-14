@@ -49,3 +49,9 @@ document.querySelector("#next").addEventListener("click",()=>{
     }
 })
 
+
+document.querySelector("#right_menu").addEventListener("click",()=>{
+    event.preventDefault();
+    window.location.href="./Signout/signout.html";
+})
+
