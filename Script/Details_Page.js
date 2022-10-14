@@ -19,7 +19,8 @@ const apiPath = {
     fecthSimilarTVShow: (id) => `https://api.themoviedb.org/3/tv/${id}/similar?api_key=${apiKey}&language=en-US&page=1`,
     fecthCrewDetails: (id) => `${apiEndPoint}/movie/${id}/credits?api_key=${apiKey}&language=en-US`,
     fecthTvShowCrewDetails: (id) => `https://api.themoviedb.org/3/tv/${id}/credits?api_key=${apiKey}&language=en-US`,
-    searchMovieTraileronYoutube: (query) => `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${youtubeApiKey}`
+    searchMovieTraileronYoutube: (query) => `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${youtubeApiKey}`,
+    fecthRecommendedMovie : (id)=> `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=${apiKey}&language=en-US&page=1`
 
 }
 
@@ -52,7 +53,7 @@ async function fecthMovie() {
         appenddataMovieSection(data, cast);
         appendVideo(data);
         appenddataCrewSection(data, cast);
-        movieLikeThisSection(similarMovieData.results);
+        movieLikeThisSection(similarMovieData.results,'MovieLikeThisSection');
     //     console.log("yes is arary")
     //     console.log(data);
     //     console.log(cast);
@@ -80,7 +81,7 @@ async function fecthMovie() {
         appenddataMovieSection(data, cast);
         appendVideo(data);
         appenddataCrewSection(data, cast);
-        movieLikeThisSection(similarMovieData.results);
+        movieLikeThisSection(similarMovieData.results,'MovieLikeThisSection');
         // console.log(similarMovieData.results);
     }
 
@@ -104,8 +105,8 @@ function appenddataMovieSection(data, cast) {
                          Thriller, Adventure  <br> RunTime || Episodes ${data.runtime || data.number_of_episodes} MIN || Episodes</h3>
                     </div>
                     <div class="addToWacthList">
-                        <i class="fa-solid fa-lg fa-heart"></i>
-                        <span id="PlayTrailerbtn" onclick = "playfullscreentrailer()" ><i class="fa-solid fa-lg  fa-play"></i> Play Trailer</span>
+                        <i id="${data.id}"  onclick="saveToMyList(${data.id})" class="fa-solid fa-lg fa-heart"></i>
+                        <span onclick = "playfullscreentrailer()" ><i class="fa-solid fa-lg  fa-play"></i> Play Trailer</span>
                     </div>
     
                     <div class="movieOverView">
@@ -187,7 +188,7 @@ function appenddataCrewSection(data, cast) {
 
 }
 
-function movieLikeThisSection(data) {
+function movieLikeThisSection(data, section) {
 
 
     data.slice(0, 10).map((data) => {
@@ -205,11 +206,20 @@ function movieLikeThisSection(data) {
         })
         div.append(img);
 
-        document.getElementById('MovieLikeThisSection').append(div);
+        document.getElementById(section).append(div);
     })
 
 
 }
+
+async function fecthRecommendedMovie(){
+    const moviedetals = localStorage.getItem('movieId');
+
+    const res = await fetch(apiPath.fecthRecommendedMovie(moviedetals));
+    const data  = await res.json();
+    movieLikeThisSection(data.results,'recoomendedMovie')
+    console.log('rec',data);
+}fecthRecommendedMovie()
 
 // navbar js
 
@@ -254,4 +264,21 @@ function playfullscreentrailer(){
             document.getElementById('video').innerHTML=frame;
         }
       }, false);
+}
+window.saveToMyList= saveToMyList;
+const saveListItems = JSON.parse(localStorage.getItem("SavedList")) || [];
+function saveToMyList(id){
+    if(!saveListItems.includes(id)){
+        saveListItems.push(id);
+        localStorage.setItem('SavedList', JSON.stringify(saveListItems));
+    }
+    const button   = document.getElementById(id);
+    // const i = `<i class="fa fa-check" aria-hidden="true"></i>`;
+
+    // button.innerHTML =null;
+    // button.innerHTML=i;
+    button.className='fa fa-check'
+    
+    console.log(saveListItems);
+
 }

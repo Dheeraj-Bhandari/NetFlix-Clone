@@ -61,7 +61,9 @@ body {
 }
 /* Vide Player section */
 #video {
+    /* width: 100%; */
     margin-top: 50px;
+    /* background-image: url('https://media.tenor.com/QJNoPeq9WmUAAAAC/netflix-intro-netflix.gif'); */
 }
 
 #ExitTrailerBtn{
@@ -103,7 +105,7 @@ body {
 .movieDetails {
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 5px;
     justify-content: flex-start;
     align-items: flex-start;
@@ -135,15 +137,23 @@ body {
 
 
 /* Cast Section */
+
+
+.castH4 h1{
+    margin-left: 20px;
+}
+
 #CastsectionParentDiv {
     margin-top: 50px;
+    width: 100%;
 }
 
 #castsection {
+    width: 100%;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(10, 1fr);
+    /* gap: 20px; */
     align-items: center;
     justify-content: center;
 
@@ -153,9 +163,9 @@ body {
 .profile {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 5px;
-    border: 2px solid red;
-    width: 200px;
-    height: 250px;
+    /* border: 2px solid red; */
+    width: inherit;
+    height: inherit;
     padding: 25px;
     overflow: hidden;
 }
@@ -176,15 +186,20 @@ body {
 
 /* Movie Like HTis Section */
 .recoomendedMovieH4 {
-    margin-bottom: 50px;
+   margin: 40px 0 20px 0;
 }
 
-#MovieLikeThisSection {
+#MovieLikeThisSectionparentDiv{
+    margin: 20px 20px 0 20px;
+}
+
+#MovieLikeThisSection,#recoomendedMovie {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-content: center;
     align-items: center;
     gap: 20px;
+   
 
 }
 

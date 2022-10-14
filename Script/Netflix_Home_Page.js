@@ -12,6 +12,7 @@ const apiPath = {
     fecthTrending: `${apiEndPoint}/trending/all/week?api_key=${apiKey}&language=en-US`,
     fetchMoviesList: (id) => `${apiEndPoint}/discover/movie?api_key=${apiKey}&with_genres=${id}`,
     SearchMovie : (value) => `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${value}`,
+    multiSearchTVMOVIEPEOPLE:(value)=> `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=en-US&query=${value}&page=1&include_adult=false`,
     searchMovieTraileronYoutube :(query)=> `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${youtubeApiKey}`
 }
 
@@ -303,8 +304,6 @@ function saveToMyList(id){
     
     console.log(saveListItems);
 
-    
-   
 }
 
 // function changebackgifonhover(itemid){
@@ -358,7 +357,7 @@ async function displayMovies() {
     }
     
     
-    let url = `${apiPath.SearchMovie(input)}`;
+    let url = `${apiPath.multiSearchTVMOVIEPEOPLE(input)}`;
 
     try {
         const res = await fetch (url);
