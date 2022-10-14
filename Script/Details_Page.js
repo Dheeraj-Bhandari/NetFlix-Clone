@@ -46,14 +46,17 @@ async function fecthMovie() {
 
         const similarMovieres = await fetch(apiPath.fecthSimilarMovie(moviedetals));
         const similarMovieData = await similarMovieres.json();
-        appenddataMovieSection(data, crewdata);
+        const cast = crewdata.cast.filter(function(ele){
+            return ele.profile_path!=null
+        })
+        appenddataMovieSection(data, cast);
         appendVideo(data);
-        appenddataCrewSection(data, crewdata);
+        appenddataCrewSection(data, cast);
         movieLikeThisSection(similarMovieData.results);
-        console.log("yes is arary")
-        console.log(data);
-        console.log(crewdata);
-        console.log(similarMovieData.results);
+    //     console.log("yes is arary")
+    //     console.log(data);
+    //     console.log(cast);
+    //     console.log(similarMovieData.results);
     }
     else {
         console.log("Inside Tv Show Condition")
@@ -67,21 +70,26 @@ async function fecthMovie() {
 
         const crewres = await fetch(apiPath.fecthTvShowCrewDetails(moviedetals));
         const crewdata = await crewres.json();
-        appenddataMovieSection(data, crewdata);
+
+        const cast = crewdata.cast.filter(function(ele){
+            return ele.profile_path!=null
+        })
+
+        // console.log(data);
+        // console.log(cast);
+        appenddataMovieSection(data, cast);
         appendVideo(data);
-        appenddataCrewSection(data, crewdata);
+        appenddataCrewSection(data, cast);
         movieLikeThisSection(similarMovieData.results);
-        console.log(data);
-        console.log(crewdata);
-        console.log(similarMovieData.results);
+        // console.log(similarMovieData.results);
     }
 
 
 }
 
 
-function appenddataMovieSection(data, crewdata) {
-    if(crewdata.cast.length<2) return;
+function appenddataMovieSection(data, cast) {
+    if(cast.length<2) return;
     const videoSectiondata = `
   
     <div id="videoSection" style="background-image: url(${imgPath}${data.backdrop_path});">
@@ -106,12 +114,12 @@ function appenddataMovieSection(data, crewdata) {
     
                     <div class="movieDirectorName">
                         <div class="directorNmae">
-                            <p>${crewdata.cast[0].original_name}</p>
-                            <p>${crewdata.cast[0].character}</p>
+                            <p>${cast[0].original_name}</p>
+                            <p>${cast[0].character}</p>
                         </div>
                         <div class="screenplay">
-                            <p>${crewdata.cast[1].original_name}</p>
-                            <p>${crewdata.cast[1].character}</p>
+                            <p>${cast[1].original_name}</p>
+                            <p>${cast[1].character}</p>
                         </div>
                     </div>
     
@@ -143,29 +151,29 @@ function appendVideo(data) {
 
 }
 
-function appenddataCrewSection(data, crewdata) {
-    const min = Math.min(crewdata.cast.length, 15);
+function appenddataCrewSection(data, cast) {
+    const min = Math.min(cast.length, 15);
 
     for (var i = 0; i < min; i++) {
 
         const crewDatacard = `
             <div class="profile">
-                    <img src="${imgPath}${crewdata.cast[i].profile_path}" alt="${crewdata.cast[i].original_name} avatar">
-                    <p>${crewdata.cast[i].original_name}</p>
-                    <p>${crewdata.cast[i].character}</p>
+                    <img src="${imgPath}${cast[i].profile_path}" alt="${cast[i].original_name} avatar">
+                    <p>${cast[i].original_name}</p>
+                    <p>${cast[i].character}</p>
                 </div>
             `
 
         const div = document.createElement('div');
         div.className = 'profile';
         const img = document.createElement('img');
-        img.src = `${imgPath}${crewdata.cast[i].profile_path}`;
+        img.src = `${imgPath}${cast[i].profile_path}`;
 
         const p1 = document.createElement('p');
-        p1.innerText = `${crewdata.cast[i].original_name}`
+        p1.innerText = `${cast[i].original_name}`
 
         const p2 = document.createElement('p');
-        p2.innerText = `${crewdata.cast[i].character}`
+        p2.innerText = `${cast[i].character}`
 
         div.append(img, p1, p2);
 
