@@ -1,0 +1,94 @@
+
+#main_container{
+    width: 60%;
+    margin: auto;
+}
+/* #first_child{
+    width: 60%;
+    margin: auto;
+    padding: 30px 0 10px 20px;
+} */
+.list{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+.list >img{
+    width:4%;
+}
+
+#second_child{
+    /* width: 60%; */
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+}
+.div_items{
+    background-color: red;
+    color: white;
+    padding: 60px 15px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 400;
+}
+#monthly_price{
+    /* width: 60%; */
+    /* margin: auto; */
+    display: flex;
+    margin-top: 3vh;
+    align-items: center;
+    gap: 10px;
+}
+#video_quality{
+    /* width: 60%; */
+    /* margin: auto; */
+    display: flex;
+    margin-top: 3vh;
+    gap: 10px;
+}
+#resolution{
+    /* width: 60%;
+    margin: auto; */
+    display: flex;
+    margin-top: 3vh;
+    gap:10px;
+}
+
+.one{
+    flex: 4;
+    text-align: center;
+}
+.two{
+    flex: 1.5;
+    text-align: center;
+}
+.three{
+    flex: 1.5;
+    text-align: center;
+}
+.four{
+    flex: 1.5;
+    text-align: center;
+}
+.five{
+    flex: 1.5;
+    text-align: center;
+}
+
+#fourth_child{
+    width:30%;
+    margin: auto;
+}
+#next{
+   width: 100%;
+   border: none;
+   color: #fff;
+   background-color: red;
+   border-radius: 2px;
+   font-size: 22px;
+   padding: 15px ;
+   margin-top: 4vh;
+}

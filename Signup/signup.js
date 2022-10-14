@@ -1,5 +1,5 @@
 var login = JSON.parse(localStorage.getItem("........")) || [];
-document.querySelector("#btn1").addEventListener("click", myFun);
+document.querySelector("form").addEventListener("submit", myFun);
 function myFun() {
   // console.log("dfgdg")
   // document.getElementById("email").value = "";
@@ -15,8 +15,10 @@ function myFun() {
     }
   }
   if (flag) {
+    event.preventDefault();
+    console.log(1);
     alert("login Sucessfull ✔️");
-    window.location.href = "";
+    window.location.href = "./Pages/Netflix_Home_Page.html";
   } else {
     alert("Wrong Credential   ❌");
   }
