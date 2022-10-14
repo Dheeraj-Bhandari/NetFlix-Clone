@@ -342,6 +342,7 @@ margin-left: 50px;
 
 .cover img{
     width: inherit;
+    height: inherit;
     cursor: pointer;
     border-radius: 5px;
 }

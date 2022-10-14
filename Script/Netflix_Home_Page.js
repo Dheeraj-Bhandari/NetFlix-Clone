@@ -194,7 +194,7 @@ function buildMovieSection(list,categoryName){
             return `
             <div class="square one">
                         <div class="cover" id="cover"  >
-                        <img  id="coverid${item.id}" src="${imgPath}${item.backdrop_path}" alt="${item.title}" />
+                        <img  id="coverid${item.id}" src="${imgPath}${item.backdrop_path || item.poster_path}" alt="${item.title}" />
                         </div>
                         <div class="text">
                             <div id="texticon">
@@ -365,8 +365,13 @@ async function displayMovies() {
         var searchMoviedata = await res.json();
         
         console.log(searchMoviedata);
-        SearchMovieResultAppend(searchMoviedata.results, "Movie Matched With Your Search")
-        // res2.results.map((elem) => {
+        document.getElementById('searchMovieresult').innerHTML=null;
+        const searchresultreduceed = searchMoviedata.results.filter(function(ele){
+            return ele.poster_path!=null || ele.backdrop_path!=null
+        })
+        // console.log(searchresultreduceed)
+        SearchMovieResultAppend(searchresultreduceed, "Movie Matched With Your Search")
+       
 
     } catch(err) {
         console.log(err);
