@@ -14,7 +14,7 @@ function navbar(){
                    </ul>
                </div>
                <div class="right-cont">
-                   <input id = "input" placeholder = "Title, people, genres.." oninput = debounceMovies()>
+                   <input id = "input" style="display: none;"  placeholder = "Title, people, genres.." oninput = debounceMovies()>
                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                        class="search-icon" onclick = "searchMovies()">
                        <path fill-rule="evenodd" clip-rule="evenodd"

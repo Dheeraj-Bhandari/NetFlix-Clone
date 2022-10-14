@@ -11,6 +11,7 @@ const apiPath = {
     fetchAllCategories: `${apiEndPoint}/genre/movie/list?api_key=${apiKey}`,
     fecthTrending: `${apiEndPoint}/trending/all/week?api_key=${apiKey}&language=en-US`,
     fetchMoviesList: (id) => `${apiEndPoint}/discover/movie?api_key=${apiKey}&with_genres=${id}`,
+    SearchMovie : (value) => `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${value}`,
     searchMovieTraileronYoutube :(query)=> `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${youtubeApiKey}`
 }
 
@@ -181,6 +182,65 @@ function buildMovieSection(list,categoryName){
     
     }
 
+    // Search Movie result Append 
+
+    function SearchMovieResultAppend(list,categoryName){
+        console.log(list, categoryName);
+        const movieCont = document.getElementById("searchMovieresult");
+        const moviesListHtml = list.map(item=>{
+            // onmouseenter="searchMovieTrailer('${item.title} trailer','yt${item.id}')"
+            // onmouseenter="changebackgifonhover()"
+            // onmouseover="changebackgifonhover(coverid${item.id})"
+            return `
+            <div class="square one">
+                        <div class="cover" id="cover"  >
+                        <img  id="coverid${item.id}" src="${imgPath}${item.backdrop_path}" alt="${item.title}" />
+                        </div>
+                        <div class="text">
+                            <div id="texticon">
+                                <div id="textfirst3icon">
+                                    <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-play"></i></button>
+                                    <button id="${item.id}" onclick="saveToMyList(${item.id})" ><i class="fa-1x fa-plus" aria-hidden="true"></i></button>
+                                    <button><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
+                                </div>
+                                <div id="textlasticon">
+                                    <button onclick="MovieDetailsPage(${item.id})"><i class="fa-1x fa-solid fa-arrow-down"></i></button>
+                                </div>
+                            </div>
+            
+            
+                            <div id="textcontent">
+                                <div id="textp">
+                                <span>97% Match</span>
+                                    <p> &nbsp U/A 13+ 3 Season</p>
+                                </div>
+                                <div id="itemgenres">
+                                    
+                                    <p><span id='avgrating' >Avg Rating ${(item.vote_average).toFixed(1)}</span> Quirky. Feel-Good. Teen</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               
+            `;
+        }).join('');
+        
+        const movieSectionHtml = `
+        <h2 id="movieh3" >${categoryName}<span class="explore-nudge">Explore All</span> </h2>
+        <div id="movieRow">
+           ${moviesListHtml}
+        </div>
+        `;
+        
+        const div = document.createElement('div');
+        div.id = 'movieSection'
+        div.innerHTML = movieSectionHtml;
+        
+        movieCont.append(div);
+        
+        // console.log(movieSectionHtml);
+        
+        }
 
 
 function searchMovieTrailer(movieName, iframeId){
@@ -253,8 +313,66 @@ function saveToMyList(id){
 //     // element.style.background = 'url(https://img.buzzfeed.com/buzzfeed-static/static/2021-07/22/16/enhanced/5cdbc5809df1/anigif_enhanced-8810-1626970483-2.gif)';
 // }
 
+
+// Search Movie function Start 
+
 window.searchMovies = searchMovies;
 //* DEBOUNCING ON SEARCH MOVIES//
 function searchMovies() {
-    location.href = "../Pages/search_movies.html";
+   const searchInput =  document.getElementById('input')
+   searchInput.style.display='block';
+//    searchInput.style.transition = 
+    // location.href = "../Pages/search_movies.html";
 }
+
+let debounceMovies = debounce(displayMovies,300);
+
+function debounce(fn, delay){
+    let timerId;
+    return function(){
+        clearTimeout(timerId);
+        timerId = setTimeout(function(){
+            fn();
+        },delay);
+        // console.log(timerId);
+    }
+}
+
+window.displayMovies = displayMovies;
+
+
+
+async function displayMovies() {
+    var input = document.getElementById("input").value;
+    console.log(input);
+    const bannersection  = document.getElementById("banner-section")
+     const movieContainer = document.getElementById("movies-cont");
+    if(input!=""){
+
+        movieContainer.style.display= 'none';
+        bannersection.style.display='none'
+    }
+    else{
+        movieContainer.style.display= 'block';
+        bannersection.style.display='block'
+    }
+    
+    
+    let url = `${apiPath.SearchMovie(input)}`;
+
+    try {
+        const res = await fetch (url);
+        var searchMoviedata = await res.json();
+        
+        console.log(searchMoviedata);
+        SearchMovieResultAppend(searchMoviedata.results, "Movie Matched With Your Search")
+        // res2.results.map((elem) => {
+
+    } catch(err) {
+        console.log(err);
+    }
+}
+
+window.debounceMovies = debounceMovies;
+
+// Search Movie Function End
