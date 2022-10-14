@@ -36,7 +36,7 @@ document.querySelector("form").addEventListener("submit",()=>{
     }
 })
 
-localStorage.setItem("netflix_email","admin123@gmail.com");
+// localStorage.setItem("netflix_email","admin123@gmail.com");
 
 let email=localStorage.getItem("netflix_email");
 

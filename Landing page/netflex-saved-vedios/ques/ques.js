@@ -58,3 +58,22 @@ question6btn.onclick = function () {
 		question6.style.display = "block";
 	}
 };
+
+// console.log(document.querySelector("#mail"));
+// let give_mail=document.querySelector("#mail").value;
+// console.log(give_mail);
+document.querySelector("#mail").addEventListener("keypress",(e)=>{
+	if(e.key==="Enter"){
+		let give_mail=document.querySelector("#mail").value;
+		localStorage.setItem("netflix_email",give_mail);
+		window.location.href="./login_index.html"
+	}
+})
+document.querySelector(".btn-lg").addEventListener("click",(e)=>{
+		let give_mail=document.querySelector("#mail").value;
+		localStorage.setItem("netflix_email",give_mail);
+		window.location.href="./login_index.html"
+})
+document.querySelector(".btn-rounded").addEventListener("click",(e)=>{
+		window.location.href="./Signup/signup.html"
+})
