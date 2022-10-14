@@ -1,21 +1,20 @@
 function footer(){
-return`<p id="q">Questions? Call 000-800-040-1843</p>
-<div id="child">
-<!-- <p id="q">Questions? Call 000-800-040-1843</p> -->
-<ul id="st"> 
-    <li id="faq"> FAQ</li>
-    <li>FAQHelp Centre</li>
-    <li>Help CentreTerms of Use</li>
-    <li>Privacy</li>
-    </ul>
-    <ul id="nd">
-    <li id="cook">Cookie Preferences</li>
-    <li id="cor">Corporate Information</li>
-</ul>
+return`<div id="footer">
+<div class="para"><span>Questions? Call 000-800-040-1843</span></div>
+<div class="list">
+  <a href="">FAQ</a>
+  <a href="">Help Centre</a>
+  <a href="">Terms of Use</a>
+  <a href="">Privacy</a>
+  <a href="">Cookie Preferences</a>
+  <a href="">Corporate Information</a>
 </div>
-<div id="eng">
-    <img src="https://bs-uploads.toptal.io/blackfish-uploads/skill_page/content/logo_file/logo/6282/web-b756877cb91fff127d5dce0dc7b3a946.png" id="logo" alt="">
-    <h4> English</h4>
+<div id="btn">
+  <i class="material-icons">language</i>
+
+  <span>English</span>
+  <i class="material-icons">arrow_drop_down</i>
+</div>
 </div>`
 
 }
