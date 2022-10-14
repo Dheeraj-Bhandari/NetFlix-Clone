@@ -3,13 +3,11 @@ body{
 }
 #container{
     display: block;
-    margin: auto;
-    width: 350px;
-    height: 230px;
-    /* border: 2px solid red; */
-    /* text-align: center; */
+     margin: auto;
+     width: 400px; 
+    
     background:white;
-    padding: 55px;
+     padding: 30px;
     color: black;
     padding-right: -50px;
 }
@@ -17,12 +15,12 @@ body{
     display: block;
     margin: auto;
 
-    /* border: 2px solid blueviolet; */
-    /* padding: 20px; */
+   
 }
 h2{
-    /* padding-top: -30px; */
-    font-size: 40px;
+    
+    font-size: 30px;
+   
     padding-bottom: 30px;
 }
 #you{
@@ -30,10 +28,10 @@ h2{
     padding-bottom: 30px;
 }
 p{
-    font-size: 17px;
+    font-size: 15px;
 }
 #now{
-    /* padding-top: 10px; */
+    
     width: 95%;
     height:55px;
     background-color:#0080ff ;

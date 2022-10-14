@@ -1,6 +1,7 @@
 var login = JSON.parse(localStorage.getItem("........")) || [];
-document.querySelector("form").addEventListener("submit", myFun);
+document.querySelector("#btn1").addEventListener("click", myFun);
 function myFun() {
+  // console.log("dfgdg")
   // document.getElementById("email").value = "";
   // document.getElementById("password").value = "";
   event.preventDefault();
