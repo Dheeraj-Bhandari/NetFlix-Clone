@@ -31,14 +31,50 @@ body {
     width: 100%;
 }
 
+/* Hero Section */
+.movenameandType h1{
+    font-weight: bolder;
+    font-size: 80px;
+    
+}
+
+.fa-heart:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   color: red;
+    cursor: pointer;
+   
+}
+.fa-play:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   color: red;
+    cursor: pointer;
+}
+.addToWacthList i {
+    margin-left: 50px;
+}
+.addToWacthList span {
+   font-size: large;
+}
+.addToWacthList span:hover{
+    color: red;
+    cursor: pointer;
+}
 /* Vide Player section */
 #video {
     margin-top: 50px;
 }
 
+#ExitTrailerBtn{
+    width: 100%;
+    height: 100%;
+    z-index: 99999999;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
 /* Vide Player section End */
 #videoSectionParentDiv {
-    width: 50%;
+    /* width: 800px; */
 }
 
 #videoSection {
@@ -48,13 +84,13 @@ body {
     margin-right: 50px;
     gap: 50px;
     padding: 50px;
-    background-image: url('https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/06/THOR-LOVE-AND-THUNDER-SET-PHOTO.jpg');
+    background-image: url('https://image.tmdb.org/t/p/original/mDfJG3LC3Dqb67AZ52x3Z0jU0uB.jpg');
     background-repeat: repeat;
     background-color: rgba(255, 255, 255, 0.6);
     background-blend-mode: lighten;
     color: black;
     font-weight: bolder;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 50px;
 }
 
@@ -67,10 +103,13 @@ body {
 .movieDetails {
     display: flex;
     flex-direction: column;
-    border: 2px solid red;
-    justify-content: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    justify-content: flex-start;
     align-items: flex-start;
-    padding: 50px;
+    margin-top: 0;
+    
+    padding: 10px;
 }
 
 .movieDetails>div {
@@ -79,6 +118,7 @@ body {
 
 .screenplay {
     display: flex;
+    flex-direction: column;
 
 
 }
@@ -87,14 +127,12 @@ body {
     font-weight: bold;
 }
 
+
 .movieDirectorName {
     display: flex;
     gap: 80px;
 }
 
-.addToWacthList i {
-    margin-left: 50px;
-}
 
 /* Cast Section */
 #CastsectionParentDiv {

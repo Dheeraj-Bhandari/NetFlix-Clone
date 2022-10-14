@@ -5,8 +5,8 @@ document.getElementById('header').innerHTML = navbar;
 
 
 const apiKey = '9e997fe8c2efd000188bc88e3dda6d23';
-// const youtubeApiKey = 'AIzaSyC7bWr31DArqVECDyRJbH-g106fKypGKRE'
-const youtubeApiKey = 'AIzaSyBa770uGbngfNCOB2sg8ykjuXkWTGFZTxs'
+const youtubeApiKey = 'AIzaSyC7bWr31DArqVECDyRJbH-g106fKypGKRE'
+// const youtubeApiKey = 'AIzaSyBa770uGbngfNCOB2sg8ykjuXkWTGFZTxs'
 const apiEndPoint = 'https://api.themoviedb.org/3'
 const imgPath = "https://image.tmdb.org/t/p/original"
 const apiPath = {
@@ -99,19 +99,22 @@ function appenddataMovieSection(data, cast) {
                 </div>
                 <div class="movieDetails">
                     <div class="movenameandType">
-                        <h3>${data.title || data.original_name}</h3>
-                        <p>${data.release_date || data.first_air_date} (${data.original_language}) Action, Adventure, Thriller, Adventure RunTime || Episodes ${data.runtime || data.number_of_episodes} MIN || Episodes</p>
+                        <h1>${data.title || data.original_name}</h1>
+                        <h3>${data.release_date || data.first_air_date} (${data.original_language}) <br> Action, Adventure,
+                         Thriller, Adventure  <br> RunTime || Episodes ${data.runtime || data.number_of_episodes} MIN || Episodes</h3>
                     </div>
                     <div class="addToWacthList">
-                        <i class="fa fa-list" aria-hidden="true"></i>
-                        <span><i class="fa-solid fa-play"></i> Play Trailer</span>
+                        <i class="fa-solid fa-lg fa-heart"></i>
+                        <span id="PlayTrailerbtn" onclick = "playfullscreentrailer()" ><i class="fa-solid fa-lg  fa-play"></i> Play Trailer</span>
                     </div>
     
                     <div class="movieOverView">
-                        <h4>OverView</h4>
-                        <p>${data.overview}</p>
+                        <h2>Overview</h2>
+                        <h3>${data.overview}</h3>
+                        <br>
+                        <h2>Lead Cast</h2>
                     </div>
-    
+
                     <div class="movieDirectorName">
                         <div class="directorNmae">
                             <p>${cast[0].original_name}</p>
@@ -145,6 +148,7 @@ function appendVideo(data) {
             // window.open(youtubeUrl, '_blank')
             const iframelement = document.getElementById('iframe')
             iframelement.src = `https://www.youtube.com/embed/${VideoId.id.videoId}?autoplay=1&mute=1`
+            localStorage.setItem('curTrailerVideosrc', `https://www.youtube.com/embed/${VideoId.id.videoId}?autoplay=1&mute=0`);
             console.log(iframelement.src)
         }).catch(err => console.log(err))
 
@@ -219,3 +223,35 @@ window.addEventListener('load', function () {
     })
 
 })
+
+// window.addEventListener('keypress', function(e){
+//     if('key'=='Enter'){
+//         console.log("Enter")
+//     }
+// })
+window.playfullscreentrailer = playfullscreentrailer;
+function playfullscreentrailer(){
+    const iframsrcLS = localStorage.getItem('curTrailerVideosrc');
+    console.log('inside func')
+    const frame = `
+     <iframe id="iframe" src="${iframsrcLS}" style="position:fixed; top:0; left:0; bottom:0; right:0;
+             width:100%; height:100%; border:none; margin:0; padding:0; overflow:visible; autoplay=1;">`
+             document.getElementById('video').innerHTML=frame;
+            const div = document.createElement('div');
+            const btn = document.createElement('button');
+            div.id = "ExitTrailerBtn"
+            btn.innerText ="Exit"
+            div.append(btn);
+           
+    document.getElementById('video').append(div);
+    document.addEventListener('keydown', (event) => {
+        if(event.key=='Escape'){
+          const frame =   `<iframe id="iframe" width="800" height="500" src="${iframsrcLS}">
+            </iframe>`
+            // document.getElementById('video').innerHTML=null;
+            // console.log("Inside")
+            // alert("Escape")
+            document.getElementById('video').innerHTML=frame;
+        }
+      }, false);
+}
