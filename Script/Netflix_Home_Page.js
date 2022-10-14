@@ -39,7 +39,7 @@ function buildBannerSection(movie){
     div.innerHTML = `
    
             <h2 class="banner-title">${movie.title || movie.name}</h2>
-            <p class="banner-info">Trending in Movies | Rating - ${movie.vote_average}</p>
+            <p class="banner-info">Trending in Movies | Rating - ${(movie.vote_average).toFixed(1)}</p>
             <p class="banner-overview">${movie.overview && movie.overview.length>200 ? movie.overview.slice(0,200).trim()+"...": movie.overview}</p>
             <div class="action-button-cont">
                 <button onclick="MovieDetailsPage(${movie.id})" class="action-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -252,3 +252,9 @@ function saveToMyList(id){
 //     itemid.src = 'https://img.buzzfeed.com/buzzfeed-static/static/2021-07/22/16/enhanced/5cdbc5809df1/anigif_enhanced-8810-1626970483-2.gif'
 //     // element.style.background = 'url(https://img.buzzfeed.com/buzzfeed-static/static/2021-07/22/16/enhanced/5cdbc5809df1/anigif_enhanced-8810-1626970483-2.gif)';
 // }
+
+window.searchMovies = searchMovies;
+//* DEBOUNCING ON SEARCH MOVIES//
+function searchMovies() {
+    location.href = "../Pages/search_movies.html";
+}

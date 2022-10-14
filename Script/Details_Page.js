@@ -123,8 +123,8 @@ function appenddataMovieSection(data, crewdata) {
 }
 
 function appendVideo(data) {
-    const movieName = data.title;
-    console.log(data.title)
+    const movieName = data.title || data.original_name;
+    
     if (!movieName) return;
 
     fetch(apiPath.searchMovieTraileronYoutube(movieName))
