@@ -3,8 +3,8 @@ import navbarnew from "../Components/navbarnew.js";
 document.getElementById('main-header').innerHTML = navbarnew
 
 const apiKey = '9e997fe8c2efd000188bc88e3dda6d23';
-const youtubeApiKey = 'AIzaSyC7bWr31DArqVECDyRJbH-g106fKypGKRE'
-// const youtubeApiKey = 'AIzaSyBa770uGbngfNCOB2sg8ykjuXkWTGFZTxs'
+// const youtubeApiKey = 'AIzaSyC7bWr31DArqVECDyRJbH-g106fKypGKRE'
+const youtubeApiKey = 'AIzaSyBa770uGbngfNCOB2sg8ykjuXkWTGFZTxs'
 const apiEndPoint = 'https://api.themoviedb.org/3'
 const imgPath = "https://image.tmdb.org/t/p/original"
 const apiPath = {
@@ -13,7 +13,8 @@ const apiPath = {
     fetchMoviesList: (id) => `${apiEndPoint}/discover/movie?api_key=${apiKey}&with_genres=${id}`,
     SearchMovie : (value) => `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${value}`,
     multiSearchTVMOVIEPEOPLE:(value)=> `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=en-US&query=${value}&page=1&include_adult=false`,
-    searchMovieTraileronYoutube :(query)=> `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${youtubeApiKey}`
+    searchMovieTraileronYoutube :(query)=> `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${youtubeApiKey}`,
+    fecthTvshow: (id) => `https://api.themoviedb.org/3/tv/${id}?api_key=${apiKey}&language=en-US`,
 }
 
 
@@ -138,7 +139,17 @@ async function AddtoMyList(value){
     const api = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${value}`
     const res = await fetch(api);
     const data = await res.json();
-    saveToMyList(data.results[0].id)
+    if(data.results.length<1){
+        const res = await fetch(apiPath.fecthTvshow(value));
+        const data = await res.json();
+        console.log(data);
+        saveToMyList(data.results[0].id)
+    }
+    else{
+
+        console.log(data);
+        saveToMyList(data.results[0].id)
+    }
     
 }
 
