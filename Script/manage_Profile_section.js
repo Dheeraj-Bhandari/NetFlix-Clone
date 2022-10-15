@@ -33,7 +33,7 @@ function displayMemberProfile() {
         
         cont.append(box);
         bigBox.append(cont);
-        document.body.append(bigBox);
+        document.getElementById('ProfileContainer').append(bigBox);
 
         
     })
