@@ -25,6 +25,7 @@
     text-align: center;
     justify-content: center;
     text-align: center;
+   
 }
 .div_items{
     background-color: red;
@@ -33,7 +34,13 @@
     border-radius: 10px;
     font-size: 20px;
     font-weight: 400;
+    opacity: 0.5;
 }
+
+
+
+
+
 #monthly_price{
     /* width: 60%; */
     /* margin: auto; */
@@ -91,4 +98,15 @@
    font-size: 22px;
    padding: 15px ;
    margin-top: 4vh;
+   cursor: pointer;
 }
+
+/* Dheeraj css */
+#deviceinYoucanplay{
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
+    /* align-items: center; */
+    /* border: 2px solid red; */
+}
+/* Dheeraj css end */
