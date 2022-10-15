@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD PROFILE</title>
+    <style>
+        body {
+            background-color:rgb(20, 20, 20);
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        #addProfile-formDiv {
+            width: 40%;
+            margin: auto;
+            /* border: 1px solid white; */
+            margin-top: 160px;
+            color: white;
+        }
+
+        #addProfile-formHeading  {
+            display: block;
+            font-size: 3em;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight:normal;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+
+        #addProfile-formSubTitle {
+            color: #666;
+            font-size: 1.2vw;
+        }
+
+        #addProfile-form-InnerDiv {
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+            /* border: 1px solid yellowgreen; */
+            width: 90%;
+        }
+        #addProfile-user-inputBox {
+            
+            width: 240px;
+            background: #666;
+            border: 1px solid transparent;
+            box-sizing: border-box;
+            color:  white;
+            font-size: 1.3vw;
+            height: 2em;
+            margin: 0 0.8em 0 0;
+            padding: 0.2em 0.6em;
+            text-indent: 0.1vw;
+            width: 18em;
+        }
+        #addProfile-form-btn{
+            display: flex;
+            justify-content: space-between;
+            /* border: 1px solid red; */
+            width: 50%;
+            padding: 0;
+        }
+         #hr{
+            color: #666;
+        }
+
+        #addProfile-mainbtn{
+            background: #fff;
+            /* border: 1px solid #fff; */
+            color: #000;
+            font-weight: 700;
+            cursor: pointer;
+            display: block;
+            font-size: 1.2vw;
+            letter-spacing: 2px;
+            margin: 2em 0 1em;
+            padding: 0.5em 1.5em;
+        }
+        #addProfile-mainbtn:hover {
+            /* background-color: #CC0100; */
+            color: white;
+        }
+        #addProfile-userImage {
+            border-radius: 5px;
+        }
+        
+
+        
+        #addProfile-mainbtn1{
+            background-color: transparent;
+            border: 1px solid grey;
+            color: grey;
+            cursor: pointer;
+            display: block;
+            font-size: 1.2vw;
+            letter-spacing: 2px;
+            margin: 2em 0 1em;
+            padding: 0.5em 1.5em;
+        }
+        #addProfile-mainbtn1:hover {
+            border-color: #fff;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "addProfile-formDiv">
+        <h1 id = "addProfile-formHeading">Add Profile</h1>
+        <p id = "addProfile-formSubTitle">Add a Profile for another person watching Netflix</p>
+        <hr id = "hr">
+
+        <div id = "addProfile-form-InnerDiv">
+            <div><img id = "addProfile-userImage" height = "90px" src="https://occ-0-1492-2705.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABbV2URr-qEYOrESG0qnP2787XsIxWTMBh7QfJwyqYxMAVFNyiXAqFeu16gI8yTxg3kLwF2mUDKmZGfwBEDd7722xskhYwAMwsBBe.png?r=bd7" alt="" class=""></div>
+            <div><input id = "addProfile-user-inputBox" placeholder = "Name" type="text"></div>
+        </div>
+        <hr id = "hr">
+        <div id = "addProfile-form-btn">
+            <button id = "addProfile-mainbtn" onclick="displayProfile()">Continue</button>
+            <button id = "addProfile-mainbtn1">Cancel</button>
+        </div>
+    </div>
+</body>
+<script src="../Script/addUserProfile.js"></script>
+
+</html>

@@ -1,0 +1,40 @@
+body{
+    background-image: url("https://assets.nflxext.com/ffe/siteui/acquisition/login/login-the-crown_2-1500x1000.jpg");
+}
+#container{
+    display: block;
+     margin: auto;
+     width: 400px; 
+    
+    background:white;
+     padding: 30px;
+    color: black;
+    padding-right: -50px;
+}
+#go{
+    display: block;
+    margin: auto;
+
+   
+}
+h2{
+    
+    font-size: 30px;
+   
+    padding-bottom: 30px;
+}
+#you{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+p{
+    font-size: 15px;
+}
+#now{
+    
+    width: 95%;
+    height:55px;
+    background-color:#0080ff ;
+    font-size: 20px;
+    border: none;
+}

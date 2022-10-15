@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+#left{
+    flex: 7;
+    padding: 20px 0;
+}
+
+#logo{
+    width: 20%;
+    
+}
+#right{
+    flex: 3;
+}
+#right >h3{
+    width: 100%;
+   text-align:end;
+}
+#right >h3>a{
+    /* width: 100%; */
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    align-items: center;
+}
+
+hr{
+    border:0.5px solid #eee;
+}

@@ -1,0 +1,141 @@
+#child_container{
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+
+#logo_lock >img{
+    width: 15%;
+    margin-top: 1vh;
+}
+
+
+#child_container >p ,h1,h4{
+    margin-bottom: 1vh;
+}
+#payment_method >div{
+    width: 30%;
+    margin: auto;
+}
+#payment_method >div >a{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #8c8c8c;
+}
+#payment_method >div >a >div{
+
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 10px 30px 10px 5px;
+}
+#payment_method >div >a >div>img{
+    width: 10%;
+    padding: 3px 5px;
+}
+
+#order_img_text{
+    width: 57%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5vh;
+}
+#order_img_text >img{
+    width: 10%;
+}
+
+
+ @media screen and (max-width:1286px) {
+    #child_container{
+        width: 41%;
+    }
+    #payment_method >div{
+        width: 40%;
+        margin: auto;
+    }
+
+    #order_img_text{
+        width: 65%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5vh;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    #child_container{
+        width: 60%;
+    }
+    #payment_method >div{
+        width: 50%;
+        margin: auto;
+    }
+
+    #order_img_text{
+        width: 55%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5vh;
+    }
+}
+
+
+@media screen and (max-width:830px) {
+    #child_container{
+        width: 80%;
+    }
+    #payment_method >div{
+        width: 50%;
+        margin: auto;
+    }
+
+    #order_img_text{
+        width: 55%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5vh;
+    }
+} 
+
+
+@media screen and (max-width:600px) {
+    #child_container{
+        width: 90%;
+    }
+    #payment_method >div{
+        width: 70%;
+        margin: auto;
+    }
+
+    #order_img_text{
+        width: 65%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5vh;
+    }
+} 
+
+@media screen and (max-width:430px) {
+    #child_container{
+        width: 100%;
+    }
+    #payment_method >div{
+        width: 90%;
+        margin: auto;
+    }
+
+    #order_img_text{
+        width: 65%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5vh;
+    }
+}
