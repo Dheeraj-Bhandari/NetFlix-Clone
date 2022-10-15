@@ -12,12 +12,18 @@
 
         .main-profile-div {
             /* border: 1px solid white; */
-            margin-top: 160px;
-            padding-left: 90px;
-            padding-right: 90px;
+            /* margin-top: 160px; */
+            /* padding-left: 90px;
+            padding-right: 90px; */
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+            align-items: center;
             width: 80%;
             margin: auto;
             margin-top: 200px;
+            /* border: 2px solid red; */
         }
         .main-profile-div > h1{
             color: white;
@@ -37,10 +43,11 @@
             display: flex;
             flex-direction: row;
             /* border: 1px solid yellow; */
-            margin: 20px;
-            margin-left: 460px;
-            
-            width: 20%;
+            /* margin: 20px;
+            margin-left: 460px; */
+            justify-content: center;
+            align-items: center;
+            width: 100%;
         }
         #cont {
             /* border: 1px solid green; */
@@ -72,8 +79,14 @@
             
         }
 
-        .addIcon:hover {
+        .addIcon{
+            opacity: 0.5;
             background-color: darkgrey;
+        }
+        .addIcon:hover{
+            opacity: 1;
+            background-color: darkgrey;
+            cursor: pointer;
         }
 
         .addIcon > i :hover {
@@ -104,10 +117,27 @@
             gap: 20px;
             justify-content: center;
             align-items: center;
+            /* border: 2px solid red; */
+            width: 100%;
+            margin-top: 20px;
         }  
         #cont{
             cursor: pointer;
-        }      
+        } 
+        .fa-plus-circle{
+            opacity: 1;
+        }
+        #box img{
+            opacity: 0.5;
+        }
+        #box img:hover{
+            opacity: 1;
+            box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+        }  
+        #memberImg{
+            width: 200px;
+            height: 200px;
+        }   
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" />
 

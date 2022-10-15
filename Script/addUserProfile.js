@@ -8,3 +8,7 @@ function displayProfile() {
     location.href = "../Pages/Manage_profilesection.html"
    
 }
+
+document.getElementById('addProfile-mainbtn1').addEventListener('click', function(){
+    location.href = "../Pages/Manage_profilesection.html"
+})
