@@ -8,7 +8,7 @@ function navbar(){
                        <a href="/Pages/Netflix_Home_Page.html"><li class="nav-item active">Home</li> </a>
                        <a href="/Pages/Tv_Shows.html"><li class="nav-item active">Tv Shows</li> </a>
                        <a href="/Pages/Movie.html"><li class="nav-item active">Movie</li> </a>
-                       <a href="/Pages/Movie.html"><li class="nav-item active">News & Popular</li> </a>
+                       <a href="/Pages/MyLikedMovie.html"><li class="nav-item active">My Liked</li> </a>
                        <a href="/Pages/My_List.html"><li class="nav-item active">My List</li> </a>
                        <a href="/Pages/Movie.html"><li class="nav-item active">Browse by Languages</li> </a>
                    </ul>

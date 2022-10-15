@@ -142,7 +142,7 @@ function buildMovieSection(list,categoryName){
                             <div id="textfirst3icon">
                                 <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-play"></i></button>
                                 <button id="${item.id}" onclick="saveToMyList(${item.id})" ><i class="fa-1x fa-plus" aria-hidden="true"></i></button>
-                                <button><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
+                                <button id="liked${item.id}" onclick="myLikedMovie(${item.id})" ><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
                             </div>
                             <div id="textlasticon">
                                 <button onclick="MovieDetailsPage(${item.id})"><i class="fa-1x fa-solid fa-arrow-down"></i></button>
@@ -283,6 +283,7 @@ document.getElementById('brandlogo').addEventListener('click', function(){
 
 window.MovieDetailsPage= MovieDetailsPage;
 window.saveToMyList= saveToMyList;
+window.myLikedMovie= myLikedMovie;
 // window.changebackgifonhover= changebackgifonhover;
 
 function MovieDetailsPage(id){
@@ -303,6 +304,21 @@ function saveToMyList(id){
     button.innerHTML =i;
     
     console.log(saveListItems);
+
+}
+
+const myLikedMovieLC = JSON.parse(localStorage.getItem("myLikedMovie")) || [];
+function myLikedMovie(id){
+    if(!myLikedMovieLC.includes(id)){
+        myLikedMovieLC.push(id);
+        localStorage.setItem('myLikedMovie', JSON.stringify(myLikedMovieLC));
+    }
+    const button   = document.getElementById(`liked${id}`);
+    const i = `<i class="fa fa-check" aria-hidden="true"></i>`;
+
+    button.innerHTML =i;
+    
+    console.log(myLikedMovieLC);
 
 }
 
