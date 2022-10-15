@@ -308,6 +308,7 @@ function saveToMyList(id){
 }
 
 const myLikedMovieLC = JSON.parse(localStorage.getItem("myLikedMovie")) || [];
+
 function myLikedMovie(id){
     if(!myLikedMovieLC.includes(id)){
         myLikedMovieLC.push(id);

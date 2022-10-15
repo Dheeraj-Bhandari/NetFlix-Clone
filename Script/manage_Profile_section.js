@@ -31,7 +31,7 @@ function displayMemberProfile() {
         box.append(image, member);
         box.addEventListener('click', function(){
             localStorage.setItem("UserWatching", elem.name);
-            location.href = "Netflix_Home_Page.html"
+            location.href = "/Netflix_Home_Page_Static_Main/NetFlix_HomePage_Main.html"
         })
         
         cont.append(box);
