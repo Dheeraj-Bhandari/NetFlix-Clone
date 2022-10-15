@@ -1,5 +1,6 @@
 import navbar from "../Components/navbar.js";
 
+
 document.getElementById('header').innerHTML = navbar;
 
 const apiKey = '9e997fe8c2efd000188bc88e3dda6d23';

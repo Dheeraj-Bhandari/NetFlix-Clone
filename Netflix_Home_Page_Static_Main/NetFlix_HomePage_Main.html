@@ -17,318 +17,44 @@
   <link rel="stylesheet" href="css/select2.min.css" />
   <link rel="stylesheet" href="css/select2-bootstrap4.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="shortcut icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico">
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico">
   <link rel="stylesheet" href="css/slick-animation.css" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/Style/Netflix_Home_Page.css">
   <style>
-    .btn.btn-hover.iq-button{
+    .btn.btn-hover.iq-button {
       display: none;
     }
-    .share{
+
+    .share {
       display: hidden;
     }
-    .fa-share-alt{
+
+    .fa-share-alt {
       display: none;
     }
-    .d-flex{
-     display: none;
+
+    .d-flex {
+      display: none;
     }
   </style>
 </head>
 
 <body>
-  <header id="main-header">
-    <div class="main-header">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-12">
-            <nav class="navbar navbar-expand-lg navbar-light p-0">
-              <a href="#" class="navbar-toggler c-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="navbar-toggler-icon" data-toggle="collapse">
-                  <span class="navbar-menu-icon navbar-menu-icon--top"></span>
-                  <span class="navbar-menu-icon navbar-menu-icon--middle"></span>
-                  <span class="navbar-menu-icon navbar-menu-icon--bottom"></span>
-                </div>
-              </a>
-              <a href="index.html" class="navbar-brand">
-                <img src="images/logo.png" class="img-fluid logo" alt="" />
-              </a>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="menu-main-menu-container">
-                  <ul id="top-menu" class="navbar-nav ml-auto">
-                    <li class="menu-item"><a href="/Netflix_Home_Page_Static_Main/NetFlix_HomePage_Main.html">Home</a></li>
-                    <li class="menu-item"><a href="/Pages/Netflix_Home_Page.html">Movies</a></li>
-                    <li class="menu-item"><a href="/Pages/Tv_Shows.html">Tv Shows</a></li>
-                    <li class="menu-item"><a href="/Pages/Tv_Shows.html">My Liked</a></li>
-                    <li class="menu-item"><a href="/Pages/Tv_Shows.html">My List</a></li>
-                    <!-- <li class="menu-item">
-                      <a href="#">Contact Us</a>
-                      <ul class="sub-menu">
-                        <li class="menu-item"><a href="#">About Us</a></li>
-                        <li class="menu-item"><a href="#">Contact</a></li>
-                        <li class="menu-item"><a href="#">FAQ</a></li>
-                        <li class="menu-item">
-                          <a href="#">Privacy-Policy</a>
-                        </li>
-                        <li class="menu-item">
-                          <a href="#">Pricing</a>
-                          <ul class="sub-menu">
-                            <li class="menu-item">
-                              <a href="#">Gold Membership</a>
-                            </li>
-                            <li class="menu-item">
-                              <a href="#">Silver Membership</a>
-                            </li>
-                            <li class="menu-item">
-                              <a href="#">Bronze Membership</a>
-                            </li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li> -->
-                  </ul>
-                </div>
-              </div>
-              <div class="mobile-more-menu">
-                <a href="javascript:void(0);" class="more-toggle" id="dropdownMenuButton" data-toggle="more-toggle"
-                  aria-haspopup="true" aria-expanded="false">
-                  <i class="fa fa-ellipsis-h"></i>
-                </a>
-                <div class="more-menu" aria-labelledby="dropdownMenuButton">
-                  <div class="navbar-right position-relative">
-                    <ul class="d-flex align-items-center justify-content-end list-inline m-0">
-                      <li>
-                        <a href="#" class="search-toggle">
-                          <i class="fa fa-search"></i>
-                        </a>
-                        <div class="search-box iq-search-bar">
-                          <form action="#" class="searchbox">
-                            <div class="form-group position-relative">
-                              <input type="text" class="text search-input font-size-12"
-                                placeholder="type here to search..." />
-                              <i class="search-link fa fa-search"></i>
-                            </div>
-                          </form>
-                        </div>
-                      </li>
-                      <li class="nav-item nav-icon">
-                        <a href="#" class="search-toggle position-relative">
-                          <i class="fa fa-bell"></i>
-                          <span class="bg-danger dots"></span>
-                        </a>
-                        <div class="iq-sub-dropdown">
-                          <div class="iq-card shadow-none m-0">
-                            <div class="iq-card-body">
-                              <a href="#" class="iq-sub-card">
-                                <div class="media align-items-center">
-                                  <img src="images/notify/thumb-1.jpg" alt="" class="img-fluid mr-3" />
-                                  <div class="media-body">
-                                    <h6 class="mb-0">Captain Marvel</h6>
-                                    <small class="font-size-12">just now</small>
-                                  </div>
-                                </div>
-                              </a>
-                              <a href="#" class="iq-sub-card">
-                                <div class="media align-items-center">
-                                  <img src="images/notify/thumb-2.jpg" alt="" class="img-fluid mr-3" />
-                                  <div class="media-body">
-                                    <h6 class="mb-0">
-                                      Dora and The Lost City of Gold
-                                    </h6>
-                                    <small class="font-size-12">25 mins ago</small>
-                                  </div>
-                                </div>
-                              </a>
-                              <a href="#" class="iq-sub-card">
-                                <div class="media align-items-center">
-                                  <img src="images/notify/thumb-3.jpg" alt="" class="img-fluid mr-3" />
-                                  <div class="media-body">
-                                    <h6 class="mb-0">Mulan</h6>
-                                    <small class="font-size-12">1h 30 mins ago</small>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li>
-                        <a href="#" class="iq-user-dropdown search-toggle d-flex align-items-center">
-                          <img src="images/user/user.png" class="img-fluid user-m rounded-circle" alt="" />
-                        </a>
-                        <div class="iq-sub-dropdown iq-user-dropdown">
-                          <div class="iq-card shadow-none m-0">
-                            <div class="iq-card-body p-0 pl-3 pr-3">
-                              <a href="/Pages/Manage_profilesection.html" class="iq-sub-card setting-dropdown">
-                                <div class="media align-items-center">
-                                  <div class="right-icon">
-                                    <i class="fa fa-user text-primary"></i>
-                                  </div>
-                                  <div class="media-body ml-3">
-                                    <h6 class="mb-0">Manage Profile</h6>
-                                  </div>
-                                </div>
-                              </a>
-                              <a href="/Pages/addUserProfle_page.html" class="iq-sub-card setting-dropdown">
-                                <div class="media align-items-center">
-                                  <div class="right-icon">
-                                    <i class="fa fa-cog text-primary"></i>
-                                  </div>
-                                  <div class="media-body ml-3">
-                                    <h6 class="mb-0">Settings</h6>
-                                  </div>
-                                </div>
-                              </a>
-                              <a href="#" class="iq-sub-card setting-dropdown">
-                                <div class="media align-items-center">
-                                  <div class="right-icon">
-                                    <i class="fa fa-inr text-primary"></i>
-                                  </div>
-                                  <div class="media-body ml-3">
-                                    <h6 class="mb-0">Pricing Plan</h6>
-                                  </div>
-                                </div>
-                              </a>
-                              <a href="#" class="iq-sub-card setting-dropdown">
-                                <div class="media align-items-center">
-                                  <div class="right-icon">
-                                    <i class="fa fa-sign-out text-primary"></i>
-                                  </div>
-                                  <div class="media-body ml-3">
-                                    <h6 class="mb-0">Logout</h6>
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
 
-              <div class="navbar-right menu-right">
-                <ul class="d-flex align-items-center list-inline m-0">
-                  <li class="nav-item nav-icon">
-                    <a href="#" class="search-toggle device-search">
-                      <i class="fa fa-search"></i>
-                    </a>
-                    <div class="search-box iq-search-bar d-search">
-                      <form action="#" class="searchbox">
-                        <div class="form-group position-relative">
-                          <input type="text" class="text search-input font-size-12"
-                            placeholder="type here to search..." />
-                          <i class="search-link fa fa-search"></i>
-                        </div>
-                      </form>
-                    </div>
-                  </li>
-                  <li class="nav-item nav-icon">
-                    <a href="#" class="search-toggle" data-toggle="search-toggle">
-                      <i class="fa fa-bell"></i>
-                      <span class="bg-danger dots"></span>
-                    </a>
-                    <div class="iq-sub-dropdown">
-                      <div class="iq-card shadow-none m-0">
-                        <div class="iq-card-body">
-                          <a href="#" class="iq-sub-card">
-                            <div class="media align-items-center">
-                              <img src="images/notify/thumb-1.jpg" alt="" class="img-fluid mr-3" />
-                              <div class="media-body">
-                                <h6 class="mb-0">Captain Marvel</h6>
-                                <small class="font-size-12">just now</small>
-                              </div>
-                            </div>
-                          </a>
-                          <a href="#" class="iq-sub-card">
-                            <div class="media align-items-center">
-                              <img src="images/notify/thumb-2.jpg" alt="" class="img-fluid mr-3" />
-                              <div class="media-body">
-                                <h6 class="mb-0">
-                                  Dora and The Lost City of Gold
-                                </h6>
-                                <small class="font-size-12">25 mins ago</small>
-                              </div>
-                            </div>
-                          </a>
-                          <a href="#" class="iq-sub-card">
-                            <div class="media align-items-center">
-                              <img src="images/notify/thumb-3.jpg" alt="" class="img-fluid mr-3" />
-                              <div class="media-body">
-                                <h6 class="mb-0">Mulan</h6>
-                                <small class="font-size-12">1h 30 mins ago</small>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="nav-item nav-icon">
-                    <a href="/Pages/Manage_profilesection.html" class="iq-user-dropdown search-toggle d-flex align-items-center p-0">
-                      <img src="images/user/user.png" class="img-fluid user-m rounded-circle" alt="" />
-                    </a>
-                    <div class="iq-sub-dropdown iq-user-dropdown">
-                      <div class="iq-card shadow-none m-0">
-                        <div class="iq-card-body p-0 pl-3 pr-3">
-                          <a href="/Pages/Manage_profilesection.html" class="iq-sub-card setting-dropdown">
-                            <div class="media align-items-center">
-                              <div class="right-icon">
-                                <i class="fa fa-user text-primary"></i>
-                              </div>
-                              <div class="media-body ml-3">
-                                <h6 class="mb-0">Manage Profile</h6>
-                              </div>
-                            </div>
-                          </a>
-                          <a href="/Pages/addUserProfle_page.html" class="iq-sub-card setting-dropdown">
-                            <div class="media align-items-center">
-                              <div class="right-icon">
-                                <i class="fa fa-cog text-primary"></i>
-                              </div>
-                              <div class="media-body ml-3">
-                                <h6 class="mb-0">Settings</h6>
-                              </div>
-                            </div>
-                          </a>
-                          <a href="" class="iq-sub-card setting-dropdown">
-                            <div class="media align-items-center">
-                              <div class="right-icon">
-                                <i class="fa fa-inr text-primary"></i>
-                              </div>
-                              <div class="media-body ml-3">
-                                <h6 class="mb-0">Pricing Plan</h6>
-                              </div>
-                            </div>
-                          </a>
-                          <a  onclick="logout()" href="/index.html" class="iq-sub-card setting-dropdown">
-                            <div class="media align-items-center">
-                              <div class="right-icon">
-                                <i class="fa fa-sign-out text-primary"></i>
-                              </div>
-                              <div class="media-body ml-3">
-                                <h6 class="mb-0">Logout</h6>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </nav>
-            <div class="nav-overlay"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <header id="main-header">
+   
   </header>
 
+
+  <div id="searchMovieresult">
+
+  </div>
+  <div id="video">
+   
+  </div>
   <!-- slider starts  -->
   <section id="home" class="iq-main-slider p-0">
     <div id="home-slider" class="slider m-0 p-0">
@@ -368,7 +94,8 @@
                   </div>
                 </div>
                 <p data-animation-in="fadeInUp">
-                  After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.
+                  After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite
+                  and assemble again to reinvigorate their trounced allies and restore balance.
                 </p>
                 <div class="trending-list" data-animation-in="fadeInUp" data-delay-in="1.2">
                   <div class="text-primary title starring">
@@ -390,11 +117,11 @@
                 </div>
               </div>
             </div>
-            <div class="col-xl-5 col-lg-12 col-md-12 trailor-video">
-              <a href="video/trailer.mp4" class="video-open playbtn">
-                <img onclick="ShowTrailerVideoOnScreen('AvengerEndgame')" src="images/play.png" class="play" alt="" />
+            <div onclick="searchMovieTrailer('AvengerEndgame')"  class="col-xl-5 col-lg-12 col-md-12 trailor-video">
+              <!-- <a href=""  class="video-open playbtn"> -->
+                <img src="images/play.png" class="play" alt="" />
                 <span class="w-trailor">Watch Trailer</span>
-              </a>
+              <!-- </a> -->
             </div>
           </div>
         </div>
@@ -411,7 +138,7 @@
                 </a>
                 <h1 class="slider-text big-title title text-uppercase" data-animation-in="fadeInLeft"
                   data-delay-in="0.6">
-                 Love and Thunder
+                  Love and Thunder
                 </h1>
                 <div class="d-flex flex-wrap align-items-center fadeInLeft animated" data-animation-in="fadeInLeft"
                   style="opacity: 1">
@@ -432,7 +159,9 @@
                   </div>
                 </div>
                 <p data-animation-in="fadeInUp">
-                  Thor embarks on a journey unlike anything he's ever faced -- a quest for inner peace. However, his retirement gets interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the gods. To combat the threat, Thor enlists the help of King
+                  Thor embarks on a journey unlike anything he's ever faced -- a quest for inner peace. However, his
+                  retirement gets interrupted by Gorr the God Butcher, a galactic killer who seeks the extinction of the
+                  gods. To combat the threat, Thor enlists the help of King
                 </p>
                 <div class="trending-list" data-animation-in="fadeInUp" data-delay-in="1.2">
                   <div class="text-primary title starring">
@@ -457,8 +186,9 @@
               </div>
             </div>
             <div class="col-xl-5 col-lg-12 col-md-12 trailor-video">
-              <a href="video/trailer.mp4" class="video-open playbtn">
-                <img onclick="ShowTrailerVideoOnScreen('ThorLoveAndThunder')" src="images/play.png" class="play" alt="" />
+              <a href="" class="video-open playbtn">
+                <img onclick="searchMovieTrailer('ThorLoveAndThunder')" src="images/play.png" class="play"
+                  alt="" />
                 <span class="w-trailor">Watch Trailer</span>
               </a>
             </div>
@@ -498,7 +228,8 @@
                   </div>
                 </div>
                 <p data-animation-in="fadeInUp">
-                  A simple man with a disability embarks on an extraordinary journey, meeting many friends along the way.
+                  A simple man with a disability embarks on an extraordinary journey, meeting many friends along the
+                  way.
                 </p>
                 <div class="trending-list" data-animation-in="fadeInUp" data-delay-in="1.2">
                   <div class="text-primary title starring">
@@ -522,8 +253,8 @@
               </div>
             </div>
             <div class="col-xl-5 col-lg-12 col-md-12 trailor-video">
-              <a href="video/trailer.mp4" class="video-open playbtn">
-                <img onclick="ShowTrailerVideoOnScreen('Lal Singh Chadha')" src="images/play.png"  class="play" alt="" />
+              <a href="" class="video-open playbtn">
+                <img onclick="searchMovieTrailer('Lal Singh Chadha')" src="images/play.png" class="play" alt="" />
                 <span class="w-trailor">Watch Trailer</span>
               </a>
             </div>
@@ -563,7 +294,8 @@
                   </div>
                 </div>
                 <p data-animation-in="fadeInUp">
-                  Ponniyin Selvan: I is a 2022 Indian Tamil-language epic historical action drama film directed by Mani Ratnam, who co-wrote it with Elango
+                  Ponniyin Selvan: I is a 2022 Indian Tamil-language epic historical action drama film directed by Mani
+                  Ratnam, who co-wrote it with Elango
                 </p>
                 <div class="trending-list" data-animation-in="fadeInUp" data-delay-in="1.2">
                   <div class="text-primary title starring">
@@ -586,8 +318,9 @@
               </div>
             </div>
             <div class="col-xl-5 col-lg-12 col-md-12 trailor-video">
-              <a href="video/trailer.mp4" class="video-open playbtn">
-                <img onclick="ShowTrailerVideoOnScreen('Ponniyin Selvan: I')"  src="images/play.png" class="play" alt="" />
+              <a href="" class="video-open playbtn">
+                <img onclick="searchMovieTrailer('Ponniyin Selvan: I')" src="images/play.png" class="play"
+                  alt="" />
                 <span class="w-trailor">Watch Trailer</span>
               </a>
             </div>
@@ -606,7 +339,7 @@
                 </a>
                 <h1 class="slider-text big-title title text-uppercase" data-animation-in="fadeInLeft"
                   data-delay-in="0.6">
-                 Jhon Wick 2
+                  Jhon Wick 2
                 </h1>
                 <div class="d-flex flex-wrap align-items-center fadeInLeft animated" data-animation-in="fadeInLeft"
                   style="opacity: 1">
@@ -627,7 +360,8 @@
                   </div>
                 </div>
                 <p data-animation-in="fadeInUp">
-                  John Wick is declared excommunicado and a hefty bounty is set on him after he murders an international crime lord. He sets out to seek help to save himself from ruthless hitmen and bounty hunters.
+                  John Wick is declared excommunicado and a hefty bounty is set on him after he murders an international
+                  crime lord. He sets out to seek help to save himself from ruthless hitmen and bounty hunters.
                 </p>
                 <div class="trending-list" data-animation-in="fadeInUp" data-delay-in="1.2">
                   <div class="text-primary title starring">
@@ -649,8 +383,8 @@
               </div>
             </div>
             <div class="col-xl-5 col-lg-12 col-md-12 trailor-video">
-              <a href="video/trailer.mp4" class="video-open playbtn">
-                <img onclick="ShowTrailerVideoOnScreen('Jhon Wick 2')"  src="images/play.png" class="play" alt="" />
+              <a href="" class="video-open playbtn">
+                <img onclick="searchMovieTrailer('Jhon Wick 2')" src="images/play.png" class="play" alt="" />
                 <span class="w-trailor">Watch Trailer</span>
               </a>
             </div>
@@ -690,7 +424,9 @@
                   </div>
                 </div>
                 <p data-animation-in="fadeInUp">
-                  In ancient Kahndaq, Teth Adam was bestowed the almighty powers of the gods. After using these powers for vengeance, he was imprisoned, becoming Black Adam. Nearly 5,000 years have passed, and Black Adam has gone from man to myth to legend. Now free, his unique form of justice,
+                  In ancient Kahndaq, Teth Adam was bestowed the almighty powers of the gods. After using these powers
+                  for vengeance, he was imprisoned, becoming Black Adam. Nearly 5,000 years have passed, and Black Adam
+                  has gone from man to myth to legend. Now free, his unique form of justice,
                 </p>
                 <div class="trending-list" data-animation-in="fadeInUp" data-delay-in="1.2">
                   <div class="text-primary title starring">
@@ -713,8 +449,8 @@
               </div>
             </div>
             <div class="col-xl-5 col-lg-12 col-md-12 trailor-video">
-              <a href="video/trailer.mp4" class="video-open playbtn">
-                <img onclick="ShowTrailerVideoOnScreen('Black Adam')"  src="images/play.png" class="play" alt="" />
+              <a href="" class="video-open playbtn">
+                <img onclick="searchMovieTrailer('Black Adam')" src="images/play.png" class="play" alt="" />
                 <span class="w-trailor">Watch Trailer</span>
               </a>
             </div>
@@ -726,7 +462,7 @@
   <!-- slider ends -->
 
   <!-- main content starts  -->
-  <div class="main-content">
+  <div id="main-content" class="main-content">
     <!-- favorite section starts   -->
 
     <section id="iq-favorites">
@@ -741,7 +477,7 @@
               <ul class="favorites-slider list-inline row p-0 mb-0">
                 <!-- slide item 1 -->
                 <li class="slide-item">
-                  <div  class="block-images position-relative">
+                  <div class="block-images position-relative">
                     <div class="img-box">
                       <img src="images/favorite/f1.jpg" class="img-fluid" alt="" />
                     </div>
@@ -762,7 +498,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -773,11 +509,11 @@
                           </div>
                         </li> -->
                         <li>
-                          <span  onclick="AddToLiked('Insidious')" ><i class="fa fa-heart"></i></span>
+                          <span onclick="AddToLiked('Insidious')"><i class="fa fa-heart"></i></span>
                           <span class="count-box">19+</span>
                         </li>
                         <li>
-                          <span  onclick="AddtoMyList('Insidious')" ><i class="fa fa-plus"></i></span>
+                          <span onclick="AddtoMyList('Insidious')"><i class="fa fa-plus"></i></span>
                         </li>
                       </ul>
                     </div>
@@ -785,13 +521,13 @@
                 </li>
                 <!-- slide item 2 -->
                 <li class="slide-item">
-                  <div  class="block-images position-relative">
+                  <div class="block-images position-relative">
                     <div class="img-box">
                       <img src="images/favorite/f2.jpg" class="img-fluid" alt="" />
                     </div>
                     <div class="block-description">
                       <h6 class="iq-title">
-                        <a href="#" onclick="SeeMovieDetails('War')" > War </a>
+                        <a href="#" onclick="SeeMovieDetails('War')"> War </a>
                       </h6>
                       <div class="movie-time d-flex align-items-center my-2">
                         <div class="badge badge-secondary p-1 mr-2">12+</div>
@@ -806,7 +542,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -817,8 +553,8 @@
                           </div>
                         </li> -->
                         <li>
-                          <span onclick="AddToLiked('War')" ><i class="fa fa-heart"></i></span>
-                          <span  onclick="AddtoMyList('War')" class="count-box">58+</span>
+                          <span onclick="AddToLiked('War')"><i class="fa fa-heart"></i></span>
+                          <span onclick="AddtoMyList('War')" class="count-box">58+</span>
                         </li>
                         <li>
                           <span><i class="fa fa-plus"></i></span>
@@ -829,7 +565,7 @@
                 </li>
                 <!-- slide item 3 -->
                 <li class="slide-item">
-                  <div    class="block-images position-relative">
+                  <div class="block-images position-relative">
                     <div class="img-box">
                       <img src="images/favorite/f3.jpg" class="img-fluid" alt="" />
                     </div>
@@ -850,7 +586,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -861,8 +597,8 @@
                           </div>
                         </li> -->
                         <li>
-                          <span onclick="AddToLiked(' Five Feet Apart')" ><i class="fa fa-heart"></i></span>
-                          <span  onclick="AddtoMyList(' Five Feet Apart')"  class="count-box">19+</span>
+                          <span onclick="AddToLiked(' Five Feet Apart')"><i class="fa fa-heart"></i></span>
+                          <span onclick="AddtoMyList(' Five Feet Apart')" class="count-box">19+</span>
                         </li>
                         <li>
                           <span><i class="fa fa-plus"></i></span>
@@ -873,13 +609,13 @@
                 </li>
                 <!-- slide item 4 -->
                 <li class="slide-item">
-                  <div  class="block-images position-relative">
+                  <div class="block-images position-relative">
                     <div class="img-box">
                       <img src="images/favorite/f4.jpg" class="img-fluid" alt="" />
                     </div>
                     <div class="block-description">
                       <h6 class="iq-title">
-                        <a href="#"  onclick="SeeMovieDetails('Chhichhore')" > Chhichore </a>
+                        <a href="#" onclick="SeeMovieDetails('Chhichhore')"> Chhichore </a>
                       </h6>
                       <div class="movie-time d-flex align-items-center my-2">
                         <div class="badge badge-secondary p-1 mr-2">10+</div>
@@ -894,7 +630,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -905,11 +641,11 @@
                           </div>
                         </li> -->
                         <li>
-                          <span  onclick="AddToLiked('Chhichhore')"  ><i class="fa fa-heart"></i></span>
-                          <span  class="count-box">19+</span>
+                          <span onclick="AddToLiked('Chhichhore')"><i class="fa fa-heart"></i></span>
+                          <span class="count-box">19+</span>
                         </li>
                         <li>
-                          <span onclick="AddtoMyList('Chhichhore')"   ><i class="fa fa-plus"></i></span>
+                          <span onclick="AddtoMyList('Chhichhore')"><i class="fa fa-plus"></i></span>
                         </li>
                       </ul>
                     </div>
@@ -917,13 +653,13 @@
                 </li>
                 <!-- slide item 5 -->
                 <li class="slide-item">
-                  <div   class="block-images position-relative">
+                  <div class="block-images position-relative">
                     <div class="img-box">
                       <img src="images/favorite/f5.jpg" class="img-fluid" alt="" />
                     </div>
                     <div class="block-description">
                       <h6 class="iq-title">
-                        <a href="#"  onclick="SeeMovieDetails('Doctor Strange')"> Doctor Strange </a>
+                        <a href="#" onclick="SeeMovieDetails('Doctor Strange')"> Doctor Strange </a>
                       </h6>
                       <div class="movie-time d-flex align-items-center my-2">
                         <div class="badge badge-secondary p-1 mr-2">12+</div>
@@ -938,7 +674,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -949,11 +685,11 @@
                           </div>
                         </li> -->
                         <li>
-                          <span onclick="AddToLiked('DoctorStrange')" ><i class="fa fa-heart"></i></span>
+                          <span onclick="AddToLiked('DoctorStrange')"><i class="fa fa-heart"></i></span>
                           <span class="count-box">19+</span>
                         </li>
                         <li>
-                          <span onclick="AddtoMyList('DoctorStrange')" ><i class="fa fa-plus"></i></span>
+                          <span onclick="AddtoMyList('DoctorStrange')"><i class="fa fa-plus"></i></span>
                         </li>
                       </ul>
                     </div>
@@ -1002,7 +738,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -1017,7 +753,7 @@
                           <span class="count-box">89+</span>
                         </li>
                         <li>
-                          <span onclick="AddtoMyList('Mulan')" ><i class="fa fa-plus"></i></span>
+                          <span onclick="AddtoMyList('Mulan')"><i class="fa fa-plus"></i></span>
                         </li>
                       </ul>
                     </div>
@@ -1046,7 +782,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -1061,7 +797,7 @@
                           <span class="count-box">35+</span>
                         </li>
                         <li>
-                          <span onclick="AddtoMyList('Laxmii')" ><i class="fa fa-plus"></i></span>
+                          <span onclick="AddtoMyList('Laxmii')"><i class="fa fa-plus"></i></span>
                         </li>
                       </ul>
                     </div>
@@ -1090,7 +826,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -1105,7 +841,7 @@
                           <span class="count-box">99+</span>
                         </li>
                         <li>
-                          <span onclick="AddtoMyList('Captain America')" ><i class="fa fa-plus"></i></span>
+                          <span onclick="AddtoMyList('Captain America')"><i class="fa fa-plus"></i></span>
                         </li>
                       </ul>
                     </div>
@@ -1134,7 +870,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -1149,7 +885,7 @@
                           <span class="count-box">19+</span>
                         </li>
                         <li>
-                          <span onclick="AddtoMyList('Life of Pie')" ><i class="fa fa-plus"></i></span>
+                          <span onclick="AddtoMyList('Life of Pie')"><i class="fa fa-plus"></i></span>
                         </li>
                       </ul>
                     </div>
@@ -1178,7 +914,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -1193,7 +929,7 @@
                           <span class="count-box">19+</span>
                         </li>
                         <li>
-                          <span onclick="AddtoMyList('Mission Mangal')" ><i class="fa fa-plus"></i></span>
+                          <span onclick="AddtoMyList('Mission Mangal')"><i class="fa fa-plus"></i></span>
                         </li>
                       </ul>
                     </div>
@@ -1219,9 +955,9 @@
               </h4>
               <ul id="top-ten-slider" class="list-inline p-0 m-0 d-flex align-items-center">
                 <li class="slick-bg">
-                  <a href="#" >
+                  <a href="#">
                     <img src="images/top-10/01.jpg" class="img-fluid w-100" alt="" />
-                    <h6 class="iq-title"><a href="#" >Harry Potter</a></h6>
+                    <h6 class="iq-title"><a href="#">Harry Potter</a></h6>
                   </a>
                 </li>
                 <li class="slick-bg">
@@ -1272,9 +1008,9 @@
                           </div>
                           <span class="text-white">8 Parts</span>
                         </div>
-                        <div class="hover-buttons" onclick="SeeMovieDetails('Harry Potter')" >
+                        <div class="hover-buttons" onclick="SeeMovieDetails('Harry Potter')">
                           <a href="" class="btn btn-hover" tabindex="0">
-                            <i  class="fa fa-play mr-1" aria-hidden="true"></i>
+                            <i class="fa fa-play mr-1" aria-hidden="true"></i>
                             Play Now
                           </a>
                         </div>
@@ -1295,7 +1031,7 @@
                           <span class="text-white">1 Season</span>
                         </div>
                         <div class="hover-buttons" onclick="SeeMovieDetails('The Queens Gambit')">
-                          <a  href="" class="btn btn-hover" tabindex="0">
+                          <a href="" class="btn btn-hover" tabindex="0">
                             <i class="fa fa-play mr-1" aria-hidden="true"></i>
                             Play Now
                           </a>
@@ -1432,7 +1168,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -1476,7 +1212,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -1520,7 +1256,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -1564,7 +1300,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -1608,7 +1344,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -1684,7 +1420,9 @@
           </div>
           <div class="col-lg-8">
             <div class="parallax-img">
-              <a href="#"><img src="https://m.media-amazon.com/images/M/MV5BMWFmYmRiYzMtMTQ4YS00NjA5LTliYTgtMmM3OTc4OGY3MTFkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg" alt="" class="img-fluid w-100" /></a>
+              <a href="#"><img
+                  src="https://m.media-amazon.com/images/M/MV5BMWFmYmRiYzMtMTQ4YS00NjA5LTliYTgtMmM3OTc4OGY3MTFkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg"
+                  alt="" class="img-fluid w-100" /></a>
             </div>
           </div>
         </div>
@@ -1751,24 +1489,30 @@
                   <div class="tranding-block position-relative" style="background-image: url(images/trending/01.jpg);">
                     <div class="trending-custom-tab">
                       <div class="tab-title-info position-relative">
-                        <ul class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center" role="tablist">
+                        <ul
+                          class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center"
+                          role="tablist">
                           <li class="nav-item">
-                            <a href="#trending-data1" class="nav-link active show" data-toggle="pill" role="tab" aria-selected="true">
+                            <a href="#trending-data1" class="nav-link active show" data-toggle="pill" role="tab"
+                              aria-selected="true">
                               Overview
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data2" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data2" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Episodes
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data3" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data3" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Trailers
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data4" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data4" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Similiar Like This
                             </a>
                           </li>
@@ -1797,23 +1541,25 @@
                               <span class="text-gold ml-3">#2 in Series Today</span>
                             </div>
                             <p class="trending-dec">
-                              the Crown is a historical drama television series about the reign of Queen Elizabeth II, created and principally written by Peter Morgan and produced by .....
+                              the Crown is a historical drama television series about the reign of Queen Elizabeth II,
+                              created and principally written by Peter Morgan and produced by .....
                             </p>
                             <div class="p-btns">
                               <div class="d-flex align-items-center p-0">
-                                <a href="" onclick="SeeMovieDetails('TheCrown')" class="btn btn-hover mr-2" tabindex="0">
+                                <a href="" onclick="SeeMovieDetails('TheCrown')" class="btn btn-hover mr-2"
+                                  tabindex="0">
                                   <i class="fa fa-play mr-2"></i>
                                   Play Now
                                 </a>
                                 <a href="" onclick="AddtoMyList('TheCrown')" class="btn btn-link" tabindex="0">
                                   <i class="fa fa-plus pr-2"></i>
-                                  My List 
+                                  My List
                                 </a>
                               </div>
                             </div>
                             <div class="trending-list mt-4">
                               <div class="text-primary title">
-                                Starring : 
+                                Starring :
                                 <span class="text-body">
                                   Clarie Foy, Olivia Colman, Imelda Staunton
                                 </span>
@@ -1844,7 +1590,7 @@
                             <h1 class="trending-text big-title text-uppercase">the Crown</h1>
                             <div class="d-flex align-items-center text-white text-detail mb-4">
                               <span class="season_date">
-                                2 Seasons 
+                                2 Seasons
                               </span>
                               <span class="trending-year">Feb 2019</span>
                             </div>
@@ -2221,24 +1967,30 @@
                   <div class="tranding-block position-relative" style="background-image: url(images/trending/02.jpg);">
                     <div class="trending-custom-tab">
                       <div class="tab-title-info position-relative">
-                        <ul class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center" role="tablist">
+                        <ul
+                          class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center"
+                          role="tablist">
                           <li class="nav-item">
-                            <a href="#trending-data5" class="nav-link active show" data-toggle="pill" role="tab" aria-selected="true">
+                            <a href="#trending-data5" class="nav-link active show" data-toggle="pill" role="tab"
+                              aria-selected="true">
                               Overview
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data6" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data6" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Episodes
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data7" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data7" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Trailers
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data8" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data8" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Similiar Like This
                             </a>
                           </li>
@@ -2267,7 +2019,8 @@
                               <span class="text-gold ml-3">#3 in Series Today</span>
                             </div>
                             <p class="trending-dec">
-                              A woman who moves into an appartment across the hall from two brilliant but social awkward physicists shows then how little they know about life outside of the laboratory.
+                              A woman who moves into an appartment across the hall from two brilliant but social awkward
+                              physicists shows then how little they know about life outside of the laboratory.
                             </p>
                             <div class="p-btns">
                               <div class="d-flex align-items-center p-0">
@@ -2277,13 +2030,13 @@
                                 </a>
                                 <a href="#" class="btn btn-link" tabindex="0">
                                   <i class="fa fa-plus pr-2"></i>
-                                  My List 
+                                  My List
                                 </a>
                               </div>
                             </div>
                             <div class="trending-list mt-4">
                               <div class="text-primary title">
-                                Starring : 
+                                Starring :
                                 <span class="text-body">
                                   Jhonny Galecki, Jim Parsons , Kaley Cuoco
                                 </span>
@@ -2314,7 +2067,7 @@
                             <h1 class="trending-text big-title text-uppercase">Big Bang Theory</h1>
                             <div class="d-flex align-items-center text-white text-detail mb-4">
                               <span class="season_date">
-                                12 Seasons 
+                                12 Seasons
                               </span>
                               <span class="trending-year">Feb 2019</span>
                             </div>
@@ -2697,24 +2450,30 @@
                   <div class="tranding-block position-relative" style="background-image: url(images/trending/03.jpg);">
                     <div class="trending-custom-tab">
                       <div class="tab-title-info position-relative">
-                        <ul class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center" role="tablist">
+                        <ul
+                          class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center"
+                          role="tablist">
                           <li class="nav-item">
-                            <a href="#trending-data9" class="nav-link active show" data-toggle="pill" role="tab" aria-selected="true">
+                            <a href="#trending-data9" class="nav-link active show" data-toggle="pill" role="tab"
+                              aria-selected="true">
                               Overview
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data10" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data10" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Episodes
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data11" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data11" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Trailers
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data12" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data12" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Similiar Like This
                             </a>
                           </li>
@@ -2743,7 +2502,8 @@
                               <span class="text-gold ml-3">#5 in Series Today</span>
                             </div>
                             <p class="trending-dec">
-                              A gangster family epic set in 1990s England, centering on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby.
+                              A gangster family epic set in 1990s England, centering on a gang who sew razor blades in
+                              the peaks of their caps, and their fierce boss Tommy Shelby.
                             </p>
                             <div class="p-btns">
                               <div class="d-flex align-items-center p-0">
@@ -2753,13 +2513,13 @@
                                 </a>
                                 <a href="#" class="btn btn-link" tabindex="0">
                                   <i class="fa fa-plus pr-2"></i>
-                                  My List 
+                                  My List
                                 </a>
                               </div>
                             </div>
                             <div class="trending-list mt-4">
                               <div class="text-primary title">
-                                Starring : 
+                                Starring :
                                 <span class="text-body">
                                   Cillian Murphy, Paul Anderson, Helen McCrory
                                 </span>
@@ -2790,7 +2550,7 @@
                             <h1 class="trending-text big-title text-uppercase">Peaky Blinders</h1>
                             <div class="d-flex align-items-center text-white text-detail mb-4">
                               <span class="season_date">
-                                2 Seasons 
+                                2 Seasons
                               </span>
                               <span class="trending-year">Feb 2019</span>
                             </div>
@@ -3167,24 +2927,30 @@
                   <div class="tranding-block position-relative" style="background-image: url(images/trending/04.jpg);">
                     <div class="trending-custom-tab">
                       <div class="tab-title-info position-relative">
-                        <ul class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center" role="tablist">
+                        <ul
+                          class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center"
+                          role="tablist">
                           <li class="nav-item">
-                            <a href="#trending-data13" class="nav-link active show" data-toggle="pill" role="tab" aria-selected="true">
+                            <a href="#trending-data13" class="nav-link active show" data-toggle="pill" role="tab"
+                              aria-selected="true">
                               Overview
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data14" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data14" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Episodes
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data15" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data15" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Trailers
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data16" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data16" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Similiar Like This
                             </a>
                           </li>
@@ -3213,7 +2979,8 @@
                               <span class="text-gold ml-3">#21 in Series Today</span>
                             </div>
                             <p class="trending-dec">
-                              A chronicled look at the criminal exploits of Colombian drug lord Pablo Escobar, as well as the many other drug kingpins who plagued the country through the years.
+                              A chronicled look at the criminal exploits of Colombian drug lord Pablo Escobar, as well
+                              as the many other drug kingpins who plagued the country through the years.
                             </p>
                             <div class="p-btns">
                               <div class="d-flex align-items-center p-0">
@@ -3223,13 +2990,13 @@
                                 </a>
                                 <a href="#" class="btn btn-link" tabindex="0">
                                   <i class="fa fa-plus pr-2"></i>
-                                  My List 
+                                  My List
                                 </a>
                               </div>
                             </div>
                             <div class="trending-list mt-4">
                               <div class="text-primary title">
-                                Starring : 
+                                Starring :
                                 <span class="text-body">
                                   Pedro Pascal, Wagner Moura, Boyd Holbrook
                                 </span>
@@ -3260,7 +3027,7 @@
                             <h1 class="trending-text big-title text-uppercase">Narcos</h1>
                             <div class="d-flex align-items-center text-white text-detail mb-4">
                               <span class="season_date">
-                                2 Seasons 
+                                2 Seasons
                               </span>
                               <span class="trending-year">Feb 2019</span>
                             </div>
@@ -3637,24 +3404,30 @@
                   <div class="tranding-block position-relative" style="background-image: url(images/trending/05.jpg);">
                     <div class="trending-custom-tab">
                       <div class="tab-title-info position-relative">
-                        <ul class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center" role="tablist">
+                        <ul
+                          class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center"
+                          role="tablist">
                           <li class="nav-item">
-                            <a href="#trending-data17" class="nav-link active show" data-toggle="pill" role="tab" aria-selected="true">
+                            <a href="#trending-data17" class="nav-link active show" data-toggle="pill" role="tab"
+                              aria-selected="true">
                               Overview
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data18" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data18" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Episodes
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data19" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data19" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Trailers
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data20" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data20" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Similiar Like This
                             </a>
                           </li>
@@ -3683,7 +3456,8 @@
                               <span class="text-gold ml-3">#6 in Series Today</span>
                             </div>
                             <p class="trending-dec">
-                              Follows the personal and professional lives of six twenty to thirty-something-year-old friends living in Manhattan.
+                              Follows the personal and professional lives of six twenty to thirty-something-year-old
+                              friends living in Manhattan.
                             </p>
                             <div class="p-btns">
                               <div class="d-flex align-items-center p-0">
@@ -3693,13 +3467,13 @@
                                 </a>
                                 <a href="#" class="btn btn-link" tabindex="0">
                                   <i class="fa fa-plus pr-2"></i>
-                                  My List 
+                                  My List
                                 </a>
                               </div>
                             </div>
                             <div class="trending-list mt-4">
                               <div class="text-primary title">
-                                Starring : 
+                                Starring :
                                 <span class="text-body">
                                   Jennifer Aniston, Courteney Cox, Lisa Kudrow
                                 </span>
@@ -3730,7 +3504,7 @@
                             <h1 class="trending-text big-title text-uppercase">FRIENDS</h1>
                             <div class="d-flex align-items-center text-white text-detail mb-4">
                               <span class="season_date">
-                                10 Seasons 
+                                10 Seasons
                               </span>
                               <span class="trending-year">Feb 2019</span>
                             </div>
@@ -4108,24 +3882,30 @@
                   <div class="tranding-block position-relative" style="background-image: url(images/trending/06.jpg);">
                     <div class="trending-custom-tab">
                       <div class="tab-title-info position-relative">
-                        <ul class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center" role="tablist">
+                        <ul
+                          class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center"
+                          role="tablist">
                           <li class="nav-item">
-                            <a href="#trending-data21" class="nav-link active show" data-toggle="pill" role="tab" aria-selected="true">
+                            <a href="#trending-data21" class="nav-link active show" data-toggle="pill" role="tab"
+                              aria-selected="true">
                               Overview
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data22" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data22" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Episodes
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data23" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data23" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Trailers
                             </a>
                           </li>
                           <li class="nav-item">
-                            <a href="#trending-data24" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                            <a href="#trending-data24" class="nav-link" data-toggle="pill" role="tab"
+                              aria-selected="false">
                               Similiar Like This
                             </a>
                           </li>
@@ -4154,7 +3934,8 @@
                               <span class="text-gold ml-3">#11 in Series Today</span>
                             </div>
                             <p class="trending-dec">
-                              A shocking incident at a wedding procession ignites a series of events entangling the lives of two families in the lawless city of Mirzapur.
+                              A shocking incident at a wedding procession ignites a series of events entangling the
+                              lives of two families in the lawless city of Mirzapur.
                             </p>
                             <div class="p-btns">
                               <div class="d-flex align-items-center p-0">
@@ -4164,21 +3945,21 @@
                                 </a>
                                 <a href="#" class="btn btn-link" tabindex="0">
                                   <i class="fa fa-plus pr-2"></i>
-                                  My List 
+                                  My List
                                 </a>
                               </div>
                             </div>
                             <div class="trending-list mt-4">
                               <div class="text-primary title">
-                                Starring : 
+                                Starring :
                                 <span class="text-body">
-                                  Pankaj Tripathi, Ali Fazal, Divyendu Sharma 
+                                  Pankaj Tripathi, Ali Fazal, Divyendu Sharma
                                 </span>
                               </div>
                               <div class="text-primary title">
                                 Genres :
                                 <span class="text-body">
-                                  Action, Crime, Drama 
+                                  Action, Crime, Drama
                                 </span>
                               </div>
                               <div class="text-primary title">
@@ -4201,7 +3982,7 @@
                             <h1 class="trending-text big-title text-uppercase">Mirzapur</h1>
                             <div class="d-flex align-items-center text-white text-detail mb-4">
                               <span class="season_date">
-                                2 Seasons 
+                                2 Seasons
                               </span>
                               <span class="trending-year">Feb 2019</span>
                             </div>
@@ -4584,7 +4365,7 @@
           <div class="col-sm-12 overflow-hidden">
             <div class="iq-main-header d-flex align-items-center justify-content-between">
               <h4 class="main-title">Recommended For You</h4>
-              <a href="/Pages/Netflix_Home_Page.html"  id="viewAllMovie" class="iq-view-all">View All</a>
+              <a href="/Pages/Netflix_Home_Page.html" id="viewAllMovie" class="iq-view-all">View All</a>
             </div>
             <div class="favorite-contens">
               <ul class="favorites-slider list-inline row p-0 mb-0">
@@ -4595,7 +4376,7 @@
                       <img src="images/tvthrillers/01.jpg" class="img-fluid" alt="" />
                     </div>
                     <div class="block-description">
-                      <h6  class="iq-title">
+                      <h6 class="iq-title">
                         <a onclick="SeeMovieDetails('The Martian')" href="">The Martian</a>
                       </h6>
                       <div class="movie-time d-flex align-items-center my-2">
@@ -4611,7 +4392,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -4626,7 +4407,7 @@
                           <span class="count-box">89+</span>
                         </li>
                         <li>
-                          <span onclick="AddtoMyList('The Martian')" ><i class="fa fa-plus"></i></span>
+                          <span onclick="AddtoMyList('The Martian')"><i class="fa fa-plus"></i></span>
                         </li>
                       </ul>
                     </div>
@@ -4639,7 +4420,7 @@
                       <img src="images/tvthrillers/02.jpg" class="img-fluid" alt="" />
                     </div>
                     <div class="block-description">
-                      <h6  class="iq-title">
+                      <h6 class="iq-title">
                         <a onclick="SeeMovieDetails('Unhinged')" href="">Unhinged</a>
                       </h6>
                       <div class="movie-time d-flex align-items-center my-2">
@@ -4655,7 +4436,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -4670,7 +4451,7 @@
                           <span class="count-box">35+</span>
                         </li>
                         <li>
-                          <span onclick="AddtoMyList('Unhinged')" ><i class="fa fa-plus"></i></span>
+                          <span onclick="AddtoMyList('Unhinged')"><i class="fa fa-plus"></i></span>
                         </li>
                       </ul>
                     </div>
@@ -4683,7 +4464,7 @@
                       <img src="images/tvthrillers/03.jpg" class="img-fluid" alt="" />
                     </div>
                     <div class="block-description">
-                      <h6  class="iq-title">
+                      <h6 class="iq-title">
                         <a onclick="SeeMovieDetails('Kingsman')" href="">Kingsman</a>
                       </h6>
                       <div class="movie-time d-flex align-items-center my-2">
@@ -4699,7 +4480,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -4710,11 +4491,11 @@
                           </div>
                         </li> -->
                         <li>
-                          <span onclick="AddToLiked('Kingsman')" ><i class="fa fa-heart"></i></span>
+                          <span onclick="AddToLiked('Kingsman')"><i class="fa fa-heart"></i></span>
                           <span class="count-box">99+</span>
                         </li>
                         <li>
-                          <span onclick="AddtoMyList('Kingsman')" ><i class="fa fa-plus"></i></span>
+                          <span onclick="AddtoMyList('Kingsman')"><i class="fa fa-plus"></i></span>
                         </li>
                       </ul>
                     </div>
@@ -4727,7 +4508,7 @@
                       <img src="images/tvthrillers/04.jpg" class="img-fluid" alt="" />
                     </div>
                     <div class="block-description">
-                      <h6  class="iq-title">
+                      <h6 class="iq-title">
                         <a onclick="SeeMovieDetails('Casino Royale')" href="">Casino Royale</a>
                       </h6>
                       <div class="movie-time d-flex align-items-center my-2">
@@ -4743,7 +4524,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -4758,7 +4539,7 @@
                           <span class="count-box">19+</span>
                         </li>
                         <li>
-                          <span onclick="AddtoMyList('Casino Royale')" ><i class="fa fa-plus"></i></span>
+                          <span onclick="AddtoMyList('Casino Royale')"><i class="fa fa-plus"></i></span>
                         </li>
                       </ul>
                     </div>
@@ -4768,10 +4549,12 @@
                 <li class="slide-item">
                   <div class="block-images position-relative">
                     <div class="img-box">
-                      <img style="height: inherit;" src="https://images.indianexpress.com/2021/11/spider-man-no-way-home-1200.jpg" class="img-fluid" alt="" />
+                      <img style="height: inherit;"
+                        src="https://images.indianexpress.com/2021/11/spider-man-no-way-home-1200.jpg" class="img-fluid"
+                        alt="" />
                     </div>
                     <div class="block-description">
-                      <h6  class="iq-title">
+                      <h6 class="iq-title">
                         <a onclick="SeeMovieDetails('Spider-Man: No Way Home')" href="">Spider-Man: No Way Home</a>
                       </h6>
                       <div class="movie-time d-flex align-items-center my-2">
@@ -4787,7 +4570,7 @@
                     </div>
                     <div class="block-social-info">
                       <ul class="list-inline p-0 m-0 music-play-lists">
-                          <!-- <li class="share">
+                        <!-- <li class="share">
                           <span><i class="fa fa-share-alt"></i></span>
                           <div class="share-box">
                             <div class="d-flex align-items-center">
@@ -4802,7 +4585,7 @@
                           <span class="count-box">19+</span>
                         </li>
                         <li>
-                          <span onclick="AddtoMyList('Spider-Man: No Way Home')" ><i class="fa fa-plus"></i></span>
+                          <span onclick="AddtoMyList('Spider-Man: No Way Home')"><i class="fa fa-plus"></i></span>
                         </li>
                       </ul>
                     </div>
@@ -4821,7 +4604,7 @@
   <!-- main content ends  -->
 
 
-  <footer class="iq-bg-dark">
+  <footer id="footer" class="iq-bg-dark">
     <div class="footer-top">
       <div class="container-fluid">
         <div class="row footer-standard">
@@ -4838,7 +4621,9 @@
             </div>
             <div class="widget text-left">
               <div class="textwidget">
-                <p><small>This is Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quo tempore. Quasi rem rerum est in nulla atque quibusdam illo. this is footer and simple tsesxij is writen jkd. fsek hello how are you. please like and subscribe. footer ends .</small></p>
+                <p><small>This is Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quo tempore.
+                    Quasi rem rerum est in nulla atque quibusdam illo. this is footer and simple tsesxij is writen jkd.
+                    fsek hello how are you. please like and subscribe. footer ends .</small></p>
               </div>
             </div>
           </div>
@@ -4850,19 +4635,19 @@
               <li>
                 <a href="#">
                   <i>
-                  <fa class="fa fa-facebook"></fa>
+                    <fa class="fa fa-facebook"></fa>
                 </a>
               </li>
               <li>
                 <a href="#">
                   <i>
-                  <fa class="fa fa-youtube"></fa>
+                    <fa class="fa fa-youtube"></fa>
                 </a>
               </li>
               <li>
                 <a href="#">
                   <i>
-                  <fa class="fa fa-instagram"></fa>
+                    <fa class="fa fa-instagram"></fa>
                 </a>
               </li>
             </ul>
@@ -4871,7 +4656,7 @@
             <div class="widget text-left">
               <div class="textwidget">
                 <h6 class="footer-link-title">
-                  NetFlix App 
+                  NetFlix App
                 </h6>
                 <div class="d-flex align-items-center">
                   <a href="#"><img src="images/footer/01.jpg" alt=""></a>
@@ -4895,9 +4680,10 @@
   <script src="js/select2.min.js"></script>
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/slick-animation.min.js"></script>
-  <script src="/Netflix_Home_Page_Static_Main/myscript.js"></script>
+  <script type="module" src="/Netflix_Home_Page_Static_Main/myscript.js"></script>
 
   <script src="main.js"></script>
+
 </body>
 
 </html>

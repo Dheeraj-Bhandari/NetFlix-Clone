@@ -265,6 +265,8 @@ function playfullscreentrailer(){
         }
       }, false);
 }
+
+
 window.saveToMyList= saveToMyList;
 const saveListItems = JSON.parse(localStorage.getItem("SavedList")) || [];
 function saveToMyList(id){
