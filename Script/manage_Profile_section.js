@@ -1,3 +1,9 @@
+const btn = document.querySelector(".redirect-homePage");
+
+const redirectToHomePage = ()=> {
+    // location.href = '../Pages/Netflix_Home_Page.html';
+}
+btn.addEventListener("click", redirectToHomePage());
 
 const memberDiv = document.querySelector("#member-Div");
 function addUserProfile() {
