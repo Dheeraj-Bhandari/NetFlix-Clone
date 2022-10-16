@@ -48,7 +48,7 @@ function buildBannerSection(movie){
             <p class="banner-info">Trending in Movies | Rating - ${(movie.vote_average).toFixed(1)}</p>
             <p class="banner-overview">${movie.overview && movie.overview.length>200 ? movie.overview.slice(0,200).trim()+"...": movie.overview}</p>
             <div class="action-button-cont">
-                <button onclick="searchMovieTrailerandPlay('${movie.title || movie.name}  trailer')" class="action-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                <button onclick="MovieDetailsPage(${movie.id})" class="action-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg" class="Hawkins-Icon Hawkins-Icon-Standard">
                         <path
                             d="M4 2.69127C4 1.93067 4.81547 1.44851 5.48192 1.81506L22.4069 11.1238C23.0977 11.5037 23.0977 12.4963 22.4069 12.8762L5.48192 22.1849C4.81546 22.5515 4 22.0693 4 21.3087V2.69127Z"
@@ -144,7 +144,7 @@ function buildMovieSection(list,categoryName){
                     <div class="text">
                         <div id="texticon">
                             <div id="textfirst3icon">
-                                <button onclick="searchMovieTrailerandPlay('${item.title || item.name} trailer')" ><i class="fa-1x fa-solid fa-play"></i></button>
+                                <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-play"></i></button>
                                 <button id="${item.id}" onclick="saveToMyList(${item.id})" ><i class="fa-solid fa-plus"></i></button>
                                 <button id="liked${item.id}" onclick="myLikedMovie(${item.id})" ><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
                             </div>
@@ -204,7 +204,7 @@ function buildMovieSection(list,categoryName){
                         <div class="text">
                             <div id="texticon">
                                 <div id="textfirst3icon">
-                                    <button onclick="searchMovieTrailerandPlay('${item.title || item.name}trailer')" ><i class="fa-1x fa-solid fa-play"></i></button>
+                                    <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-play"></i></button>
                                     <button id="${item.id}" onclick="saveToMyList(${item.id})" ><i class="fa-solid fa-plus"></i></button>
                                     <button><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
                                 </div>
@@ -458,70 +458,13 @@ window.debounceMovies = debounceMovies;
 
 // Search Movie Function End
 
-<<<<<<< HEAD
-const speechRecognition = window.webkitSpeechRecognition;
-const recognition = new speechRecognition();
+// const speechRecognition = window.webkitSpeechRecognition;
+// const recognition = new speechRecognition();
 
-const searcBox = document.querySelector("#input");
-=======
-// Play Full Screen Function
+// const searcBox = document.querySelector("#input").value;
 
+// recognition.continous = true;
 
-// Search Trailer
-
-function searchMovieTrailerandPlay(movieName) {
-    console.log("Helo")
-    // if(!movieName) return;
-
-    fetch(apiPath.searchMovieTraileronYoutube(movieName))
-        .then(res => res.json())
-        .then(res => {
-            console.log(res.items);
-            const VideoId = res.items[0];
-            const youtubeUrl = `https://www.youtube.com/watch?v=${VideoId.id.videoId}`
-            console.log(youtubeUrl);
-            // window.open(youtubeUrl, '_blank')
-            //    const iframelement  = document.getElementById(iframeId)
-            //    iframelement.src = `https://www.youtube.com/embed/${VideoId.id.videoId}?autoplay=1&mute=1`
-            playfullscreentrailer(`https://www.youtube.com/embed/${VideoId.id.videoId}?autoplay=1&mute=1`)
-        }).catch(err => console.log(err))
-}
-
-
-function playfullscreentrailer(src) {
-    const frame = `
-    <iframe id="iframe" src="${src}" style="position:fixed; margin-top: 20px; top: 20px;; left:0; bottom:0; right:0;
-    width:100%; height:90%; border:none; margin:0; padding:0; overflow:visible; ">`
-
-
-    console.log(frame)
-    document.getElementById('searchBox-Div').style.display = "none";
-    document.getElementById('banner-section').style.display = "none";
-    document.getElementById('movies-cont').style.display = "none";
-    document.getElementById('searchMovieresult').style.display = "none";
-    document.getElementById('footer').style.display = "none";
-    document.getElementById('video').innerHTML = frame;
-
-    document.addEventListener('keydown', (event) => {
-        if (event.key == 'Escape') {
-            const frame = `<iframe id="iframe" width="800" height="500" src="">
-            </iframe>`
-            // document.getElementById('video').innerHTML=null;
-            console.log("Inside")
-            // alert("Escape")
-            document.getElementById('video').innerHTML = null;
-           
-            // document.getElementById('searchBox-Div').style.display = "block";
-            document.getElementById('banner-section').style.display = "block";
-            document.getElementById('movies-cont').style.display = "block";
-            document.getElementById('searchMovieresult').style.display = "block";
-            document.getElementById('footer').style.display = "block";
-        }
-    }, false);
-}
-
-window.playfullscreentrailer = playfullscreentrailer;
-window.searchMovieTrailerandPlay = searchMovieTrailerandPlay;
-
-// Play Full Screen Function End
->>>>>>> origin
+// document.querySelector("#micBtn").click(function(event) {
+//     if
+// })
