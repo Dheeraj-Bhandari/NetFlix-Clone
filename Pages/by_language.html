@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Preference</title>
+    <style>
+        body{
+            background-color: #0d121c;
+        }
+       .img_container{
+        background-image:url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2155/1272155-h-53b5cac1c094);
+        background-size: cover;
+        height: 25vh;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        font-weight: 500;
+        }
+       .container{
+        width: 70%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 15px;
+        cursor: pointer;
+        transition: transform .3s all ease-in-out;
+        
+       }
+       .container :hover{
+        transform: scale(1.2);
+       }
+       #upperfolder{
+        display: flex;
+        flex-direction: column;
+       text-align: center;
+       align-items: center;
+       justify-content: center;
+       margin-top: 25%;
+        gap: 10%;
+
+       } 
+      span{
+        color: white;
+        font-size: 20px;
+      }
+      .one{
+        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/5444/1265444-h-d76f7b771fe4);
+      }
+      .three{
+        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2156/1272156-h-069fc6816144);
+      }
+      .four{
+        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/1381/1121381-h-6c23f89e0ba2);
+      }
+      .five{
+        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2158/1272158-h-aa2d20facda2);
+      }
+      .six{
+        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2157/1272157-h-e0d5706adae2);
+      }
+      .seven{
+        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2160/1272160-h-d078165f23bb);
+      }
+      .eight{
+        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/2159/1272159-h-54c3e895c74e);
+      }
+      .nine{
+        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/7339/1307339-h-303abe8ea3d6);
+      }
+      .ten{
+        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/848/1330848-h-4ede10b7d754);
+      }
+      .eleven{
+        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/old_images/LANGUAGE/5711/5711/5711-h);
+      }
+      h3{
+        width: 70%;
+        margin: auto;
+        color: white;
+        margin-top: 5vh;
+        margin-bottom: 4vh;
+      }
+    </style>
+</head>
+<body>
+
+    <h3>Language</h3>
+
+    <div class="container">
+        <div class="img_container one">
+            <div id="upperfolder">
+               
+                <span id="one">Odia</span>
+            </div>
+        </div>
+        <div class="img_container">
+            <div id="upperfolder">
+                
+                <span id="two">Hindi</span>
+            </div>
+        </div>
+        <div class="img_container three">
+            <div id="upperfolder">
+               
+                <span id="three">Bengali</span>
+            </div>
+        </div>
+        <div class="img_container four">
+            <div id="upperfolder">
+               
+                <span id="four">Telugu</span>
+            </div>
+        </div>
+        <div class="img_container five">
+            <div id="upperfolder">
+                
+                <span>English</span>
+            </div>
+        </div>
+        <div class="img_container six">
+            <div id="upperfolder">
+                
+                <span>Marathi</span>
+            </div>
+        </div>
+        <div class="img_container seven">
+            <div id="upperfolder">
+               
+                <span>Tamil</span>
+            </div>
+        </div>
+        <div class="img_container eight">
+            <div id="upperfolder">
+               
+                <span>Malayalam</span>
+            </div>
+        </div>
+        <div class="img_container nine">
+            <div id="upperfolder">
+               
+                <span>Korean</span>
+            </div>
+        </div>
+        <div class="img_container ten">
+            <div id="upperfolder">
+                
+                <span>Japanese</span>
+            </div>
+        </div>
+        <div class="img_container eleven">
+            <div id="upperfolder">
+               
+                <span>Kannadda</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector(".one").addEventListener("click",()=>{
+        let lang=document.querySelector("#one").innerText;
+        console.log(lang);
+    //    localStorage.setItem("language",)
+    })
+</script>
