@@ -68,3 +68,7 @@
         width: 20%;
     }
 }
+
+#next{
+    cursor: pointer;
+}

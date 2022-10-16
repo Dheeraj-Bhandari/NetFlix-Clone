@@ -140,3 +140,6 @@
         width: 100%;
     }
 }
+#next,#select{
+    cursor: pointer;
+}

@@ -226,16 +226,16 @@ async function fecthRecommendedMovie(){
 
 // navbar js
 
-window.addEventListener('load', function () {
+// window.addEventListener('load', function () {
 
-    window.addEventListener('scroll', function () {
-        //header color update
-        const header = document.getElementById('header');
-        if (window.screenY > 5) header.classList.add('black-bg')
-        else header.classList.remove('black-bg')
-    })
+//     window.addEventListener('scroll', function () {
+//         //header color update
+//         const header = document.getElementById('header');
+//         if (window.screenY > 5) header.classList.add('black-bg')
+//         else header.classList.remove('black-bg')
+//     })
 
-})
+// })
 
 // window.addEventListener('keypress', function(e){
 //     if('key'=='Enter'){

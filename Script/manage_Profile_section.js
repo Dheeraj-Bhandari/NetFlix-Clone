@@ -49,7 +49,7 @@ displayMemberProfile();
 
 function redirectToHomePage() {
 
-    location.href = "../Pages/Netflix_Home_Page.html";
+    location.href = "/Netflix_Home_Page_Static_Main/NetFlix_HomePage_Main.html";
 
 }
 

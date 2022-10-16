@@ -145,7 +145,7 @@ function buildMovieSection(list,categoryName){
                         <div id="texticon">
                             <div id="textfirst3icon">
                                 <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-play"></i></button>
-                                <button id="${item.id}" onclick="saveToMyList(${item.id})" ><i class="fa-1x fa-plus" aria-hidden="true"></i></button>
+                                <button id="${item.id}" onclick="saveToMyList(${item.id})" ><i class="fa-solid fa-plus"></i></button>
                                 <button id="liked${item.id}" onclick="myLikedMovie(${item.id})" ><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
                             </div>
                             <div id="textlasticon">
@@ -205,7 +205,7 @@ function buildMovieSection(list,categoryName){
                             <div id="texticon">
                                 <div id="textfirst3icon">
                                     <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-play"></i></button>
-                                    <button id="${item.id}" onclick="saveToMyList(${item.id})" ><i class="fa-1x fa-plus" aria-hidden="true"></i></button>
+                                    <button id="${item.id}" onclick="saveToMyList(${item.id})" ><i class="fa-solid fa-plus"></i></button>
                                     <button><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
                                 </div>
                                 <div id="textlasticon">

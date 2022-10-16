@@ -46,6 +46,7 @@
     padding: 12px 15px;
     border-radius: 10px;
     margin-top: 25px;
+    cursor: pointer;
 }
 
 
@@ -82,3 +83,5 @@
          width: 70%;
     }
 }
+
+
