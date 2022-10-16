@@ -42,27 +42,28 @@ let email=localStorage.getItem("netflix_email");
 
 document.querySelector("#email").value=email;
 
-// let chk_mail=document.querySelector("#email").value;
-// console.log(chk_mail);
-// if(chk_mail!=null){
-//    let ema= document.querySelector("#ema");
-//    ema.style.transform="translateY(-0.8em)";
-// }
-// else{
-//     let ema= document.querySelector("#ema");
+let chk_mail=document.querySelector("#email").value;
+console.log(chk_mail);
+if(chk_mail!=null){
+   let ema= document.querySelector("#ema");
+   console.log(ema);
+   ema.style.transform="translateY(-0.8em)";
+}
+else{
+    let ema= document.querySelector("#ema");
    
-//    ema.style.transform="translateY(0)";
-// }
-// let chk_pass=document.querySelector("#pass").value;
-// if(chk_pass!=null){
-//     let ema= document.querySelector("#pas");
-//     ema.style.transform="translateY(-0.8em)";
-//  }
-//  else{
-//      let ema= document.querySelector("#pas");
+   ema.style.transform="none";
+}
+let chk_pass=document.querySelector("#pass").value;
+if(chk_pass!=null){
+    let ema= document.querySelector("#pas");
+    ema.style.transform="translateY(-0.8em)";
+ }
+ else{
+     let ema= document.querySelector("#pas");
     
-//     ema.style.transform="translateY(0)";
-//  }
+    ema.style.transform="none";
+ }
 
 
 
