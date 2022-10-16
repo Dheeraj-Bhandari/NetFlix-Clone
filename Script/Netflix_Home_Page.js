@@ -365,10 +365,10 @@ window.displayMovies = appendMovies;
 
 document.getElementById("searchBox-Div").style.display = "none";
     async function appendMovies() {
-        document.getElementById("searchBox-Div").inn = "";
+       
         var search = document.getElementById("input").value;
         // console.log(search);
-        document.getElementById("searchBox-Div").style.display = "block";
+        
         const bannersection  = document.getElementById("banner-section")
         const movieContainer = document.getElementById("movies-cont");
         if(input!=""){
@@ -381,12 +381,15 @@ document.getElementById("searchBox-Div").style.display = "none";
             bannersection.style.display='block'
         }
         let url = `${apiPath.multiSearchTVMOVIEPEOPLE(search)}`
-           
+        
         try {
             const res = await fetch(url);
             const res2 = await res.json();
             console.log(res2);
+            document.getElementById("searchBox-Div").innerHTML = "";
+            document.getElementById("searchBox-Div").style.display = "block";
             res2.results.map(function(elem){
+                  
                 const box = document.getElementById("searchBox-Div");
                 box.innerHTML=null;
                 const div = document.createElement("div");
@@ -456,6 +459,12 @@ window.debounceMovies = debounceMovies;
 
 // Search Movie Function End
 
+<<<<<<< HEAD
+const speechRecognition = window.webkitSpeechRecognition;
+const recognition = new speechRecognition();
+
+const searcBox = document.querySelector("#input");
+=======
 // Play Full Screen Function
 
 
@@ -516,3 +525,4 @@ window.playfullscreentrailer = playfullscreentrailer;
 window.searchMovieTrailerandPlay = searchMovieTrailerandPlay;
 
 // Play Full Screen Function End
+>>>>>>> origin
