@@ -106,25 +106,6 @@
    cursor: pointer;
 }
 
-<<<<<<< HEAD
-
-#phn_section{
-    display: flex;
-    justify-content: space-around;
-}
-
-#icons_container{
-    display: flex;
-    justify-content: space-around;
-}
-
-.div_items{
-    opacity: 0.6;
-}
-.div_items:hover{
-    opacity: 1;
-}
-=======
 /* Dheeraj css */
 #deviceinYoucanplay{
     display: flex;
@@ -134,4 +115,3 @@
     /* border: 2px solid red; */
 }
 /* Dheeraj css end */
->>>>>>> 2b2a7d9e44292ca66deb8c0dd494eb86d80d1762
