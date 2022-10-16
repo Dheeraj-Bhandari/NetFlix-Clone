@@ -3,7 +3,20 @@ import navbar from "../Components/navbar.js";
 
 
 document.getElementById('header').innerHTML = navbar;
+import footernew from "../Components/footernew.js";
+document.getElementById('footer').innerHTML = footernew;
 
+
+    window.addEventListener('load', function () {
+    init();
+   window.addEventListener('scroll', function(){
+        //header color update
+        const header = document.getElementById('header');
+        if(window.screenY>5) header.classList.add('black-bg')
+        else header.classList.remove('black-bg')
+    })
+
+})
 
 const apiKey = '9e997fe8c2efd000188bc88e3dda6d23';
 const youtubeApiKey = 'AIzaSyC7bWr31DArqVECDyRJbH-g106fKypGKRE'
@@ -58,7 +71,7 @@ function fecthAndbuildMovieSection(fecthUrl, categoryName) {
             // console.table(res.results)
             const movies = res.results;
             if(Array.isArray(movies) && movies.length){
-                buildMovieSection(movies.slice(0,9), categoryName);
+                buildMovieSection(movies.slice(0,16), categoryName);
             }
             return movies;
         })

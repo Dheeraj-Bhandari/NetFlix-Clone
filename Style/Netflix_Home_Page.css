@@ -112,7 +112,7 @@ header {
     display: flex;
     flex-direction: column;
 
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 150px;
     text-decoration: none;
     color: white;
@@ -403,9 +403,11 @@ margin-left: 50px;
 #textcontent{
     display: flex;
     flex-direction: column;
-    margin-top: 3px;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
+    gap: 5px;
+    
 
 }
 #textp{
@@ -417,6 +419,7 @@ margin-left: 50px;
  margin-bottom: -20px; 
 }
 #textp span{
+    margin-bottom: 12px;
     font-weight: bold;
     color: green;
 }
@@ -458,6 +461,11 @@ margin-left: 50px;
 }
 
 
+#footer{
+    margin-top: 150px;
+}
+
+
 /* Movie-Cont Css My  End */
 
 /* Responsive CSS */
@@ -494,3 +502,10 @@ margin-left: 50px;
     transition-property:opacity;
     transition-duration:1s;
   }
+
+  a:hover{
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+

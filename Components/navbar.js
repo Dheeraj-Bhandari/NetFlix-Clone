@@ -5,12 +5,13 @@ function navbar(){
                <a href="/Netflix_Home_Page_Static_Main/NetFlix_HomePage_Main.html"> <img class="brandlogo" id="brandlogo"
                src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt=""> </a>
                    <ul class="main-nav ">
-                       <a href="/Pages/Netflix_Home_Page.html"><li class="nav-item active">Home</li> </a>
-                       <a href="/Pages/Tv_Shows.html"><li class="nav-item active">Tv Shows</li> </a>
-                       <a href="/Pages/Movie.html"><li class="nav-item active">Movie</li> </a>
-                       <a href="/Pages/MyLikedMovie.html"><li class="nav-item active">My Liked</li> </a>
-                       <a href="/Pages/My_List.html"><li class="nav-item active">My List</li> </a>
-                       <a href="/Pages/Movie.html"><li class="nav-item active">Browse by Languages</li> </a>
+                       <a href="/Netflix_Home_Page_Static_Main/NetFlix_HomePage_Main.html"><li class="nav-item active">HOME</li> </a>
+                       <a href="/Pages/Netflix_Home_Page.html"><li class="nav-item active">TRENDING</li> </a>
+                       <a href="/Pages/Movie.html"><li class="nav-item active">MOVIES</li> </a>
+                       <a href="/Pages/Tv_Shows.html"><li class="nav-item active">TV SHOW</li> </a>
+                       <a href="/Pages/MyLikedMovie.html"><li class="nav-item active">LIKED</li> </a>
+                       <a href="/Pages/My_List.html"><li class="nav-item active">MY LIST</li> </a>
+                       <a href="/Pages/Movie.html"><li class="nav-item active">BROWSE BY LANGUAGE</li> </a>
                    </ul>
                </div>
                <div class="right-cont">
@@ -35,7 +36,7 @@ function navbar(){
                                Profile</a>
                            <a href=""><i class="fa fa-user" aria-hidden="true"></i> Account</a>
                            <a href=""><i class="fa fa-question-circle" aria-hidden="true"></i> HelpCenter</a>
-                           <a href="">Sign Out of Netflix</a>
+                           <a href="/index.html" >Sign Out of Netflix</a>
                        </div>
                    </div>
                </div>

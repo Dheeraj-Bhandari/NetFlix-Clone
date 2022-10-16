@@ -1,7 +1,10 @@
 import navbar from "../Components/navbar.js";
 
-
 document.getElementById('header').innerHTML = navbar;
+
+
+import footernew from "../Components/footernew.js";
+document.getElementById('footer').innerHTML = footernew;
 
 const apiKey = '9e997fe8c2efd000188bc88e3dda6d23';
 const youtubeApiKey = 'AIzaSyC7bWr31DArqVECDyRJbH-g106fKypGKRE'
@@ -72,7 +75,7 @@ function fecthAndBuildAllSection() {
         .then(res => {
             const categories = res.genres;
             if (Array.isArray(categories) && categories.length) {
-                categories.slice(0, 3).forEach(category => {
+                categories.forEach(category => {
                     fecthAndbuildMovieSection(apiPath.fetchMoviesList(category.id), category.name);
                 })
             }
@@ -244,6 +247,8 @@ function buildMovieSection(list,categoryName){
         
         }
 
+    
+    window.searchMovieTrailer =searchMovieTrailer;
 
 function searchMovieTrailer(movieName, iframeId){
     console.log(document.getElementById(iframeId), iframeId);

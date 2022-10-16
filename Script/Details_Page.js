@@ -1,6 +1,9 @@
-import navbar from "../Components/navbar.js";
+import navbarnew from "../Components/navbarnew.js";
+import footernew from "../Components/footernew.js";
 
-document.getElementById('header').innerHTML = navbar;
+
+document.getElementById('main-header').innerHTML = navbarnew;
+document.getElementById('footer').innerHTML = footernew;
 
 
 

@@ -18,4 +18,4 @@ function footer(){
     `
 }
 
-export {footer};
+export default footer();

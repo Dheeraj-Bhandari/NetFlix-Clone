@@ -21,10 +21,11 @@ function navbarnew(){
                 <div class="menu-main-menu-container">
                   <ul id="top-menu" class="navbar-nav ml-auto">
                     <li class="menu-item"><a href="/Netflix_Home_Page_Static_Main/NetFlix_HomePage_Main.html">Home</a></li>
-                    <li class="menu-item"><a href="/Pages/Netflix_Home_Page.html">Movies</a></li>
+                    <li class="menu-item"><a href="/Pages/Netflix_Home_Page.html">Trending</a></li>
+                    <li class="menu-item"><a href="/Pages/Movie.html">Movies</a></li>
                     <li class="menu-item"><a href="/Pages/Tv_Shows.html">Tv Shows</a></li>
-                    <li class="menu-item"><a href="/Pages/Tv_Shows.html">My Liked</a></li>
-                    <li class="menu-item"><a href="/Pages/Tv_Shows.html">My List</a></li>
+                    <li class="menu-item"><a href="/Pages/My_List.html">My Liked</a></li>
+                    <li class="menu-item"><a href="/Pages/MyLikedMovie.html">My List</a></li>
                     <!-- <li class="menu-item">
                       <a href="#">Contact Us</a>
                       <ul class="sub-menu">
@@ -68,7 +69,7 @@ function navbarnew(){
                         <div class="search-box iq-search-bar">
                           <form action="" class="searchbox">
                             <div class="form-group position-relative">
-                              <input id="input" oninput="check()" i search-input font-size-12"
+                              <input  i search-input font-size-12"
                                 placeholder="type here to search..." />
                               <i class="search-link fa fa-search"></i>
                             </div>
@@ -178,15 +179,24 @@ function navbarnew(){
                     <a href="#" class="search-toggle device-search">
                       <i class="fa fa-search"></i>
                     </a>
+                    
+                    
+
                     <div class="search-box iq-search-bar d-search">
-                      <form action="#" class="searchbox">
-                        <div class="form-group position-relative">
-                          <input type="text" class="text search-input font-size-12"
-                            placeholder="type here to search..." />
-                          <i class="search-link fa fa-search"></i>
-                        </div>
-                      </form>
-                    </div>
+                    <form action="#" class="searchbox">
+                      <div class="form-group position-relative">
+                        <input id="input" oninput="debounceMovies()"  type="text" class="text search-input font-size-12"
+                          placeholder="type here to search..." />
+                        <i class="search-link fa fa-search"></i>
+                      </div>
+                    </form>
+                  </div>
+
+
+
+
+
+
                   </li>
                   <li class="nav-item nav-icon">
                     <a href="#" class="search-toggle" data-toggle="search-toggle">
@@ -230,7 +240,7 @@ function navbarnew(){
                     </div>
                   </li>
                   <li class="nav-item nav-icon">
-                    <a href="/Pages/Manage_profilesection.html" class="iq-user-dropdown search-toggle d-flex align-items-center p-0">
+                    <a  class="iq-user-dropdown search-toggle d-flex align-items-center p-0">
                       <img src="images/user/user.png" class="img-fluid user-m rounded-circle" alt="" />
                     </a>
                     <div class="iq-sub-dropdown iq-user-dropdown">
