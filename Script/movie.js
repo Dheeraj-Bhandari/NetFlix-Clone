@@ -1,7 +1,4 @@
 import navbar from "../Components/navbar.js";
-
-
-
 document.getElementById('header').innerHTML = navbar;
 import footernew from "../Components/footernew.js";
 document.getElementById('footer').innerHTML = footernew;
@@ -19,7 +16,8 @@ document.getElementById('footer').innerHTML = footernew;
 })
 
 const apiKey = '9e997fe8c2efd000188bc88e3dda6d23';
-const youtubeApiKey = 'AIzaSyC7bWr31DArqVECDyRJbH-g106fKypGKRE'
+// const youtubeApiKey = 'AIzaSyC7bWr31DArqVECDyRJbH-g106fKypGKRE'
+const youtubeApiKey = 'AIzaSyBa770uGbngfNCOB2sg8ykjuXkWTGFZTxs'
 const apiEndPoint = 'https://api.themoviedb.org/3'
 const imgPath = "https://image.tmdb.org/t/p/original"
 const apiPath = {
@@ -94,7 +92,7 @@ function buildMovieSection(list,categoryName){
                     <div class="text">
                         <div id="texticon">
                             <div id="textfirst3icon">
-                                <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-play"></i></button>
+                                <button onclick="searchMovieTrailerandPlay('${item.title || item.name} trailer')" ><i class="fa-1x fa-solid fa-play"></i></button>
                                 <button id="${item.id}" onclick="saveToMyList(${item.id})" ><i class="fa-solid fa-plus"></i></button>
                                 <button><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
                             </div>
@@ -204,3 +202,58 @@ function saveToMyList(id){
 //     itemid.src = 'https://img.buzzfeed.com/buzzfeed-static/static/2021-07/22/16/enhanced/5cdbc5809df1/anigif_enhanced-8810-1626970483-2.gif'
 //     // element.style.background = 'url(https://img.buzzfeed.com/buzzfeed-static/static/2021-07/22/16/enhanced/5cdbc5809df1/anigif_enhanced-8810-1626970483-2.gif)';
 // }
+
+// Play Full Screen Function
+
+
+// Search Trailer
+
+function searchMovieTrailerandPlay(movieName) {
+    console.log("Helo")
+    // if(!movieName) return;
+
+    fetch(apiPath.searchMovieTraileronYoutube(movieName))
+        .then(res => res.json())
+        .then(res => {
+            console.log(res.items);
+            const VideoId = res.items[0];
+            const youtubeUrl = `https://www.youtube.com/watch?v=${VideoId.id.videoId}`
+            console.log(youtubeUrl);
+            // window.open(youtubeUrl, '_blank')
+            //    const iframelement  = document.getElementById(iframeId)
+            //    iframelement.src = `https://www.youtube.com/embed/${VideoId.id.videoId}?autoplay=1&mute=1`
+            playfullscreentrailer(`https://www.youtube.com/embed/${VideoId.id.videoId}?autoplay=1&mute=1`)
+        }).catch(err => console.log(err))
+}
+
+
+function playfullscreentrailer(src) {
+    const frame = `
+    <iframe id="iframe" src="${src}" style="position:fixed; margin-top: 20px; top: 20px;; left:0; bottom:0; right:0;
+    width:100%; height:90%; border:none; margin:0; padding:0; overflow:visible; ">`
+
+
+    console.log(frame)
+    document.getElementById('movies-cont').style.display = "none";
+    document.getElementById('footer').style.display = "none";
+    
+    document.getElementById('video').innerHTML = frame;
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key == 'Escape') {
+            const frame = `<iframe id="iframe" width="800" height="500" src="">
+            </iframe>`
+          
+            console.log("Inside")
+            // alert("Escape")
+            document.getElementById('video').innerHTML = null;
+            document.getElementById('movies-cont').style.display = "block";
+            document.getElementById('footer').style.display = "block";
+        }
+    }, false);
+}
+
+window.playfullscreentrailer = playfullscreentrailer;
+window.searchMovieTrailerandPlay = searchMovieTrailerandPlay;
+
+// Play Full Screen Function End

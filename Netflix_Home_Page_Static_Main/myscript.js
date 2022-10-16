@@ -35,6 +35,13 @@ window.myLikedMovie = myLikedMovie;
 
 // Search Trailer
 
+async function fecthMovieIDFortrailer(id){
+    const res = await apiPath.SearchMovie(id);
+    const data = await res.json();
+    searchMovieTrailer(data.id)
+}
+
+
 function searchMovieTrailer(movieName) {
     console.log("Helo")
     // if(!movieName) return;
@@ -245,7 +252,7 @@ function SearchMovieResultAppend(list, categoryName) {
                     <div class="text">
                         <div id="texticon">
                             <div id="textfirst3icon">
-                                <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-play"></i></button>
+                                <button onclick="searchMovieTrailer('${item.title} trailer')" ><i class="fa-1x fa-solid fa-play"></i></button>
                                 <button id="${item.id}" onclick="saveToMyList(${item.id})" ><i class="fa-1x fa-plus" aria-hidden="true"></i></button>
                                 <button><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
                             </div>
