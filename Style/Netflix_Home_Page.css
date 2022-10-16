@@ -219,13 +219,10 @@ header {
 
 /* #movies-cont {
     margin-top: -20px;
-
 }
-
 .movie-section {
     margin: 41px 0;
 }
-
 .movie-section-heading {
     font-size: 20px;
     font-weight: 700;
@@ -233,24 +230,17 @@ header {
     color: white;
     cursor: pointer;
     margin-bottom: 10px;
-
 }
-
 .explore-nudge {
     color: #54b9c5;
     font-size: 12px;
     display: none;
-
 }
-
 .movie-section-heading:hover .explore-nudge {
     display: inline-block;
     cursor: pointer;
     margin-left: 5px;
-
-
 }
-
 .movies-row {
     display: flex;
     flex-direction: row;
@@ -259,7 +249,6 @@ header {
     overflow-x: auto;
     overflow-y: hidden;
 }
-
 .movie-item {
     width: 245px;
     object-fit: contain;
@@ -267,14 +256,10 @@ header {
     border-radius: 4px;
     position: relative;
     cursor: pointer;
-
 }
-
 .movie-item-img {
     width: inherit;
 }
-
-
 .movie-item iframe {
     position: absolute;
     top: 0;
@@ -286,23 +271,16 @@ header {
     border: none;
     outline: none;
 }
-
 .movie-item:hover iframe {
     display: block;
     transform: scale(1.9);
-
     overflow: visible;
-
 }
-
 .movie-item:hover {
     transform: scale(1.3);
     transition: linear 300ms;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     overflow: visible;
-
-
-
 } */
 
 
@@ -512,4 +490,3 @@ margin-left: 50px;
     text-decoration: none;
     font-weight: bold;
 }
-
