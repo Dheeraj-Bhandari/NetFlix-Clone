@@ -48,7 +48,7 @@ function buildBannerSection(movie){
             <p class="banner-info">Trending in Movies | Rating - ${(movie.vote_average).toFixed(1)}</p>
             <p class="banner-overview">${movie.overview && movie.overview.length>200 ? movie.overview.slice(0,200).trim()+"...": movie.overview}</p>
             <div class="action-button-cont">
-                <button onclick="MovieDetailsPage(${movie.id})" class="action-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                <button onclick="searchMovieTrailerandPlay('${movie.title || movie.name} trailer')" class="action-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg" class="Hawkins-Icon Hawkins-Icon-Standard">
                         <path
                             d="M4 2.69127C4 1.93067 4.81547 1.44851 5.48192 1.81506L22.4069 11.1238C23.0977 11.5037 23.0977 12.4963 22.4069 12.8762L5.48192 22.1849C4.81546 22.5515 4 22.0693 4 21.3087V2.69127Z"
@@ -144,7 +144,7 @@ function buildMovieSection(list,categoryName){
                     <div class="text">
                         <div id="texticon">
                             <div id="textfirst3icon">
-                                <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-play"></i></button>
+                                <button onclick="searchMovieTrailerandPlay('${item.title || item.name} trailer')" ><i class="fa-1x fa-solid fa-play"></i></button>
                                 <button id="${item.id}" onclick="saveToMyList(${item.id})" ><i class="fa-solid fa-plus"></i></button>
                                 <button id="liked${item.id}" onclick="myLikedMovie(${item.id})" ><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
                             </div>
@@ -204,7 +204,7 @@ function buildMovieSection(list,categoryName){
                         <div class="text">
                             <div id="texticon">
                                 <div id="textfirst3icon">
-                                    <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-play"></i></button>
+                                    <button onclick="searchMovieTrailerandPlay('${item.title || item.name} trailer')" ><i class="fa-1x fa-solid fa-play"></i></button>
                                     <button id="${item.id}" onclick="saveToMyList(${item.id})" ><i class="fa-solid fa-plus"></i></button>
                                     <button><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
                                 </div>
@@ -459,12 +459,10 @@ window.debounceMovies = debounceMovies;
 
 // Search Movie Function End
 
-<<<<<<< HEAD
 const speechRecognition = window.webkitSpeechRecognition;
 const recognition = new speechRecognition();
 
 const searcBox = document.querySelector("#input");
-=======
 // Play Full Screen Function
 
 // recognition.continous = true;
@@ -526,4 +524,3 @@ window.playfullscreentrailer = playfullscreentrailer;
 window.searchMovieTrailerandPlay = searchMovieTrailerandPlay;
 
 // Play Full Screen Function End
->>>>>>> origin
