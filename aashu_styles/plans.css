@@ -1,13 +1,9 @@
 
 #main_container{
-    width: 60%;
+    width: 50%;
     margin: auto;
 }
-/* #first_child{
-    width: 60%;
-    margin: auto;
-    padding: 30px 0 10px 20px;
-} */
+
 .list{
     display: flex;
     align-items: center;
@@ -18,15 +14,17 @@
 }
 
 #second_child{
-    /* width: 60%; */
+    width: 100%;
     margin: auto;
     display: flex;
     gap: 10px;
     text-align: center;
-    justify-content: center;
+    justify-content: space-around;
     text-align: center;
 }
 .div_items{
+    width: 15%;
+    height: 15%;
     background-color: red;
     color: white;
     padding: 60px 15px;
@@ -35,16 +33,22 @@
     font-weight: 400;
 }
 #monthly_price{
-    /* width: 60%; */
-    /* margin: auto; */
+    width: 100%;
+    margin: auto;
     display: flex;
     margin-top: 3vh;
     align-items: center;
+    /* gap: 5vw; */
     gap: 10px;
+    text-align: justify;
+}
+#monthly_price > div{
+    width: 15%;
+    height: 15%;
 }
 #video_quality{
-    /* width: 60%; */
-    /* margin: auto; */
+    width: 90%;
+    margin: auto;
     display: flex;
     margin-top: 3vh;
     gap: 10px;
@@ -68,6 +72,7 @@
 .three{
     flex: 1.5;
     text-align: center;
+    /* color: red; */
 }
 .four{
     flex: 1.5;
@@ -91,4 +96,22 @@
    font-size: 22px;
    padding: 15px ;
    margin-top: 4vh;
+}
+
+
+#phn_section{
+    display: flex;
+    justify-content: space-around;
+}
+
+#icons_container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.div_items{
+    opacity: 0.6;
+}
+.div_items:hover{
+    opacity: 1;
 }
