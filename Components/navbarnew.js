@@ -180,7 +180,13 @@ function navbarnew(){
                       <i class="fa fa-search"></i>
                     </a>
                     
-                    
+                    <div class="container">
+  <form action="https://www.google.com/search" method="get" target="_blank" id="search-form">
+    <input name="q" type="text" placeholder="Search Google..." autocomplete="off" autofocus>
+     <button type="button"><i class="fas fa-microphone"></i></button> 
+  </form>
+  <p class="info"></p>
+</div>
 
                     <div class="search-box iq-search-bar d-search">
                     <form action="#" class="searchbox">
