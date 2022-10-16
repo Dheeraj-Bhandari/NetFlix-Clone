@@ -15,8 +15,10 @@ function navbar(){
                    </ul>
                </div>
                <div class="right-cont">
-                   <input id = "input" style="display: none;"  placeholder = "Title, people, genres.." oninput="debounceMovies()">
-                   <button id = "micBtn" onclick = "micBtnClick()" type="button"><i class="fas fa-microphone"></i></button>
+               
+                   <input id = "input" style="display: none;"  placeholder = "Title, people, genres.." oninput="debounceMovies()" >
+                   <button id = "micBtn"  type="button"><i class="fas fa-microphone"></i></button>
+                   <p class="info"></p>
                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                        class="search-icon" onclick = "searchMovies()">
                        <path fill-rule="evenodd" clip-rule="evenodd"

@@ -187,6 +187,8 @@ function navbarnew(){
                       <div class="form-group position-relative">
                         <input id="input" oninput="debounceMovies()"  type="text" class="text search-input font-size-12"
                           placeholder="type here to search..." />
+                          <button id = "micBtn"  type="button"><i class="fas fa-microphone"></i></button>
+                          <p class="info"></p>
                         <i class="search-link fa fa-search"></i>
                       </div>
                     </form>
