@@ -347,7 +347,7 @@ function searchMovies() {
     // location.href = "../Pages/search_movies.html";
 }
 
-let debounceMovies = debounce(displayMovies,300);
+let debounceMovies = debounce(appendMovies,500);
 
 function debounce(fn, delay){
     let timerId;
@@ -360,11 +360,62 @@ function debounce(fn, delay){
     }
 }
 
-window.displayMovies = displayMovies;
+window.displayMovies = appendMovies;
 
 
+document.getElementById("searchBox-Div").style.display = "none";
+    async function appendMovies() {
+        document.getElementById("searchBox-Div").inn = "";
+        var search = document.getElementById("input").value;
+        // console.log(search);
+        document.getElementById("searchBox-Div").style.display = "block";
+        const bannersection  = document.getElementById("banner-section")
+        const movieContainer = document.getElementById("movies-cont");
+        if(input!=""){
 
-async function displayMovies() {
+            movieContainer.style.display= 'none';
+            bannersection.style.display='none'
+        }
+        else{
+            movieContainer.style.display= 'block';
+            bannersection.style.display='block'
+        }
+        let url = `${apiPath.multiSearchTVMOVIEPEOPLE(search)}`
+           
+        try {
+            const res = await fetch(url);
+            const res2 = await res.json();
+            console.log(res2);
+            res2.results.map(function(elem){
+                const box = document.getElementById("searchBox-Div");
+                const div = document.createElement("div");
+                div.setAttribute("id", "searchBox-InnerDiv");
+
+                const image = document.createElement("img");
+                image.setAttribute("src", `${imgPath}${elem.backdrop_path}`) ||  image.setAttribute("src", `${imgPath}${elem.poster_path}`) ;
+                image.setAttribute("id", "search_movie_img");
+                image.addEventListener("click", function() {
+                    localStorage.setItem('movieId', elem.id);
+                })
+
+                const p = document.createElement("p");
+                p.innerText = elem.title || elem.name;
+                div.append(image,p);
+                box.append(div);
+                displayAllMovies();
+            })
+        } 
+        catch(err) {
+            console.log(err);
+        }
+    }
+
+    
+
+    
+
+
+async function displayAllMovies() {
     var input = document.getElementById("input").value;
     console.log(input);
     const bannersection  = document.getElementById("banner-section")

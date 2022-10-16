@@ -115,6 +115,7 @@ header {
 
 #movie_box {
     display: grid;
+    
     grid-template-columns: repeat(6, 1fr);
     margin-top: 90px;
    
@@ -168,6 +169,7 @@ header {
     vertical-align: middle;
     padding: 7px;
     color: #e5e5e5;
+    width: 300px;
 }
 
 #searchImg {
@@ -194,6 +196,39 @@ header {
    
 }
 
+ #searchBox-Div {
+        width: 313px;
+        position:relative;
+        z-index:50;
+        margin-left: 920px;
+        margin-top: 47px;
+        height: 400px;
+        overflow-y: scroll;
+        background-color: transparent;
+        color: #e5e5e5;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+ }
+
+ #searchBox-InnerDiv {
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    margin: 4px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    
+ }
+
+ #searchBox-InnerDiv > img {
+    width: 20%;
+    margin-right: 10px;
+ }
+
+ #movieContainer {
+    position:relative;
+    z-index:30;
+   
+
+ }
 /* BODY*/
 
 

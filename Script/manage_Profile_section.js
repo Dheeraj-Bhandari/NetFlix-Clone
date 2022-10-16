@@ -27,9 +27,9 @@ function displayMemberProfile() {
         image.setAttribute("src", "https://occ-0-1492-2705.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABbV2URr-qEYOrESG0qnP2787XsIxWTMBh7QfJwyqYxMAVFNyiXAqFeu16gI8yTxg3kLwF2mUDKmZGfwBEDd7722xskhYwAMwsBBe.png?r=bd7");
         // image.style.height = "90px";
         image.setAttribute("id", "memberImg");
-        
 
-            var member= document.createElement('p');
+    
+        var member = document.createElement('h1');
 
         member.innerText = elem.name;
         box.append(image, member);
