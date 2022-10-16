@@ -459,12 +459,12 @@ window.debounceMovies = debounceMovies;
 
 // Search Movie Function End
 
-<<<<<<< HEAD
+
 const speechRecognition = window.webkitSpeechRecognition;
 const recognition = new speechRecognition();
 
 const searcBox = document.querySelector("#input");
-=======
+
 // Play Full Screen Function
 
 
@@ -525,4 +525,4 @@ window.playfullscreentrailer = playfullscreentrailer;
 window.searchMovieTrailerandPlay = searchMovieTrailerandPlay;
 
 // Play Full Screen Function End
->>>>>>> origin
+
