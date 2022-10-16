@@ -388,6 +388,7 @@ document.getElementById("searchBox-Div").style.display = "none";
             console.log(res2);
             res2.results.map(function(elem){
                 const box = document.getElementById("searchBox-Div");
+                box.innerHTML=null;
                 const div = document.createElement("div");
                 div.setAttribute("id", "searchBox-InnerDiv");
 
