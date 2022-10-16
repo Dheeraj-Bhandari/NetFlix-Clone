@@ -21,6 +21,7 @@
     text-align: center;
     justify-content: space-around;
     text-align: center;
+   
 }
 .div_items{
     width: 15%;
@@ -31,7 +32,13 @@
     border-radius: 10px;
     font-size: 20px;
     font-weight: 400;
+    opacity: 0.5;
 }
+
+
+
+
+
 #monthly_price{
     width: 100%;
     margin: auto;
@@ -96,8 +103,10 @@
    font-size: 22px;
    padding: 15px ;
    margin-top: 4vh;
+   cursor: pointer;
 }
 
+<<<<<<< HEAD
 
 #phn_section{
     display: flex;
@@ -115,3 +124,14 @@
 .div_items:hover{
     opacity: 1;
 }
+=======
+/* Dheeraj css */
+#deviceinYoucanplay{
+    display: flex;
+    margin-top: 5px;
+    justify-content: center;
+    /* align-items: center; */
+    /* border: 2px solid red; */
+}
+/* Dheeraj css end */
+>>>>>>> 2b2a7d9e44292ca66deb8c0dd494eb86d80d1762

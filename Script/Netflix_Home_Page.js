@@ -1,5 +1,6 @@
 import navbar from "../Components/navbar.js";
 
+
 document.getElementById('header').innerHTML = navbar;
 
 const apiKey = '9e997fe8c2efd000188bc88e3dda6d23';
@@ -12,6 +13,7 @@ const apiPath = {
     fecthTrending: `${apiEndPoint}/trending/all/week?api_key=${apiKey}&language=en-US`,
     fetchMoviesList: (id) => `${apiEndPoint}/discover/movie?api_key=${apiKey}&with_genres=${id}`,
     SearchMovie : (value) => `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${value}`,
+    multiSearchTVMOVIEPEOPLE:(value)=> `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&language=en-US&query=${value}&page=1&include_adult=false`,
     searchMovieTraileronYoutube :(query)=> `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${query}&key=${youtubeApiKey}`
 }
 
@@ -141,7 +143,7 @@ function buildMovieSection(list,categoryName){
                             <div id="textfirst3icon">
                                 <button onclick="MovieDetailsPage(${item.id})" ><i class="fa-1x fa-solid fa-play"></i></button>
                                 <button id="${item.id}" onclick="saveToMyList(${item.id})" ><i class="fa-1x fa-plus" aria-hidden="true"></i></button>
-                                <button><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
+                                <button id="liked${item.id}" onclick="myLikedMovie(${item.id})" ><i class="fa-1x fa-solid fa-thumbs-up"></i></button>
                             </div>
                             <div id="textlasticon">
                                 <button onclick="MovieDetailsPage(${item.id})"><i class="fa-1x fa-solid fa-arrow-down"></i></button>
@@ -282,6 +284,7 @@ document.getElementById('brandlogo').addEventListener('click', function(){
 
 window.MovieDetailsPage= MovieDetailsPage;
 window.saveToMyList= saveToMyList;
+window.myLikedMovie= myLikedMovie;
 // window.changebackgifonhover= changebackgifonhover;
 
 function MovieDetailsPage(id){
@@ -303,8 +306,22 @@ function saveToMyList(id){
     
     console.log(saveListItems);
 
+}
+
+const myLikedMovieLC = JSON.parse(localStorage.getItem("myLikedMovie")) || [];
+
+function myLikedMovie(id){
+    if(!myLikedMovieLC.includes(id)){
+        myLikedMovieLC.push(id);
+        localStorage.setItem('myLikedMovie', JSON.stringify(myLikedMovieLC));
+    }
+    const button   = document.getElementById(`liked${id}`);
+    const i = `<i class="fa fa-check" aria-hidden="true"></i>`;
+
+    button.innerHTML =i;
     
-   
+    console.log(myLikedMovieLC);
+
 }
 
 // function changebackgifonhover(itemid){
@@ -358,7 +375,7 @@ async function displayMovies() {
     }
     
     
-    let url = `${apiPath.SearchMovie(input)}`;
+    let url = `${apiPath.multiSearchTVMOVIEPEOPLE(input)}`;
 
     try {
         const res = await fetch (url);

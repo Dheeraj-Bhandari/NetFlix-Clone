@@ -2,19 +2,19 @@ function navbar(){
     return  `
        <div class="header-cont container">
                <div class="left-cont">
-               <a href="/"> <img class="brandlogo" id="brandlogo"
+               <a href="/Netflix_Home_Page_Static_Main/NetFlix_HomePage_Main.html"> <img class="brandlogo" id="brandlogo"
                src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt=""> </a>
                    <ul class="main-nav ">
                        <a href="/Pages/Netflix_Home_Page.html"><li class="nav-item active">Home</li> </a>
                        <a href="/Pages/Tv_Shows.html"><li class="nav-item active">Tv Shows</li> </a>
                        <a href="/Pages/Movie.html"><li class="nav-item active">Movie</li> </a>
-                       <a href="/Pages/Movie.html"><li class="nav-item active">News & Popular</li> </a>
+                       <a href="/Pages/MyLikedMovie.html"><li class="nav-item active">My Liked</li> </a>
                        <a href="/Pages/My_List.html"><li class="nav-item active">My List</li> </a>
                        <a href="/Pages/Movie.html"><li class="nav-item active">Browse by Languages</li> </a>
                    </ul>
                </div>
                <div class="right-cont">
-                   <input id = "input" style="display: none;"  placeholder = "Title, people, genres.." oninput = debounceMovies()>
+                   <input id = "input" style="display: none;"  placeholder = "Title, people, genres.." oninput="debounceMovies()">
                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                        class="search-icon" onclick = "searchMovies()">
                        <path fill-rule="evenodd" clip-rule="evenodd"

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color:rgb(20, 20, 20);
+        }
+
+        .main-profile-div {
+            /* border: 1px solid white; */
+            /* margin-top: 160px; */
+            /* padding-left: 90px;
+            padding-right: 90px; */
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            margin: auto;
+            margin-top: 200px;
+            /* border: 2px solid red; */
+        }
+        .main-profile-div > h1{
+            color: white;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+            font-weight: 300;
+            font-size: 2em;
+            line-height: 1.2;
+            display: block;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            text-align: center;
+           
+        }
+        .member-Div {
+            display: flex;
+            flex-direction: row;
+            /* border: 1px solid yellow; */
+            /* margin: 20px;
+            margin-left: 460px; */
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        #cont {
+            /* border: 1px solid green; */
+            display: flex;
+            flex-direction: row;
+            width: 40%;
+            margin: auto;
+            margin-top: 190px;
+            margin-top: 10px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+        }
+        #box {
+            
+            /* border: 1px solid red; */
+            color: white;
+            text-align: center;
+            
+            
+            
+            
+        }
+        .addIcon {
+            height: 90px;
+            width: 100px;
+            margin-left: 10px;
+            border-radius: 5px;
+            background-color: whitesmoke;
+            
+        }
+
+        .addIcon{
+            opacity: 0.5;
+            background-color: darkgrey;
+        }
+        .addIcon:hover{
+            opacity: 1;
+            background-color: darkgrey;
+            cursor: pointer;
+        }
+
+        .addIcon > i :hover {
+           color: gray;
+           background-color: darkred;
+
+        }
+
+        .redirect-homePage {
+            background-color: transparent;
+            border: 1px solid grey;
+            color: grey;
+            cursor: pointer;
+            display: block;
+            font-size: 1.2vw;
+            letter-spacing: 2px;
+            margin: auto;
+            padding: 0.5em 1.5em;
+            
+        }
+        #profile-icon, #memberImg {
+            border-radius: 5px;
+        }
+        
+        /* Dheeraj csss */
+        #ProfileContainer{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            /* border: 2px solid red; */
+            width: 100%;
+            margin-top: 20px;
+        }  
+        #cont{
+            cursor: pointer;
+        } 
+        .fa-plus-circle{
+            opacity: 1;
+        }
+        #box img{
+            opacity: 0.5;
+        }
+        #box img:hover{
+            opacity: 1;
+            box-shadow: rgba(255, 255, 255, 0.24) 0px 3px 8px;
+        }  
+        #memberImg{
+            width: 200px;
+            height: 200px;
+        }   
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA==" crossorigin="anonymous" />
+
+</head>
+<body>
+    <div class="whoIsWatching">
+
+        <div class="main-profile-div">
+            <h1>Who's watching?</h1>
+        
+            <div class="member-Div">
+                <img id = "profile-icon" height = "90px" src="https://occ-0-2991-2164.1.nflxso.net/dnm/api/v6/K6hjPJd6cR6FpVELC5Pd6ovHRSk/AAAABY5cwIbM7shRfcXmfQg98cqMqiZZ8sReZnj4y_keCAHeXmG_SoqLD8SXYistPtesdqIjcsGE-tHO8RR92n7NyxZpqcFS80YfbRFz.png?r=229" alt="">
+                <button class="addIcon" onclick="addUserProfile()"><i  style = "width: 80px" class = "fas fa-6x fa-plus-circle"></i> <span></span></button>
+            </div>
+            <button class="redirect-homePage" onclick="redirectToHomePage()">DONE</button>
+        </div>
+    </div>
+    <div id="ProfileContainer">
+
+    </div>
+</body>
+<script src="../Script/manage_Profile_section.js"></script>
+<script src="../Script/addUserProfile.js"></script>
+</html>
