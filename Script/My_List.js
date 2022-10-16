@@ -203,8 +203,7 @@ function buildMovieSection(item) {
 
     const button1 = document.createElement('button');
     button1.addEventListener('click', function () {
-        localStorage.setItem('movieId', item.id);
-        location.href = "/Pages/Detail_Page.html"
+        searchMovieTrailerandPlay(`${item.title || item.name}`);
     });
     const i1 = document.createElement('i');
     i1.className = 'fa-1x fa-solid fa-play';
@@ -285,4 +284,57 @@ function buildMovieSection(item) {
 
 // window.changebackgifonhover= changebackgifonhover;
 
+// Play Full Screen Function
 
+
+// Search Trailer
+
+function searchMovieTrailerandPlay(movieName) {
+    console.log("Helo")
+    // if(!movieName) return;
+
+    fetch(apiPath.searchMovieTraileronYoutube(movieName))
+        .then(res => res.json())
+        .then(res => {
+            console.log(res.items);
+            const VideoId = res.items[0];
+            const youtubeUrl = `https://www.youtube.com/watch?v=${VideoId.id.videoId}`
+            console.log(youtubeUrl);
+            // window.open(youtubeUrl, '_blank')
+            //    const iframelement  = document.getElementById(iframeId)
+            //    iframelement.src = `https://www.youtube.com/embed/${VideoId.id.videoId}?autoplay=1&mute=1`
+            playfullscreentrailer(`https://www.youtube.com/embed/${VideoId.id.videoId}?autoplay=1&mute=1`)
+        }).catch(err => console.log(err))
+}
+
+
+function playfullscreentrailer(src) {
+    const frame = `
+    <iframe id="iframe" src="${src}" style="position:fixed; margin-top: 20px; top: 20px;; left:0; bottom:0; right:0;
+    width:100%; height:90%; border:none; margin:0; padding:0; overflow:visible; ">`
+
+
+    console.log(frame)
+    document.getElementById('movies-cont').style.display = "none";
+    document.getElementById('footer').style.display = "none";
+    
+    document.getElementById('video').innerHTML = frame;
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key == 'Escape') {
+            const frame = `<iframe id="iframe" width="800" height="500" src="">
+            </iframe>`
+          
+            console.log("Inside")
+            // alert("Escape")
+            document.getElementById('video').innerHTML = null;
+            document.getElementById('movies-cont').style.display = "block";
+            document.getElementById('footer').style.display = "block";
+        }
+    }, false);
+}
+
+window.playfullscreentrailer = playfullscreentrailer;
+window.searchMovieTrailerandPlay = searchMovieTrailerandPlay;
+
+// Play Full Screen Function End
