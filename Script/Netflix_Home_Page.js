@@ -458,14 +458,4 @@ window.debounceMovies = debounceMovies;
 
 // Search Movie Function End
 
-const speechRecognition = window.webkitSpeechRecognition;
-const recognition = new speechRecognition();
-
-const searcBox = document.querySelector("#input").value;
-
-recognition.continous = true;
-
-recognition.onstart
-document.querySelector("#micBtn").click(function(event) {
-    if
-})
+// 
