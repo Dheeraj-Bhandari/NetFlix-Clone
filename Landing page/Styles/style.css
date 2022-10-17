@@ -25,7 +25,7 @@ h3{
     font-weight: lighter;
 }
 a{
-    color: #ffffff;
+    color: #f1e3e3;
     text-decoration: none;
 }
 p{
@@ -79,7 +79,7 @@ img{
     justify-content: center;
     text-align: center;
     align-items: center;
-    margin-top: 9rem;
+    margin-top: 10%;
 }
 .showcase-content h1{
     font-weight: 700px;
@@ -104,12 +104,13 @@ img{
     position: absolute;
     left:0;
     bottom:-8vh;
-    width:454px;
-    height: 3rem;
+    width:66%;
+    height: 17%;
     font-size: 1rem;
-    padding-left: 0.5rem;
+    
 }
 .btn{
+    
     display:inline-block;
     background:var(--primary-color);
     color:white;
@@ -122,6 +123,10 @@ img{
     margin-right: 0.5rem;
     outline: none;
     box-shadow: 0 5px 3px rgba(0,0,0,0.45);
+    
+    
+    
+
 }
 .btn:hover{
     opacity: 0.9;
@@ -133,11 +138,11 @@ img{
     position: absolute;
     right: 0;
     bottom: -8vh;
-    padding:0.5 rem 1.2rem;
-    font-size: 1.5rem;
+    padding:0.6rem ;
+    font-size: 1.3rem;
     text-transform: uppercase;
-    height: 31.5px;
-    width: 12rem;
+    height: 10%;
+    width: 30%;
 
 }
 .showcase-top a{
@@ -330,6 +335,19 @@ img{
         width: 100%;
         text-align: center;
     }
+    .showcase-content .btn-lg{
+     
+        height: 10%;
+        width: 30%;
+    
+    }.showcase-content input{
+    
+        width:66%;
+        height: 17%;
+      
+        
+    }
+
     
 }
 
@@ -337,6 +355,18 @@ img{
     /* ENJOY ON YOUR TV */
     .main-section .section-container{
         padding-bottom: 0px;
+    }
+    .showcase-content .btn-lg{
+     
+        height: 10%;
+        width: 30%;
+    
+    }.showcase-content input{
+    
+        width:66%;
+        height: 17%;
+      
+        
     }
 }
 
@@ -649,7 +679,7 @@ img{
      
         font-size: 0.7rem;
        
-        height: 31.7px;
+        height: 50.7px;
         width: 15%;
         font-weight: bolder;
         
@@ -671,4 +701,227 @@ img{
 }
  
     
+}
+
+
+
+/*More responsive code  (#_#) */
+
+
+@media (min-width:1016px) and (max-width:1244px){
+    .showcase-content input{
+        position: absolute;
+        left:0;
+        bottom:-8vh;
+        width:66%;
+        height: 16%;
+        font-size: 1rem;
+        
+    }
+    .showcase-content .btn-lg{
+        position: absolute;
+        right: 0;
+        bottom: -8vh;
+        padding:0.6rem ;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        height: 11%;
+        width: 30%;
+    
+    }
+}
+
+@media (min-width:700px) and (max-width:814px){
+    .showcase-content input{
+        position: absolute;
+        left:0;
+        bottom:-8vh;
+        width:66%;
+        height: 10%;
+        font-size: 1rem;
+        
+    }
+    .showcase-content .btn-lg{
+        position: absolute;
+        right: 0;
+        bottom: -8vh;
+        padding:0.6rem ;
+        font-size: 1.15rem;
+        text-transform: uppercase;
+        height: 6.2%;
+        width: 25%;
+    
+    }
+}
+
+@media (min-width:650px) and (max-width:700px){
+    .showcase-content input{
+        position: absolute;
+        left:0;
+        bottom:-8vh;
+        width:66%;
+        height: 20%;
+        font-size: 1rem;
+        
+    }
+    .showcase-content .btn-lg{
+        position: absolute;
+        right: 0;
+        bottom: -8vh;
+        padding:0.6rem ;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        height: 8.5%;
+        width: 25%;
+        font-weight: bolder;
+    
+    }
+    .showcase{
+        width:110%;
+        height:100%;
+       
+    }
+}
+
+@media (min-width:600px) and (max-width:650px){
+    .showcase-content input{
+        position: absolute;
+        left:0;
+        bottom:-8vh;
+        width:66%;
+        height: 20%;
+        font-size: 1rem;
+        
+    }
+    .showcase-content .btn-lg{
+        position: absolute;
+        right: 0;
+        bottom: -8vh;
+        padding:0.6rem ;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        height: 8.5%;
+        width: 25%;
+        font-weight: bolder;
+    
+    }
+    .showcase{
+        width:110%;
+        height:100%;
+       
+    }
+}
+
+
+@media  (min-width:530px) and (max-width:600px){
+    .showcase-content input{
+        position: absolute;
+        left:0;
+        bottom:-8vh;
+        width:66%;
+        height: 20%;
+        font-size: 1rem;
+        
+    }
+    .showcase-content .btn-lg{
+        position: absolute;
+        right: 0;
+        bottom: -8vh;
+        padding:0.6rem ;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        height: 11%;
+        width: 25%;
+        font-weight: bolder;
+    
+    }
+    .showcase{
+        width:110%;
+        height:100%;
+       
+    }
+}
+@media  (min-width:500px) and (max-width:530px){
+    .showcase-content input{
+        position: absolute;
+        left:0;
+        bottom:-8vh;
+        width:66%;
+        height: 17.1%;
+        font-size: 1rem;
+        
+    }
+    .showcase-content .btn-lg{
+        position: absolute;
+        right: 0;
+        bottom: -8vh;
+        padding:0.6rem ;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        height: 11%;
+        width: 25%;
+        font-weight: bolder;
+    
+    }
+    .showcase{
+        width:110%;
+        height:100%;
+       
+    }
+}
+@media  (min-width:400px) and (max-width:500px){
+    .showcase-content input{
+        position: absolute;
+        left:0;
+        bottom:-8vh;
+        width:66%;
+        height: 17.1%;
+        font-size: 1rem;
+        
+    }
+    .showcase-content .btn-lg{
+        position: absolute;
+        right: 0;
+        bottom: -8vh;
+        padding:0.6rem ;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        height: 11%;
+        width: 25%;
+        font-weight: bolder;
+    
+    }
+    .showcase{
+        width:110%;
+        height:100%;
+       
+    }
+}
+@media  (min-width:360px) and (max-width:400px){
+    .showcase-content input{
+        position: absolute;
+        left:0;
+        bottom:-8vh;
+        width:66%;
+        height: 13%;
+        font-size: 1rem;
+        
+    }
+    .showcase-content .btn-lg{
+        position: absolute;
+        right: 0;
+        bottom: -8vh;
+        padding:0.6rem ;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        height: 8%;
+        width: 25%;
+        font-weight: bolder;
+    
+    }
+    .showcase{
+        width:110%;
+        height:100%;
+       
+    }
 }
