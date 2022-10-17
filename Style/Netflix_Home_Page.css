@@ -51,6 +51,10 @@ header {
     flex-direction: row;
     align-items: center;
 }
+.left-cont a{
+    font-size: small;
+
+}
 
 .brandlogo {
     max-width: 110px;
@@ -78,7 +82,9 @@ header {
     opacity: 1;
     font-weight: 500;
 }
-
+.nav-item.active:hover{
+    color: red;
+}
 .right-cont svg,
 .right-cont img {
     margin-right: 22px;
@@ -132,6 +138,8 @@ header {
     margin-top: 180px;
     background-color: #141414;
     position: absolute;
+    border: 2px solid black;
+    border-radius:5px;
 }
 
 
@@ -487,10 +495,11 @@ margin-left: 50px;
    
   }
 
-  a:hover{
-    color: red;
+ a:hover{
+    /* color: red; */
     text-decoration: none;
     font-weight: bold;
+  
 }
 
 #span{
@@ -536,4 +545,13 @@ margin-left: 50px;
 #searchMovieresult{
     margin-top: 200px;
 
+}
+
+
+#User_Watching{
+    margin-right: 3px;
+  font-size: large;
+  font-weight: bold;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    
 }

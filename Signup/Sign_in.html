@@ -25,13 +25,13 @@
   </div>
   <div id="container">
     <form>
-      <h2 id="SignInh2">Sign Up</h2>
+      <h2 id="SignInh2">Sign In</h2>
       <input type="email" id="email" placeholder="Enter Email">
       <!-- <label for="email">Email or Phone Number</label> -->
       <input type="password" id="password" placeholder="Enter password">
       <!-- <label for="password" id="pass">password</label> -->
-      <button type="button" id="btn1">Sign up</button>
-      <h3>Already Have Account! <a id="now"> <span id="SignupNowbtn">Sign In now.</span></a></h3>
+      <button type="button" id="btn1">Sign In</button>
+      <h3>New to Netflix? <a id="now"> <span id="SignupNowbtn">Sign Up now.</span></a></h3>
       <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <a id="more" href=""> Learn more</a></p>
     </form>
   </div>
@@ -57,11 +57,11 @@
 </body>
 
 </html>
-<!-- <script src="signup.js"></script> -->
+
 <script type="module">
 
   document.getElementById('SignupNowbtn').addEventListener('click', function () {
-    location.href="/Signup/Sign_in.html"
+   location.href ="/Signup/signup.html"
   })
 
   // Import the functions you need from the SDKs you need
@@ -91,13 +91,14 @@
     var email = document.getElementById('email').value;
    
     var password = document.getElementById('password').value;
-    createUserWithEmailAndPassword(auth, email, password)
+    signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
         // ... user.uid
-        alert("User Created Succesfully")
-        location.href='/Signup/Sign_in.html';
+        localStorage.setItem('login_user', true);
+        alert("Login Succesfully")
+        location.href="/Pages/Manage_profilesection.html"
       })
       .catch((error) => {
         const errorCode = error.code;

@@ -120,7 +120,7 @@ function navbarnew(){
                       </li>
                       <li>
                         <a href="#" class="iq-user-dropdown search-toggle d-flex align-items-center">
-                          <img src="images/user/user.png" class="img-fluid user-m rounded-circle" alt="" />
+                   <img src="images/user/user.png" class="img-fluid user-m rounded-circle" alt="" />
                         </a>
                         <div class="iq-sub-dropdown iq-user-dropdown">
                           <div class="iq-card shadow-none m-0">
@@ -247,7 +247,7 @@ function navbarnew(){
                   </li>
                   <li class="nav-item nav-icon">
                     <a  class="iq-user-dropdown search-toggle d-flex align-items-center p-0">
-                      <img src="images/user/user.png" class="img-fluid user-m rounded-circle" alt="" />
+                    <span> ${localStorage.getItem('UserWatching')} <img src="images/user/user.png" class="img-fluid user-m rounded-circle" alt="" /></span>
                     </a>
                     <div class="iq-sub-dropdown iq-user-dropdown">
                       <div class="iq-card shadow-none m-0">

@@ -141,7 +141,7 @@ header {
     display: flex;
     flex-direction: column;
 
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 150px;
     text-decoration: none;
     color: white;
