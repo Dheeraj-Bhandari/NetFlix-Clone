@@ -1,5 +1,5 @@
-var login = JSON.parse(localStorage.getItem("........")) || [];
-document.querySelector("form").addEventListener("submit", myFun);
+var login = JSON.parse(localStorage.getItem("login_users")) || [];
+document.querySelector("#btn1").addEventListener("click", myFun);
 function myFun() {
   // console.log("dfgdg")
   // document.getElementById("email").value = "";
@@ -10,7 +10,7 @@ function myFun() {
   var flag = false;
 
   for (var i = 0; i < login.length; i++) {
-    if (login[i].email === email && login[i].password === password) {
+    if (login[i].email === email && login[i].pass === password) {
       flag = true;
     }
   }
@@ -18,7 +18,7 @@ function myFun() {
     event.preventDefault();
     console.log(1);
     alert("login Sucessfull ✔️");
-    window.location.href = "./Pages/Netflix_Home_Page.html";
+    window.location.href = "/Netflix_Home_Page_Static_Main/NetFlix_HomePage_Main.html";
   } else {
     alert("Wrong Credential   ❌");
   }

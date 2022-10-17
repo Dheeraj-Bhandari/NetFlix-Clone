@@ -47,6 +47,7 @@ input:focus {
     margin-bottom: 45px;
     background-color: red;
     color: white;
+    cursor: pointer;
 }
 
 h3{

@@ -38,3 +38,9 @@ p{
     font-size: 20px;
     border: none;
 }
+#sign{
+    cursor: pointer;
+}
+#now{
+    cursor: pointer;
+}
