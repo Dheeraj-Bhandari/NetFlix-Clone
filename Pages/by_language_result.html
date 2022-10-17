@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Language Result</title>
+    <link rel="stylesheet" href="/Style/Netflix_Home_Page.css">
+    <link rel="shortcut icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Search movie page CSS-->
+
+    <link rel="stylesheet" href="../Style/search_Movie.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- New Added For Footer -->
+    <link rel="stylesheet" href="/Netflix_Home_Page_Static_Main/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/Netflix_Home_Page_Static_Main/style.css">
+    <link rel="stylesheet" href="/Netflix_Home_Page_Static_Main/style.css">
+    <link rel="stylesheet" href="/Style/Netflix_Home_Page.css">
+    <!-- New addd end here -->
+   
+
+</head>
+
+<body>
+    <!-- Header Start -->
+
+    <header id="header" class="black-bg">
+        
+    </header>
+    
+    <!-- Header end -->
+
+    <!-- banner section -->
+
+    <div class="banne-section" id="banner-section">
+
+        <div class="banner-fadebottom">
+
+        </div>
+    </div>
+
+
+
+    <div class="movies-cont  " id="movies-cont">
+      <h1 id="movieh3" class="LanguageSelectedByUser">Tamil Movies</h1>
+    </div>
+
+    <div id="searchMovieresult">
+
+    </div>
+  
+
+    <div id="video"></div>
+    <div id="footer"></div>
+
+
+
+</body>
+<!-- Swiper JS -->
+<script type="module" src="/Script/by_language_result.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 0,
+        slidesPerGroup: 4,
+        loop: true,
+        loopFillGroupWithBlank: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+
+</script>
+
+
+</html>
+
+
+

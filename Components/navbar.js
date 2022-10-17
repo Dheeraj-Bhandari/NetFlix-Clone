@@ -11,7 +11,7 @@ function navbar() {
                        <a href="/Pages/Tv_Shows.html"><li class="nav-item active">TV SHOW</li> </a>
                        <a href="/Pages/MyLikedMovie.html"><li class="nav-item active">LIKED</li> </a>
                        <a href="/Pages/My_List.html"><li class="nav-item active">MY LIST</li> </a>
-                       <a href="/Pages/Movie.html"><li class="nav-item active">BROWSE BY LANGUAGE</li> </a>
+                       <a href="Pages/by_language.html"><li class="nav-item active">BROWSE BY LANGUAGE</li> </a>
                    </ul>
                </div>
                <div class="right-cont">
@@ -46,7 +46,7 @@ function navbar() {
                                Profile</a>
                            <a href=""><i class="fa fa-user" aria-hidden="true"></i> Account</a>
                            <a href=""><i class="fa fa-question-circle" aria-hidden="true"></i> HelpCenter</a>
-                           <a href="/index.html" >Sign Out of Netflix</a>
+                           <a href="/Signout/signout.html" >Sign Out of Netflix</a>
                        </div>
                    </div>
                    <div id = "searchBox-Div">

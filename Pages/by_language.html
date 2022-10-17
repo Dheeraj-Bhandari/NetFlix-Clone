@@ -5,10 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Language Preference</title>
+
+    <link rel="stylesheet" href="/Style/Netflix_Home_Page.css">
+    <link rel="shortcut icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Search movie page CSS-->
+
+    <link rel="stylesheet" href="../Style/search_Movie.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <!-- New Added For Footer -->
+    <link rel="stylesheet" href="/Netflix_Home_Page_Static_Main/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/Netflix_Home_Page_Static_Main/style.css">
+    <link rel="stylesheet" href="/Netflix_Home_Page_Static_Main/style.css">
+    <link rel="stylesheet" href="/Style/Netflix_Home_Page.css">
+    <!-- New addd end here -->
     <style>
-        body{
-            background-color: #0d121c;
-        }
+       
        .img_container{
         background-image:url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2155/1272155-h-53b5cac1c094);
         background-size: cover;
@@ -17,8 +34,10 @@
         text-align: center;
         justify-content: center;
         font-weight: 500;
+        border-radius: 5px;
+        
         }
-       .container{
+       .containerdiv{
         width: 70%;
         margin: auto;
         display: grid;
@@ -28,8 +47,9 @@
         transition: transform .3s all ease-in-out;
         
        }
-       .container :hover{
+       .containerdiv  :hover{
         transform: scale(1.2);
+        transition: ease 300ms;
        }
        #upperfolder{
         display: flex;
@@ -75,94 +95,116 @@
       .eleven{
         background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/old_images/LANGUAGE/5711/5711/5711-h);
       }
-      h3{
+      #h3lang{
         width: 70%;
         margin: auto;
         color: white;
-        margin-top: 5vh;
+        margin-top: 11vh;
         margin-bottom: 4vh;
       }
     </style>
 </head>
 <body>
 
-    <h3>Language</h3>
+    <header id="header" class="black-bg">
+        
+    </header>
 
-    <div class="container">
-        <div class="img_container one">
+    <h3 id="h3lang"> Choose Your Language</h3>
+
+    <div class="containerdiv">
+        <div class="img_container one" onclick="redirectToLangResultPage('or','Odia Movies')" id="one">
             <div id="upperfolder">
                
+                <img alt="Odia" src="https://secure-media0.hotstar.com/r1/languages/PCTV-odia.svg" class="lang-name">
                 <span id="one">Odia</span>
             </div>
         </div>
-        <div class="img_container">
+        <div class="img_container two" onclick="redirectToLangResultPage('hi','Hindi Movies')" >
             <div id="upperfolder">
-                
+                <img alt="Hindi" src="https://secure-media0.hotstar.com/r1/languages/PCTV-hindi.svg" class="lang-name">
                 <span id="two">Hindi</span>
             </div>
         </div>
-        <div class="img_container three">
+        <div class="img_container three" onclick="redirectToLangResultPage('bn','Bengali Movies')">
             <div id="upperfolder">
-               
+                <img alt="Bengali" src="https://secure-media0.hotstar.com/r1/languages/PCTV-bengali.svg" class="lang-name">
                 <span id="three">Bengali</span>
             </div>
         </div>
-        <div class="img_container four">
+        <div class="img_container four" onclick="redirectToLangResultPage('te','Odia Movies')">
             <div id="upperfolder">
-               
+                <img alt="Telugu" src="https://secure-media1.hotstar.com/r1/languages/PCTV-telugu.svg" class="lang-name">
                 <span id="four">Telugu</span>
             </div>
         </div>
-        <div class="img_container five">
+        <div class="img_container six" onclick="redirectToLangResultPage('mr','Odia Movies')">
+            <div id="upperfolder">
+                <img alt="Marathi" src="https://secure-media1.hotstar.com/r1/languages/PCTV-marathi.svg" class="lang-name">
+                <span>Marathi</span>
+            </div>
+        </div>
+        <div class="img_container seven" onclick="redirectToLangResultPage('ta','Odia Movies')">
+            <div id="upperfolder">
+                <img alt="Tamil" src="https://secure-media2.hotstar.com/r1/languages/PCTV-tamil.svg" class="lang-name">
+                <span>Tamil</span>
+            </div>
+        </div>
+        <div class="img_container eight" onclick="redirectToLangResultPage('ml','Odia Movies')">
+            <div id="upperfolder">
+                <img alt="Malayalam" src="https://secure-media1.hotstar.com/r1/languages/PCTV-malayalam.svg" class="lang-name">
+                <span>Malayalam</span>
+            </div>
+        </div>
+        <div class="img_container five" onclick="redirectToLangResultPage('en','Odia Movies')">
             <div id="upperfolder">
                 
                 <span>English</span>
             </div>
         </div>
-        <div class="img_container six">
+        <div class="img_container nine" onclick="redirectToLangResultPage('ko','Odia Movies')">
             <div id="upperfolder">
-                
-                <span>Marathi</span>
-            </div>
-        </div>
-        <div class="img_container seven">
-            <div id="upperfolder">
-               
-                <span>Tamil</span>
-            </div>
-        </div>
-        <div class="img_container eight">
-            <div id="upperfolder">
-               
-                <span>Malayalam</span>
-            </div>
-        </div>
-        <div class="img_container nine">
-            <div id="upperfolder">
-               
+                <img alt="Korean" src="https://secure-media1.hotstar.com/r1/languages/PCTV-korean.svg" class="lang-name">
                 <span>Korean</span>
             </div>
         </div>
-        <div class="img_container ten">
+        <div class="img_container ten" onclick="redirectToLangResultPage('ja','Odia Movies')">
             <div id="upperfolder">
-                
+
                 <span>Japanese</span>
             </div>
         </div>
-        <div class="img_container eleven">
+        <div class="img_container eleven" onclick="redirectToLangResultPage('kn','Odia Movies')">
             <div id="upperfolder">
-               
+                <img alt="Kannada" src="https://secure-media1.hotstar.com/r1/languages/PCTV-kannada.svg" class="lang-name">
                 <span>Kannadda</span>
             </div>
         </div>
     </div>
-</body>
-</html>
+    <div id="searchMovieresult">
 
-<script>
-    document.querySelector(".one").addEventListener("click",()=>{
-        let lang=document.querySelector("#one").innerText;
-        console.log(lang);
-    //    localStorage.setItem("language",)
-    })
+    </div>
+    <div id="footer"></div>
+</body>
+<script type="module" src="/Script/Netflix_Home_Page.js"></script>
+<script type="module" >
+    import navbar from "../Components/navbar.js";
+    document.getElementById('header').innerHTML = navbar;
+
+
+    import footernew from "../Components/footernew.js";
+    document.getElementById('footer').innerHTML = footernew;
+
+
+
+
+    
+window.redirectToLangResultPage = redirectToLangResultPage;
+    function redirectToLangResultPage(LanguageSelectedByUser,langugaeSelectedByUSerFullName){
+        localStorage.setItem('LanguageSelectedByUser', LanguageSelectedByUser);
+        localStorage.setItem('langugaeSelectedByUSerFullName',langugaeSelectedByUSerFullName);
+        location.href= "/Pages/by_language_result.html"
+        console.log("Inside redirectToLangResultPage Function")
+    }
 </script>
+</html>
