@@ -11,7 +11,7 @@ function navbar() {
                        <a href="/Pages/Tv_Shows.html"><li class="nav-item active">TV SHOW</li> </a>
                        <a href="/Pages/MyLikedMovie.html"><li class="nav-item active">LIKED</li> </a>
                        <a href="/Pages/My_List.html"><li class="nav-item active">MY LIST</li> </a>
-                       <a href="Pages/by_language.html"><li class="nav-item active">BROWSE BY LANGUAGE</li> </a>
+                       <a href="Pages/by_language.html"><li class="nav-item active">LANGUAGE & GENRES</li> </a>
                    </ul>
                </div>
                <div class="right-cont">

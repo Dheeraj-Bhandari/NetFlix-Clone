@@ -26,6 +26,7 @@ function navbarnew(){
                     <li class="menu-item"><a href="/Pages/Tv_Shows.html">Tv Shows</a></li>
                     <li class="menu-item"><a href="/Pages/My_List.html">My Liked</a></li>
                     <li class="menu-item"><a href="/Pages/MyLikedMovie.html">My List</a></li>
+                    <li class="menu-item"><a href="/Pages/by_language.html">language & Genres</a></li>
                     <!-- <li class="menu-item">
                       <a href="#">Contact Us</a>
                       <ul class="sub-menu">

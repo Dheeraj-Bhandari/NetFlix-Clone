@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,89 +26,132 @@
     <link rel="stylesheet" href="/Style/Netflix_Home_Page.css">
     <!-- New addd end here -->
     <style>
-       
-       .img_container{
-        background-image:url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2155/1272155-h-53b5cac1c094);
-        background-size: cover;
-        height: 25vh;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        font-weight: 500;
-        border-radius: 5px;
-        
-        }
-       .containerdiv{
-        width: 70%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
-        gap: 15px;
-        cursor: pointer;
-        transition: transform .3s all ease-in-out;
-        
-       }
-       .containerdiv  :hover{
-        transform: scale(1.2);
-        transition: ease 300ms;
-       }
-       #upperfolder{
-        display: flex;
-        flex-direction: column;
-       text-align: center;
-       align-items: center;
-       justify-content: center;
-       margin-top: 25%;
-        gap: 10%;
+        .img_container {
+            background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2155/1272155-h-53b5cac1c094);
+            background-size: cover;
+            height: 25vh;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            font-weight: 500;
+            border-radius: 5px;
 
-       } 
-      span{
-        color: white;
-        font-size: 20px;
-      }
-      .one{
-        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/5444/1265444-h-d76f7b771fe4);
-      }
-      .three{
-        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2156/1272156-h-069fc6816144);
-      }
-      .four{
-        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/1381/1121381-h-6c23f89e0ba2);
-      }
-      .five{
-        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2158/1272158-h-aa2d20facda2);
-      }
-      .six{
-        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2157/1272157-h-e0d5706adae2);
-      }
-      .seven{
-        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2160/1272160-h-d078165f23bb);
-      }
-      .eight{
-        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/2159/1272159-h-54c3e895c74e);
-      }
-      .nine{
-        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/7339/1307339-h-303abe8ea3d6);
-      }
-      .ten{
-        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/848/1330848-h-4ede10b7d754);
-      }
-      .eleven{
-        background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/old_images/LANGUAGE/5711/5711/5711-h);
-      }
-      #h3lang{
-        width: 70%;
-        margin: auto;
-        color: white;
-        margin-top: 11vh;
-        margin-bottom: 4vh;
-      }
+        }
+
+        .containerdiv {
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+            cursor: pointer;
+            transition: transform .3s all ease-in-out;
+
+        }
+
+        .containerdiv :hover {
+            transform: scale(1.2);
+            transition: ease 300ms;
+        }
+
+        #upperfolder {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25%;
+            gap: 10%;
+
+        }
+
+        span {
+            color: white;
+            font-size: 20px;
+        }
+
+        .one {
+            background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/5444/1265444-h-d76f7b771fe4);
+        }
+
+        .three {
+            background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2156/1272156-h-069fc6816144);
+        }
+
+        .four {
+            background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/1381/1121381-h-6c23f89e0ba2);
+        }
+
+        .five {
+            background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2158/1272158-h-aa2d20facda2);
+        }
+
+        .six {
+            background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2157/1272157-h-e0d5706adae2);
+        }
+
+        .seven {
+            background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2160/1272160-h-d078165f23bb);
+        }
+
+        .eight {
+            background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/2159/1272159-h-54c3e895c74e);
+        }
+
+        .nine {
+            background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/7339/1307339-h-303abe8ea3d6);
+        }
+
+        .ten {
+            background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/848/1330848-h-4ede10b7d754);
+        }
+
+        .eleven {
+            background-image: url(https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_1_5x/sources/r1/cms/prod/old_images/LANGUAGE/5711/5711/5711-h);
+        }
+
+        #h3lang {
+            width: 70%;
+            /* margin: auto; */
+            color: white;
+            margin-top: 11vh;
+            margin-left: 14vh;
+            margin-bottom: 4vh;
+        }
+
+        @media screen and (max-width: 992px) {
+            .containerdiv {
+                width: 70%;
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 15px;
+                cursor: pointer;
+                transition: transform .3s all ease-in-out;
+
+            }
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .containerdiv {
+                width: 70%;
+                margin: auto;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+                cursor: pointer;
+                transition: transform .3s all ease-in-out;
+
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <header id="header" class="black-bg">
-        
+
     </header>
 
     <h3 id="h3lang"> Choose Your Language</h3>
@@ -115,12 +159,12 @@
     <div class="containerdiv">
         <div class="img_container one" onclick="redirectToLangResultPage('or','Odia Movies')" id="one">
             <div id="upperfolder">
-               
+
                 <img alt="Odia" src="https://secure-media0.hotstar.com/r1/languages/PCTV-odia.svg" class="lang-name">
                 <span id="one">Odia</span>
             </div>
         </div>
-        <div class="img_container two" onclick="redirectToLangResultPage('hi','Hindi Movies')" >
+        <div class="img_container two" onclick="redirectToLangResultPage('hi','Hindi Movies')">
             <div id="upperfolder">
                 <img alt="Hindi" src="https://secure-media0.hotstar.com/r1/languages/PCTV-hindi.svg" class="lang-name">
                 <span id="two">Hindi</span>
@@ -128,66 +172,177 @@
         </div>
         <div class="img_container three" onclick="redirectToLangResultPage('bn','Bengali Movies')">
             <div id="upperfolder">
-                <img alt="Bengali" src="https://secure-media0.hotstar.com/r1/languages/PCTV-bengali.svg" class="lang-name">
+                <img alt="Bengali" src="https://secure-media0.hotstar.com/r1/languages/PCTV-bengali.svg"
+                    class="lang-name">
                 <span id="three">Bengali</span>
             </div>
         </div>
-        <div class="img_container four" onclick="redirectToLangResultPage('te','Odia Movies')">
+        <div class="img_container four" onclick="redirectToLangResultPage('te','Telugu Movies')">
             <div id="upperfolder">
-                <img alt="Telugu" src="https://secure-media1.hotstar.com/r1/languages/PCTV-telugu.svg" class="lang-name">
+                <img alt="Telugu" src="https://secure-media1.hotstar.com/r1/languages/PCTV-telugu.svg"
+                    class="lang-name">
                 <span id="four">Telugu</span>
             </div>
         </div>
-        <div class="img_container six" onclick="redirectToLangResultPage('mr','Odia Movies')">
+        <div class="img_container six" onclick="redirectToLangResultPage('mr','Marathi Movies')">
             <div id="upperfolder">
-                <img alt="Marathi" src="https://secure-media1.hotstar.com/r1/languages/PCTV-marathi.svg" class="lang-name">
+                <img alt="Marathi" src="https://secure-media1.hotstar.com/r1/languages/PCTV-marathi.svg"
+                    class="lang-name">
                 <span>Marathi</span>
             </div>
         </div>
-        <div class="img_container seven" onclick="redirectToLangResultPage('ta','Odia Movies')">
+        <div class="img_container seven" onclick="redirectToLangResultPage('ta','Tamil Movies')">
             <div id="upperfolder">
                 <img alt="Tamil" src="https://secure-media2.hotstar.com/r1/languages/PCTV-tamil.svg" class="lang-name">
                 <span>Tamil</span>
             </div>
         </div>
-        <div class="img_container eight" onclick="redirectToLangResultPage('ml','Odia Movies')">
+        <div class="img_container eight" onclick="redirectToLangResultPage('ml','Malayalam Movies')">
             <div id="upperfolder">
-                <img alt="Malayalam" src="https://secure-media1.hotstar.com/r1/languages/PCTV-malayalam.svg" class="lang-name">
+                <img alt="Malayalam" src="https://secure-media1.hotstar.com/r1/languages/PCTV-malayalam.svg"
+                    class="lang-name">
                 <span>Malayalam</span>
             </div>
         </div>
-        <div class="img_container five" onclick="redirectToLangResultPage('en','Odia Movies')">
+        <div class="img_container five" onclick="redirectToLangResultPage('en','English Movies')">
             <div id="upperfolder">
-                
+
                 <span>English</span>
             </div>
         </div>
-        <div class="img_container nine" onclick="redirectToLangResultPage('ko','Odia Movies')">
+        <div class="img_container nine" onclick="redirectToLangResultPage('ko','Korean Movies')">
             <div id="upperfolder">
-                <img alt="Korean" src="https://secure-media1.hotstar.com/r1/languages/PCTV-korean.svg" class="lang-name">
+                <img alt="Korean" src="https://secure-media1.hotstar.com/r1/languages/PCTV-korean.svg"
+                    class="lang-name">
                 <span>Korean</span>
             </div>
         </div>
-        <div class="img_container ten" onclick="redirectToLangResultPage('ja','Odia Movies')">
+        <div class="img_container ten" onclick="redirectToLangResultPage('ja','Japanese Movies')">
             <div id="upperfolder">
 
                 <span>Japanese</span>
             </div>
         </div>
-        <div class="img_container eleven" onclick="redirectToLangResultPage('kn','Odia Movies')">
+        <div class="img_container eleven" onclick="redirectToLangResultPage('kn','Kannada Movies')">
             <div id="upperfolder">
-                <img alt="Kannada" src="https://secure-media1.hotstar.com/r1/languages/PCTV-kannada.svg" class="lang-name">
+                <img alt="Kannada" src="https://secure-media1.hotstar.com/r1/languages/PCTV-kannada.svg"
+                    class="lang-name">
                 <span>Kannadda</span>
             </div>
         </div>
     </div>
+
+
+    <h3 id="h3lang"> Choose Your Genre</h3>
+
+    <div class="containerdiv">
+        <div class="img_container one" onclick="redirectToLangResultPage(28,'Action Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2163/1272163-h-6a39e5230553');">
+            <div id="upperfolder">
+                <span id="one">Action</span>
+            </div>
+        </div>
+        <div class="img_container one" onclick="redirectToLangResultPage(12,'Adventure Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2201/1272201-h-6f1a3525b279');">
+            <div id="upperfolder">
+                <span id="one">Adventure</span>
+            </div>
+        </div>
+        <div class="img_container one" onclick="redirectToLangResultPage(16,'Animation Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2170/1272170-h-159c4a86d84a');">
+            <div id="upperfolder">
+                <span id="one">Animation</span>
+            </div>
+        </div>
+        <div class="img_container one" onclick="redirectToLangResultPage(35,'Comedy Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2189/1272189-h-474580e995d8');">
+            <div id="upperfolder">
+                <span id="one">Comedy</span>
+            </div>
+        </div>
+        <div class="img_container one" onclick="redirectToLangResultPage(80,'Crime Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2195/1272195-h-2981b9780648');">
+            <div id="upperfolder">
+                <span id="one">Crime</span>
+            </div>
+        </div>
+        <div class="img_container one" onclick="redirectToLangResultPage(99,'Documentary Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2199/1272199-h-a2cbf3b8c190');">
+            <div id="upperfolder">
+                <span id="one">Documentary</span>
+            </div>
+        </div>
+        <div class="img_container one" onclick="redirectToLangResultPage(18,'Drama Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2164/1272164-h-a40109f63230');">
+            <div id="upperfolder">
+                <span id="one">Drama</span>
+            </div>
+        </div>
+        <div class="img_container one" onclick="redirectToLangResultPage(10751,'Family Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2184/1272184-h-dc6d91e320bb');">
+            <div id="upperfolder">
+                <span id="one">Family</span>
+            </div>
+        </div>
+        <div class="img_container one" onclick="redirectToLangResultPage(14,'Fantasy Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/7159/1047159-h-8c703700028e');">
+            <div id="upperfolder">
+                <span id="one">Fantasy</span>
+            </div>
+        </div>
+        <div class="img_container one" onclick="redirectToLangResultPage(36,'History Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/4454/1044454-h-bdead73b8dae');">
+            <div id="upperfolder">
+                <span id="one">History</span>
+            </div>
+        </div>
+        <div class="img_container one" onclick="redirectToLangResultPage(27,'Horror Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2200/1272200-h-a1e428920c37');">
+            <div id="upperfolder">
+                <span id="one">Horror</span>
+            </div>
+        </div>
+        <div class="img_container one" onclick="redirectToLangResultPage(10402,'Music Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2169/1272169-h-26d611d85e27');">
+            <div id="upperfolder">
+                <span id="one">Music</span>
+            </div>
+        </div>
+        <div class="img_container one" onclick="redirectToLangResultPage(9648,'Mystery Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/7157/1047157-h-04ef8d408113');">
+            <div id="upperfolder">
+                <span id="one">Mystery</span>
+            </div>
+        </div>
+        <div class="img_container one" onclick="redirectToLangResultPage(10749,'Romance Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2168/1272168-h-0b9e56f3a569');">
+            <div id="upperfolder">
+                <span id="one">Romance</span>
+            </div>
+        </div>
+        <div class="img_container one" onclick="redirectToLangResultPage(878,'Science Fiction Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2173/1272173-h-20b3596ec020');">
+            <div id="upperfolder">
+                <span id="one">Science Fiction</span>
+            </div>
+        </div>
+        <div class="img_container one" onclick="redirectToLangResultPage(53,'Thriller Movies')"
+            style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2162/1272162-h-1a65d09d73f0');">
+            <div id="upperfolder">
+                <span id="one">Thriller</span>
+            </div>
+        </div>
+        
+    </div>
+
+
     <div id="searchMovieresult">
 
     </div>
     <div id="footer"></div>
 </body>
 <script type="module" src="/Script/Netflix_Home_Page.js"></script>
-<script type="module" >
+<script type="module">
     import navbar from "../Components/navbar.js";
     document.getElementById('header').innerHTML = navbar;
 
@@ -198,13 +353,15 @@
 
 
 
-    
-window.redirectToLangResultPage = redirectToLangResultPage;
-    function redirectToLangResultPage(LanguageSelectedByUser,langugaeSelectedByUSerFullName){
+
+    window.redirectToLangResultPage = redirectToLangResultPage;
+    function redirectToLangResultPage(LanguageSelectedByUser, langugaeSelectedByUSerFullName) {
         localStorage.setItem('LanguageSelectedByUser', LanguageSelectedByUser);
-        localStorage.setItem('langugaeSelectedByUSerFullName',langugaeSelectedByUSerFullName);
-        location.href= "/Pages/by_language_result.html"
+        localStorage.setItem('langugaeSelectedByUSerFullName', langugaeSelectedByUSerFullName);
+        location.href = "/Pages/by_language_result.html"
+        // console.log(isNaN(LanguageSelectedByUser))
         console.log("Inside redirectToLangResultPage Function")
     }
 </script>
+
 </html>

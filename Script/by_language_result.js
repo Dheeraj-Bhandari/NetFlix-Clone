@@ -26,8 +26,8 @@ const apiPath = {
 
 // Langugae Choosen By user From Local Storage
 
-const langugaeSelectedByUSer = localStorage.getItem("LanguageSelectedByUser") ||  'en';
-const langugaeSelectedByUSerFullName = localStorage.getItem("langugaeSelectedByUSerFullName") ||  'English';
+const langugaeSelectedByUSer = localStorage.getItem("LanguageSelectedByUser");
+const langugaeSelectedByUSerFullName = localStorage.getItem("langugaeSelectedByUSerFullName");
 
 //For boosting the app
 function init() {
@@ -37,6 +37,7 @@ function init() {
 
 async function fecthTrendingLocalLangMovie(){
     // console.log(apiPath.searchByLocalLanguage(langugaeSelectedByUSer))
+   if(isNaN(langugaeSelectedByUSer)){
     const res = await fetch(apiPath.searchByLocalLanguage(langugaeSelectedByUSer));
     const data = await  res.json();
     console.log(data);
@@ -49,6 +50,22 @@ async function fecthTrendingLocalLangMovie(){
         for(var i=1; i<=5; i++){
             fecthAndbuildMovieSection(`${apiPath.searchByLocalLanguage(langugaeSelectedByUSer)}&page=${i}`, "")
         }
+   }
+   else{
+    const res = await fetch(apiPath.fetchMoviesList(langugaeSelectedByUSer));
+    const data = await  res.json();
+    console.log(data);
+    const randomMInd = parseInt(Math.random()*data.results.length);
+    const filterData = data.results.filter(ele=>{
+        return ele.poster_path!=null || ele.backdrop_path!=null;
+    })
+        buildBannerSection(filterData[randomMInd]);
+        document.querySelector(".LanguageSelectedByUser").innerText=langugaeSelectedByUSerFullName;
+        for(var i=1; i<=5; i++){
+            fecthAndbuildMovieSection(`${apiPath.fetchMoviesList(langugaeSelectedByUSer)}&page=${i}`, "")
+        }
+   }
+    
 }fecthTrendingLocalLangMovie();
 
 
