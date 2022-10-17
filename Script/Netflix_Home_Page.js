@@ -7,8 +7,8 @@ import footernew from "../Components/footernew.js";
 document.getElementById('footer').innerHTML = footernew;
 
 const apiKey = '9e997fe8c2efd000188bc88e3dda6d23';
-const youtubeApiKey = 'AIzaSyC7bWr31DArqVECDyRJbH-g106fKypGKRE'
-// const youtubeApiKey = 'AIzaSyBa770uGbngfNCOB2sg8ykjuXkWTGFZTxs'
+// const youtubeApiKey = 'AIzaSyC7bWr31DArqVECDyRJbH-g106fKypGKRE'
+const youtubeApiKey = 'AIzaSyBa770uGbngfNCOB2sg8ykjuXkWTGFZTxs'
 const apiEndPoint = 'https://api.themoviedb.org/3'
 const imgPath = "https://image.tmdb.org/t/p/original"
 const apiPath = {
@@ -48,13 +48,13 @@ function buildBannerSection(movie){
             <p class="banner-info">Trending in Movies | Rating - ${(movie.vote_average).toFixed(1)}</p>
             <p class="banner-overview">${movie.overview && movie.overview.length>200 ? movie.overview.slice(0,200).trim()+"...": movie.overview}</p>
             <div class="action-button-cont">
-                <button onclick="searchMovieTrailerandPlay('${movie.name || movie.title} trailer')" class="action-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                <button id="BannerPlayButton" onclick="searchMovieTrailerandPlay('${movie.name || movie.title} trailer')" class="action-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg" class="Hawkins-Icon Hawkins-Icon-Standard">
                         <path
                             d="M4 2.69127C4 1.93067 4.81547 1.44851 5.48192 1.81506L22.4069 11.1238C23.0977 11.5037 23.0977 12.4963 22.4069 12.8762L5.48192 22.1849C4.81546 22.5515 4 22.0693 4 21.3087V2.69127Z"
                             fill="currentColor"></path>
                     </svg>&nbsp;&nbsp; Play</button>
-                <button onclick="MovieDetailsPage(${movie.id})" class="action-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                <button  id="BannerInfoButton" onclick="MovieDetailsPage(${movie.id})" class="action-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                         xmlns="http://www.w3.org/2000/svg" class="Hawkins-Icon Hawkins-Icon-Standard">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3ZM1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM13 10V18H11V10H13ZM12 8.5C12.8284 8.5 13.5 7.82843 13.5 7C13.5 6.17157 12.8284 5.5 12 5.5C11.1716 5.5 10.5 6.17157 10.5 7C10.5 7.82843 11.1716 8.5 12 8.5Z"
@@ -99,36 +99,7 @@ function fecthAndbuildMovieSection(fecthUrl, categoryName) {
         .catch(err => console.log(err));
 }
 
-// function buildMovieSection(list,categoryName){
-// console.log(list, categoryName);
-// const movieCont = document.getElementById("movies-cont");
-// const moviesListHtml = list.map(item=>{
-//     // onmouseenter="searchMovieTrailer('${item.title} trailer','yt${item.id}')"
-//     return `
-//     <div class="movie-item"  >
-//         <img  class="movie-item-img"  src="${imgPath}${item.backdrop_path}" alt="${item.title}" />
-//         <iframe  width="245" height="150" src="" id="yt${item.id}" ></iframe>
-//         </div>
-       
-//     `;
-// }).join('');
 
-// const movieSectionHtml = `
-// <h2 class="movie-section-heading" >${categoryName}<span class="explore-nudge">Explore All</span> </h2>
-// <div class="movies-row">
-//    ${moviesListHtml}
-// </div>
-// `;
-
-// const div = document.createElement('div');
-// div.className = 'movie-section'
-// div.innerHTML = movieSectionHtml;
-
-// movieCont.append(div);
-
-// // console.log(movieSectionHtml);
-
-// }
 function buildMovieSection(list,categoryName){
     console.log(list, categoryName);
     const movieCont = document.getElementById("movies-cont");
@@ -361,8 +332,8 @@ function searchMovieTrailerandPlay(movieName) {
 
 function playfullscreentrailer(src) {
     const frame = `
-    <iframe id="iframe" src="${src}" style="position:fixed; margin-top: 20px; top: 20px;; left:0; bottom:0; right:0;
-    width:100%; height:90%; border:none; margin:0; padding:0; overflow:visible; ">`
+    <iframe id="iframe" src="${src}" style="position:fixed; margin-top: 0px; top: ;; left:0; bottom:0; right:0;
+    width:100%; height:100%; border:none; margin:0; padding:0; overflow:visible; ">`
 
 
     console.log(frame)
@@ -421,6 +392,7 @@ document.getElementById("searchBox-Div").style.display = "none";
     async function appendMovies() {
        
         var search = document.getElementById("input").value;
+        var input = document.getElementById("input").value;
         // console.log(search);
         
         const bannersection  = document.getElementById("banner-section")
@@ -431,6 +403,8 @@ document.getElementById("searchBox-Div").style.display = "none";
             bannersection.style.display='none'
         }
         else{
+            document.getElementById("searchBox-Div").style.display = "none";
+            document.getElementById("searchBox-Div").style.height = "none";
             movieContainer.style.display= 'block';
             bannersection.style.display='block'
         }
@@ -442,17 +416,19 @@ document.getElementById("searchBox-Div").style.display = "none";
             console.log(res2);
             document.getElementById("searchBox-Div").innerHTML = "";
             document.getElementById("searchBox-Div").style.display = "block";
-            res2.results.map(function(elem){
+            res2.results.slice(0,5).map(function(elem){
                   
                 const box = document.getElementById("searchBox-Div");
                 const div = document.createElement("div");
                 div.setAttribute("id", "searchBox-InnerDiv");
 
                 const image = document.createElement("img");
-                image.setAttribute("src", `${imgPath}${elem.backdrop_path}`) ||  image.setAttribute("src", `${imgPath}${elem.poster_path}`) ;
+                image.setAttribute("src", `${imgPath}${elem.backdrop_path==null ? elem.poster_path : elem.backdrop_path}`) ;
+                console.log(`${imgPath}${elem.backdrop_path || elem.poster_path}`)
                 image.setAttribute("id", "search_movie_img");
-                image.addEventListener("click", function() {
+                div.addEventListener("click", function() {
                     localStorage.setItem('movieId', elem.id);
+                    location.href="/Pages/Detail_Page.html"
                 })
 
                 const p = document.createElement("p");
@@ -512,6 +488,10 @@ window.debounceMovies = debounceMovies;
 
 // Search Movie Function End
 
+
+
+// Search with  Voice Function Start
+
 const search = document.querySelector("#input");
 
 const info = document.querySelector(".info");
@@ -569,9 +549,11 @@ if(SpeechRecognition) {
     }
     else {
       if(transcript.toLowerCase().trim()==="go") {
-        search.submit();
+        console.log(search.value);
+        redirectTOMoviePage(search.value);
+        // search.submit();
       }
-      else if(transcript.toLowerCase().trim()==="reset input") {
+      else if(transcript.toLowerCase().trim()==="saaf karo yaar") {
         search.value = "";
       }
       else {
@@ -585,8 +567,16 @@ if(SpeechRecognition) {
   
 }
 else {
-  console.log("Your Browser does not support speech Recognition");
-  info.textContent = "Your Browser does not support Speech Recognition";
+    console.log("Your Browser does not support speech Recognition");
+    info.textContent = "Your Browser does not support Speech Recognition";
 }
 
+async function redirectTOMoviePage(value){
+    const res = await fetch(apiPath.SearchMovie(value));
+    const data = await res.json();
+    console.log(data.results[0]);
+    MovieDetailsPage(data.results[0].id)
+}
+
+// Search with  Voice Function End
 

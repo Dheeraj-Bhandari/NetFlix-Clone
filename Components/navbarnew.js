@@ -180,22 +180,19 @@ function navbarnew(){
                       <i class="fa fa-search"></i>
                     </a>
                     
-                    <div class="container">
-  <form action="https://www.google.com/search" method="get" target="_blank" id="search-form">
-    <input name="q" type="text" placeholder="Search Google..." autocomplete="off" autofocus>
-     <button type="button"><i class="fas fa-microphone"></i></button> 
-  </form>
-  <p class="info"></p>
-</div>
+         
 
                     <div class="search-box iq-search-bar d-search">
                     <form action="#" class="searchbox">
                       <div class="form-group position-relative">
-                        <input id="input" oninput="debounceMovies()"  type="text" class="text search-input font-size-12"
+                      <span id="span">
+                      <input id="input" oninput="debounceMovies()"  type="text" class="text search-input font-size-12"
                           placeholder="type here to search..." />
                           <button id = "micBtn"  type="button"><i class="fas fa-microphone"></i></button>
                           <p class="info"></p>
                         <i class="search-link fa fa-search"></i>
+                      </span>
+                        
                       </div>
                     </form>
                   </div>

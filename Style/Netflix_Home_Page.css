@@ -31,6 +31,7 @@ header {
     left: 0;
     top: 0;
     width: 100%;
+   
     transition: all ease 1000ms;
 }
 
@@ -483,10 +484,56 @@ margin-left: 50px;
   #input{
     transition-property:opacity;
     transition-duration:1s;
+   
   }
 
   a:hover{
     color: red;
     text-decoration: none;
     font-weight: bold;
+}
+
+#span{
+    display: flex;
+}
+.fa-microphone{
+    
+    /* padding: 10px; */
+  
+}
+#micBtn{
+    margin: 0 5px 0 5px;
+}
+
+#BannerInfoButton:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    cursor: pointer;
+}
+
+#BannerPlayButton:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    cursor: pointer;
+}
+
+#searchBox-Div{
+
+   
+   
+    z-index: 99999999999;
+    /* border: 2px solid red; */
+    position: fixed;
+    margin-top: 444px;
+    margin-left: 3px;
+    width: 200px;
+    
+}
+#searchBox-Div p, img{
+    cursor: pointer;
+}
+
+
+
+#searchMovieresult{
+    margin-top: 200px;
+
 }
