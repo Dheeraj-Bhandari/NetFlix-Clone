@@ -147,7 +147,7 @@
         }
 
 
-        #catagoryFilter{
+        #catagoryFilter {
             width: 100%;
             /* margin-left: 10%;
             margin-right: 10%; */
@@ -157,18 +157,26 @@
             gap: 30px;
             /* justify-content: space-around; */
         }
-        #catagoryFilter select{
+
+        #catagoryFilter select {
             border: 2px solid wheat;
             border-radius: 5px;
         }
 
-        #lang,#genre{
+        #lang,
+        #genre {
             color: white;
             background-color: black;
             transition: ease 200ms;
         }
-        #lang,#genre option{
-            font-size: small;
+
+        #lang,
+        #genre option {
+            font-size: large;
+        }
+
+        #containerdivMain {
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -178,11 +186,11 @@
     <header id="header" class="black-bg">
 
     </header>
-   
+
     <h3 id="h3lang"> Choose Your Language</h3>
     <div id="catagoryFilter">
 
-        <select name="Choose Your Language" id="lang"> 
+        <select name="Choose Your Language" id="lang">
             <option value="choose">Choose Your Language</option>
             <option value="odia">Odia</option>
             <option value="hindi">Hindi</option>
@@ -196,9 +204,9 @@
             <option value="japanes">Japanes</option>
             <option value="kannadda">Kannadda</option>
         </select>
-        
+
         <select name="" id="genre">
-            
+
             <option value="choose">Genre</option>
             <option value="action">Action</option>
             <option value="adventure">Adventure</option>
@@ -223,14 +231,16 @@
         <div class="containerdiv">
             <div class="img_container one" onclick="redirectToLangResultPage('or','Odia Movies')" id="one">
                 <div id="upperfolder">
-    
-                    <img alt="Odia" src="https://secure-media0.hotstar.com/r1/languages/PCTV-odia.svg" class="lang-name">
+
+                    <img alt="Odia" src="https://secure-media0.hotstar.com/r1/languages/PCTV-odia.svg"
+                        class="lang-name">
                     <span id="one">Odia</span>
                 </div>
             </div>
             <div class="img_container two" onclick="redirectToLangResultPage('hi','Hindi Movies')">
                 <div id="upperfolder">
-                    <img alt="Hindi" src="https://secure-media0.hotstar.com/r1/languages/PCTV-hindi.svg" class="lang-name">
+                    <img alt="Hindi" src="https://secure-media0.hotstar.com/r1/languages/PCTV-hindi.svg"
+                        class="lang-name">
                     <span id="two">Hindi</span>
                 </div>
             </div>
@@ -257,7 +267,8 @@
             </div>
             <div class="img_container seven" onclick="redirectToLangResultPage('ta','Tamil Movies')">
                 <div id="upperfolder">
-                    <img alt="Tamil" src="https://secure-media2.hotstar.com/r1/languages/PCTV-tamil.svg" class="lang-name">
+                    <img alt="Tamil" src="https://secure-media2.hotstar.com/r1/languages/PCTV-tamil.svg"
+                        class="lang-name">
                     <span>Tamil</span>
                 </div>
             </div>
@@ -270,7 +281,7 @@
             </div>
             <div class="img_container five" onclick="redirectToLangResultPage('en','English Movies')">
                 <div id="upperfolder">
-    
+
                     <span>English</span>
                 </div>
             </div>
@@ -283,7 +294,7 @@
             </div>
             <div class="img_container ten" onclick="redirectToLangResultPage('ja','Japanese Movies')">
                 <div id="upperfolder">
-    
+
                     <span>Japanese</span>
                 </div>
             </div>
@@ -295,10 +306,10 @@
                 </div>
             </div>
         </div>
-    
-    
+
+
         <h3 id="h3lang"> Choose Your Genre</h3>
-    
+
         <div class="containerdiv">
             <div class="img_container one" onclick="redirectToLangResultPage(28,'Action Movies')"
                 style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2163/1272163-h-6a39e5230553');">
@@ -396,11 +407,11 @@
                     <span id="one">Thriller</span>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
-    
+
     <div id="searchMovieresult">
 
     </div>
@@ -408,12 +419,13 @@
 </body>
 <script type="module" src="/Script/Netflix_Home_Page.js"></script>
 <script type="module">
+
     const select = document.getElementById('lang')
-    select.addEventListener('change', function(){
+    select.addEventListener('change', function () {
         const selectedValue = select.options[select.selectedIndex].value;
         const mainContainer = document.getElementById('containerdivMain');
         mainContainer.innerHTML = null;
-        if(selectedValue=="odia"){
+        if (selectedValue == "odia") {
             const html = `
             <div class="containerdiv">
                 <div class="img_container one" onclick="redirectToLangResultPage('or','Odia Movies')" id="one">
@@ -425,11 +437,11 @@
                 </div>
             </div>
             `
-            
+
             mainContainer.innerHTML = html;
         }
-        else if(selectedValue=="hindi"){
-          
+        else if (selectedValue == "hindi") {
+
             const html = `
             <div class="containerdiv">
                 <div class="img_container two" onclick="redirectToLangResultPage('hi','Hindi Movies')">
@@ -440,11 +452,11 @@
             </div>
             </div>
             `
-            
+
             mainContainer.innerHTML = html;
         }
-        else if(selectedValue=="bengali"){
-          
+        else if (selectedValue == "bengali") {
+
             const html = `
             <div class="containerdiv">
                 <div class="img_container three" onclick="redirectToLangResultPage('bn','Bengali Movies')">
@@ -456,11 +468,11 @@
             </div>
             </div>
             `
-            
+
             mainContainer.innerHTML = html;
         }
-        else if(selectedValue=="telugu"){
-        
+        else if (selectedValue == "telugu") {
+
             const html = `
             <div class="containerdiv">
                 <div class="img_container four" onclick="redirectToLangResultPage('te','Telugu Movies')">
@@ -472,10 +484,10 @@
             </div>
             </div>
             `
-            
+
             mainContainer.innerHTML = html;
         }
-        else if(selectedValue=="marathi"){
+        else if (selectedValue == "marathi") {
 
             const html = `
             <div class="containerdiv">
@@ -488,11 +500,11 @@
             </div>
             </div>
             `
-            
+
             mainContainer.innerHTML = html;
         }
-        else if(selectedValue=="tamil"){
-  
+        else if (selectedValue == "tamil") {
+
             const html = `
             <div class="containerdiv">
                 <div class="img_container seven" onclick="redirectToLangResultPage('ta','Tamil Movies')">
@@ -503,11 +515,11 @@
             </div>
             </div>
             `
-            
+
             mainContainer.innerHTML = html;
         }
-        else if(selectedValue=="malayalam"){
- 
+        else if (selectedValue == "malayalam") {
+
             const html = `
             <div class="containerdiv">
                 <div class="img_container eight" onclick="redirectToLangResultPage('ml','Malayalam Movies')">
@@ -519,11 +531,11 @@
             </div>
             </div>
             `
-            
+
             mainContainer.innerHTML = html;
         }
-        else if(selectedValue=="english"){
-  
+        else if (selectedValue == "english") {
+
             const html = `
             <div class="containerdiv">
                 <div class="img_container five" onclick="redirectToLangResultPage('en','English Movies')">
@@ -534,11 +546,11 @@
             </div>
             </div>
             `
-            
+
             mainContainer.innerHTML = html;
         }
-        else if(selectedValue=="korean"){
-  
+        else if (selectedValue == "korean") {
+
             const html = `
             <div class="containerdiv">
                 <div class="img_container nine" onclick="redirectToLangResultPage('ko','Korean Movies')">
@@ -550,11 +562,11 @@
             </div>
             </div>
             `
-            
+
             mainContainer.innerHTML = html;
         }
-        else if(selectedValue=="japanes"){
-    
+        else if (selectedValue == "japanes") {
+
             const html = `
             <div class="containerdiv">
                 <div class="img_container ten" onclick="redirectToLangResultPage('ja','Japanese Movies')">
@@ -565,11 +577,11 @@
             </div>
             </div>
             `
-            
+
             mainContainer.innerHTML = html;
         }
-        else if(selectedValue=="kannadda"){
- 
+        else if (selectedValue == "kannadda") {
+
             const html = `
             <div class="containerdiv">
                 <div class="img_container eleven" onclick="redirectToLangResultPage('kn','Kannada Movies')">
@@ -581,18 +593,268 @@
             </div>
             </div>
             `
-            
+
+            mainContainer.innerHTML = html;
+        }
+        else {
+            location.reload();
+        }
+    });
+    const select2 = document.getElementById('genre')
+    select2.addEventListener('change', function () {
+        const selectedValue = select2.options[select2.selectedIndex].value;
+    });
+
+    const genre = document.getElementById('genre');
+    genre.addEventListener('change', function () {
+        const selectedValue = genre.options[genre.selectedIndex].value;
+        const mainContainer = document.getElementById('containerdivMain');
+        mainContainer.innerHTML = null;
+        console.log(selectedValue)
+        if (selectedValue == "action") {
+            const html = `
+            <div class="containerdiv">
+                <div class="img_container one" onclick="redirectToLangResultPage(28,'Action Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2163/1272163-h-6a39e5230553');">
+                <div id="upperfolder">
+                    <span id="one">Action</span>
+                </div>
+            </div>
+            </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "adventure") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(12,'Adventure Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2201/1272201-h-6f1a3525b279');">
+                <div id="upperfolder">
+                    <span id="one">Adventure</span>
+                </div>
+            </div>
+        </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "animation") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(12,'Adventure Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2201/1272201-h-6f1a3525b279');">
+                <div id="upperfolder">
+                    <span id="one">Adventure</span>
+                </div>
+            </div>
+        </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "comedy") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(35,'Comedy Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2189/1272189-h-474580e995d8');">
+                <div id="upperfolder">
+                    <span id="one">Comedy</span>
+                </div>
+            </div>
+        </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "crime") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(80,'Crime Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2195/1272195-h-2981b9780648');">
+                <div id="upperfolder">
+                    <span id="one">Crime</span>
+                </div>
+            </div>
+        </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "documentary") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(99,'Documentary Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2199/1272199-h-a2cbf3b8c190');">
+                <div id="upperfolder">
+                    <span id="one">Documentary</span>
+                </div>
+            </div>
+        </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "drama") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(18,'Drama Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2164/1272164-h-a40109f63230');">
+                <div id="upperfolder">
+                    <span id="one">Drama</span>
+                </div>
+            </div>
+        </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "family") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(10751,'Family Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2184/1272184-h-dc6d91e320bb');">
+                <div id="upperfolder">
+                    <span id="one">Family</span>
+                </div>
+            </div>
+        </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "fantasy") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(14,'Fantasy Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/7159/1047159-h-8c703700028e');">
+                <div id="upperfolder">
+                    <span id="one">Fantasy</span>
+                </div>
+            </div>
+        </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "history") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(36,'History Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/4454/1044454-h-bdead73b8dae');">
+                <div id="upperfolder">
+                    <span id="one">History</span>
+                </div>
+            </div>
+        </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "horror") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(27,'Horror Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2200/1272200-h-a1e428920c37');">
+                <div id="upperfolder">
+                    <span id="one">Horror</span>
+                </div>
+            </div>
+        </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "music") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(10402,'Music Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2169/1272169-h-26d611d85e27');">
+                <div id="upperfolder">
+                    <span id="one">Music</span>
+                </div>
+            </div>
+        </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "music") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(9648,'Mystery Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/7157/1047157-h-04ef8d408113');">
+                <div id="upperfolder">
+                    <span id="one">Mystery</span>
+                </div>
+            </div>
+        </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "mystery") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(9648,'Mystery Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/7157/1047157-h-04ef8d408113');">
+                <div id="upperfolder">
+                    <span id="one">Mystery</span>
+                </div>
+            </div>
+        </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "romance") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(10749,'Romance Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2168/1272168-h-0b9e56f3a569');">
+                <div id="upperfolder">
+                    <span id="one">Romance</span>
+                </div>
+            </div>
+        </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "science") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(878,'Science Fiction Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2173/1272173-h-20b3596ec020');">
+                <div id="upperfolder">
+                    <span id="one">Science Fiction</span>
+                </div>
+            </div>
+        </div>
+            `
+
+            mainContainer.innerHTML = html;
+        }
+      else if (selectedValue == "science") {
+            const html = `
+        <div class="containerdiv">
+            <div class="img_container one" onclick="redirectToLangResultPage(53,'Thriller Movies')"
+                style="background-image: url('https://img1.hotstarext.com/image/upload/f_auto,t_web_hs_3x/sources/r1/cms/prod/2162/1272162-h-1a65d09d73f0');">
+                <div id="upperfolder">
+                    <span id="one">Thriller</span>
+                </div>
+            </div>
+        </div>
+            `
+
             mainContainer.innerHTML = html;
         }
         else{
             location.reload();
         }
-    });
-    const select2 = document.getElementById('genre')
-    select2.addEventListener('change', function(){
-        const selectedValue = select2.options[select2.selectedIndex].value;
-    });
 
+
+    })
 
 
     import navbar from "../Components/navbar.js";
@@ -601,10 +863,6 @@
 
     import footernew from "../Components/footernew.js";
     document.getElementById('footer').innerHTML = footernew;
-
-
-
-
 
     window.redirectToLangResultPage = redirectToLangResultPage;
     function redirectToLangResultPage(LanguageSelectedByUser, langugaeSelectedByUSerFullName) {
