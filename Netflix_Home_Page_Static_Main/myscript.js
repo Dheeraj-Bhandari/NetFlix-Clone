@@ -121,9 +121,10 @@ function myLikedMovie(id) {
     if (!myLikedMovieLC.includes(id)) {
         myLikedMovieLC.push(id);
         localStorage.setItem('myLikedMovie', JSON.stringify(myLikedMovieLC));
+        
     }
 
-
+    $.toast('Here you can put the text of the toast')
     console.log(myLikedMovieLC);
 
 }
@@ -142,6 +143,7 @@ async function AddToLiked(value) {
     const res = await fetch(api);
     const data = await res.json();
     myLikedMovie(data.results[0].id)
+    $.toast('Here you can put the text of the toast')
 
 }
 async function AddtoMyList(value) {

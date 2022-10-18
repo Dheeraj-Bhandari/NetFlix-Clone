@@ -6,6 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Netflix Signup</title>
+
+  <!-- Jquery Script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Jquery Script End   -->
+
+  <!-- Toaster CDN css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css"
+    integrity="sha512-wJgJNTBBkLit7ymC6vvzM1EcSWeM9mmOu+1USHaRBbHkm6W9EgM0HY27+UtUaprntaYQJF75rc8gjxllKs5OIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Toaster CDN css End -->
   <link rel="shortcut icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico">
   <link rel="stylesheet" href="signup.css">
   <link rel="stylesheet" href="footer.css">
@@ -58,15 +68,20 @@
 
 </html>
 <!-- <script src="signup.js"></script> -->
+<!-- Toast msg cdn script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"
+  integrity="sha512-zlWWyZq71UMApAjih4WkaRpikgY9Bz1oXIW5G0fED4vk14JjGlQ1UmkGM392jEULP8jbNMiwLWdM8Z87Hu88Fw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" type="text/javascript"></script>
+<!-- Toast msg cdn end script -->
 <script type="module">
 
   document.getElementById('SignupNowbtn').addEventListener('click', function () {
-    location.href="/Signup/Sign_in.html"
+    location.href = "/Signup/Sign_in.html"
   })
 
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword , signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -85,25 +100,51 @@
   const auth = getAuth();
 
   console.log(app)
-  
+
   document.getElementById('btn1').addEventListener('click', (e) => {
     console.log("inside firebase auth func")
     var email = document.getElementById('email').value;
-   
+
     var password = document.getElementById('password').value;
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
         // ... user.uid
-        alert("User Created Succesfully")
-        location.href='/Signup/Sign_in.html';
+        $.toast({
+          text: 'Processing! Please wait..',
+          position: 'top-center',
+          textAlign: 'center'
+        })
+        setTimeout(accountCreatedToast, 3000);
+        function accountCreatedToast() {
+
+          $.toast({
+            heading: 'Voila ! Account Created Please Sign in',
+            hideAfter: 3000,
+            icon: 'success',
+            position: 'top-center',
+            showHideTransition: 'plain',
+            loaderBg: '#9EC600'
+          })
+        }
+
+        setTimeout(redirectToSignIn, 5000)
+        function redirectToSignIn() {
+          location.href = '/Signup/Sign_in.html';
+        }
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         // ..
-        alert(errorMessage);
+        $.toast({
+          heading: 'Error',
+          text: errorMessage,
+          position: 'top-center',
+          showHideTransition: 'fade',
+          icon: 'error'
+        })
       });
   });
 </script>

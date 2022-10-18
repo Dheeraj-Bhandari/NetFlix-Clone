@@ -6,6 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Netflix Home</title>
+  <!-- Jquery Script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Jquery Script End   -->
+
+    <!-- Toaster CDN css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css" integrity="sha512-wJgJNTBBkLit7ymC6vvzM1EcSWeM9mmOu+1USHaRBbHkm6W9EgM0HY27+UtUaprntaYQJF75rc8gjxllKs5OIQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Toaster CDN css End -->
+
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <!-- i will provide this in description  -->
@@ -17,16 +25,19 @@
   <link rel="stylesheet" href="css/select2.min.css" />
   <link rel="stylesheet" href="css/select2-bootstrap4.min.css" />
 
-  
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="shortcut icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico">
   <link rel="stylesheet" href="css/slick-animation.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="/Style/Netflix_Home_Page.css">
+
   <style>
     .btn.btn-hover.iq-button {
       display: none;
@@ -43,7 +54,8 @@
     .d-flex {
       display: none;
     }
-    #span{
+
+    #span {
       display: flex;
     }
   </style>
@@ -52,11 +64,11 @@
 <body>
 
   <header id="main-header">
-   
+
   </header>
 
 
-  
+
   <!-- slider starts  -->
   <section id="home" class="iq-main-slider p-0">
     <div id="home-slider" class="slider m-0 p-0">
@@ -119,8 +131,8 @@
                 </div>
               </div>
             </div>
-            <div onclick="searchMovieTrailer('AvengerEndgame')"  class="col-xl-5 col-lg-12 col-md-12 trailor-video">
-              <a   class="video-open playbtn">
+            <div onclick="searchMovieTrailer('AvengerEndgame')" class="col-xl-5 col-lg-12 col-md-12 trailor-video">
+              <a class="video-open playbtn">
                 <img src="images/play.png" class="play" alt="" />
                 <span class="w-trailor">Watch Trailer</span>
               </a>
@@ -188,9 +200,8 @@
               </div>
             </div>
             <div onclick="searchMovieTrailer('ThorLoveAndThunder')" class="col-xl-5 col-lg-12 col-md-12 trailor-video">
-              <a  class="video-open playbtn">
-                <img  src="images/play.png" class="play"
-                  alt="" />
+              <a class="video-open playbtn">
+                <img src="images/play.png" class="play" alt="" />
                 <span class="w-trailor">Watch Trailer</span>
               </a>
             </div>
@@ -255,8 +266,8 @@
               </div>
             </div>
             <div onclick="searchMovieTrailer('Lal Singh Chadha')" class="col-xl-5 col-lg-12 col-md-12 trailor-video">
-              <a  class="video-open playbtn">
-                <img  src="images/play.png" class="play" alt="" />
+              <a class="video-open playbtn">
+                <img src="images/play.png" class="play" alt="" />
                 <span class="w-trailor">Watch Trailer</span>
               </a>
             </div>
@@ -319,10 +330,9 @@
                 </div>
               </div>
             </div>
-            <div  onclick="searchMovieTrailer('Ponniyin Selvan: I')" class="col-xl-5 col-lg-12 col-md-12 trailor-video">
-              <a  class="video-open playbtn">
-                <img src="images/play.png" class="play"
-                  alt="" />
+            <div onclick="searchMovieTrailer('Ponniyin Selvan: I')" class="col-xl-5 col-lg-12 col-md-12 trailor-video">
+              <a class="video-open playbtn">
+                <img src="images/play.png" class="play" alt="" />
                 <span class="w-trailor">Watch Trailer</span>
               </a>
             </div>
@@ -384,8 +394,8 @@
                 </div>
               </div>
             </div>
-            <div onclick="searchMovieTrailer('Jhon Wick 2')"  class="col-xl-5 col-lg-12 col-md-12 trailor-video">
-              <a  class="video-open playbtn">
+            <div onclick="searchMovieTrailer('Jhon Wick 2')" class="col-xl-5 col-lg-12 col-md-12 trailor-video">
+              <a class="video-open playbtn">
                 <img src="images/play.png" class="play" alt="" />
                 <span class="w-trailor">Watch Trailer</span>
               </a>
@@ -451,8 +461,8 @@
               </div>
             </div>
             <div onclick="searchMovieTrailer('Black Adam')" class="col-xl-5 col-lg-12 col-md-12 trailor-video">
-              <a  class="video-open playbtn">
-                <img  src="images/play.png" class="play" alt="" />
+              <a class="video-open playbtn">
+                <img src="images/play.png" class="play" alt="" />
                 <span class="w-trailor">Watch Trailer</span>
               </a>
             </div>
@@ -1033,7 +1043,7 @@
                           <span class="text-white">1 Season</span>
                         </div>
                         <div class="hover-buttons" onclick="searchMovieTrailer('The Queens Gambit')">
-                          <a  class="btn btn-hover" tabindex="0">
+                          <a class="btn btn-hover" tabindex="0">
                             <i class="fa fa-play mr-1" aria-hidden="true"></i>
                             Play Now
                           </a>
@@ -1098,9 +1108,9 @@
                           </div>
                           <span class="text-white">6 Season</span>
                         </div>
-                       
+
                         <div class="hover-buttons" onclick="searchMovieTrailer('BoJack Horseman')">
-                          <a  class="btn btn-hover" tabindex="0">
+                          <a class="btn btn-hover" tabindex="0">
                             <i class="fa fa-play mr-1" aria-hidden="true"></i>
                             Play Now
                           </a>
@@ -1122,7 +1132,7 @@
                           <span class="text-white">5 Season</span>
                         </div>
                         <div class="hover-buttons" onclick="searchMovieTrailer('Peaky Blinders')">
-                          <a  class="btn btn-hover" tabindex="0">
+                          <a class="btn btn-hover" tabindex="0">
                             <i class="fa fa-play mr-1" aria-hidden="true"></i>
                             Play Now
                           </a>
@@ -1549,12 +1559,11 @@
                             </p>
                             <div class="p-btns">
                               <div class="d-flex align-items-center p-0">
-                                <a onclick="searchMovieTrailer('TheCrown')" class="btn btn-hover mr-2"
-                                  tabindex="0">
+                                <a onclick="searchMovieTrailer('TheCrown')" class="btn btn-hover mr-2" tabindex="0">
                                   <i class="fa fa-play mr-2"></i>
                                   Play Now
                                 </a>
-                                <a  onclick="AddtoMyList('TheCrown')" class="btn btn-link" tabindex="0">
+                                <a onclick="AddtoMyList('TheCrown')" class="btn btn-link" tabindex="0">
                                   <i class="fa fa-plus pr-2"></i>
                                   My List
                                 </a>
@@ -2027,11 +2036,12 @@
                             </p>
                             <div class="p-btns">
                               <div class="d-flex align-items-center p-0">
-                                <a onclick="searchMovieTrailer('Big Bang Theory')"  class="btn btn-hover mr-2" tabindex="0">
+                                <a onclick="searchMovieTrailer('Big Bang Theory')" class="btn btn-hover mr-2"
+                                  tabindex="0">
                                   <i class="fa fa-play mr-2"></i>
                                   Play Now
                                 </a>
-                                <a onclick="AddtoMyList('Big Bang Theory')"  class="btn btn-link" tabindex="0">
+                                <a onclick="AddtoMyList('Big Bang Theory')" class="btn btn-link" tabindex="0">
                                   <i class="fa fa-plus pr-2"></i>
                                   My List
                                 </a>
@@ -3468,7 +3478,7 @@
                                   <i class="fa fa-play mr-2"></i>
                                   Play Now
                                 </a>
-                                <a onclick="AddtoMyList('FRIENDS WEBSERIES Trailer')"  class="btn btn-link" tabindex="0">
+                                <a onclick="AddtoMyList('FRIENDS WEBSERIES Trailer')" class="btn btn-link" tabindex="0">
                                   <i class="fa fa-plus pr-2"></i>
                                   My List
                                 </a>
@@ -3942,11 +3952,12 @@
                             </p>
                             <div class="p-btns">
                               <div class="d-flex align-items-center p-0">
-                                <a onclick="searchMovieTrailer('Mirzapur Trailer')"  class="btn btn-hover mr-2" tabindex="0">
+                                <a onclick="searchMovieTrailer('Mirzapur Trailer')" class="btn btn-hover mr-2"
+                                  tabindex="0">
                                   <i class="fa fa-play mr-2"></i>
                                   Play Now
                                 </a>
-                                <a onclick="AddtoMyList('Mirzapur')"  class="btn btn-link" tabindex="0">
+                                <a onclick="AddtoMyList('Mirzapur')" class="btn btn-link" tabindex="0">
                                   <i class="fa fa-plus pr-2"></i>
                                   My List
                                 </a>
@@ -4609,7 +4620,7 @@
 
   </div>
   <div id="video">
-   
+
   </div>
 
   <footer id="footer" class="iq-bg-dark">
@@ -4679,10 +4690,15 @@
     </div> -->
   </footer>
 
-<!-- Search With voice js -->
+<!-- Toast msg cdn script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js" integrity="sha512-zlWWyZq71UMApAjih4WkaRpikgY9Bz1oXIW5G0fED4vk14JjGlQ1UmkGM392jEULP8jbNMiwLWdM8Z87Hu88Fw==" crossorigin="anonymous" referrerpolicy="no-referrer" type="text/javascript"></script>
+ 
+<!-- Toast msg cdn end script -->>
 
-<script src="/Script/SearchWithVoice.js"></script>
-<!-- Search With voice js end -->
+  <!-- Search With voice js -->
+
+  <script src="/Script/SearchWithVoice.js"></script>
+  <!-- Search With voice js end -->
 
   <!-- js files  -->
   <script src="/Script/Netflix_Home_Page.js"></script>

@@ -315,32 +315,66 @@ function MovieDetailsPage(id){
 }
 
 const saveListItems = JSON.parse(localStorage.getItem("SavedList")) || [];
-function saveToMyList(id){
-    if(!saveListItems.includes(id)){
+function saveToMyList(id) {
+    if (!saveListItems.includes(id)) {
         saveListItems.push(id);
         localStorage.setItem('SavedList', JSON.stringify(saveListItems));
+
+            const button = document.getElementById(id);
+            const i = `<i class="fa fa-check" aria-hidden="true"></i>`;
+            button.innerHTML = i;
+        $.toast({
+            heading: 'Added To My WishList',
+            hideAfter: 3000,
+            icon: 'success',
+            position: 'top-right',
+            showHideTransition: 'plain',
+            loaderBg: '#9EC600'
+        })
     }
-    const button   = document.getElementById(id);
-    const i = `<i class="fa fa-check" aria-hidden="true"></i>`;
+    else{
 
-    button.innerHTML =i;
-    
+        $.toast({
+            heading: 'Already Added to WishList',
+            hideAfter: 3000,
+            icon: 'warning',
+            position: 'top-right', 
+            showHideTransition : 'plain',
+            loaderBg: '#9EC600'
+        })
+    }
+
     console.log(saveListItems);
-
 }
 
 const myLikedMovieLC = JSON.parse(localStorage.getItem("myLikedMovie")) || [];
-
 function myLikedMovie(id){
     if(!myLikedMovieLC.includes(id)){
         myLikedMovieLC.push(id);
         localStorage.setItem('myLikedMovie', JSON.stringify(myLikedMovieLC));
+        const button   = document.getElementById(`liked${id}`);
+        const i = `<i class="fa fa-check" aria-hidden="true"></i>`;
+        button.innerHTML =i;
+        $.toast({
+            heading: 'Added To My Liked',
+            hideAfter: 3000,
+            icon: 'success',
+            position: 'top-right', 
+            showHideTransition : 'plain',
+            loaderBg: '#9EC600'
+        })
     }
-    const button   = document.getElementById(`liked${id}`);
-    const i = `<i class="fa fa-check" aria-hidden="true"></i>`;
+    else{
 
-    button.innerHTML =i;
-    
+        $.toast({
+            heading: 'Already Added My Liked',
+            hideAfter: 3000,
+            icon: 'warning',
+            position: 'top-right', 
+            showHideTransition : 'plain',
+            loaderBg: '#9EC600'
+        })
+    }
     console.log(myLikedMovieLC);
 
 }

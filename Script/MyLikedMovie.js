@@ -85,7 +85,7 @@ appendsavedMovieData();
 function buildMovieSection(item) {
 
     const movieRow = document.getElementById("movieRow");
-   
+
 
     const sqone = document.createElement('div');
     sqone.className = "square one";
@@ -125,6 +125,16 @@ function buildMovieSection(item) {
         savedlist.splice(index, 1);
         localStorage.setItem('myLikedMovie', JSON.stringify(savedlist));
         location.reload();
+        $.toast({
+            heading: 'Added To My WishList',
+            hideAfter: 3000,
+            icon: 'danger',
+            position: 'top-right',
+            showHideTransition: 'plain',
+            loaderBg: '#9EC600'
+
+        })
+
     });
     const i2 = document.createElement('i');
     i2.className = 'fa fa-trash';
@@ -133,8 +143,41 @@ function buildMovieSection(item) {
     const button3 = document.createElement('button');
 
     const i3 = document.createElement('i');
-    i3.className = 'fa-1x fa-solid fa-thumbs-up';
+    i3.className = 'fa-1x  fa-solid fa-plus';
     button3.append(i3);
+    button3.addEventListener('click', function () {
+        const myLikedMovieLC = JSON.parse(localStorage.getItem("SavedList")) || [];
+       
+            if (!myLikedMovieLC.includes(item.id)) {
+                myLikedMovieLC.push(item.id);
+                localStorage.setItem('myLikedMovie', JSON.stringify(myLikedMovieLC));
+                
+                const i = `<i class="fa fa-check" aria-hidden="true"></i>`;
+                button3.innerHTML = i;
+                $.toast({
+                    heading: 'Added To My List',
+                    hideAfter: 3000,
+                    icon: 'success',
+                    position: 'top-right',
+                    showHideTransition: 'plain',
+                    loaderBg: '#9EC600'
+                })
+            }
+            else {
+
+                $.toast({
+                    heading: 'Already Added My List',
+                    hideAfter: 3000,
+                    icon: 'warning',
+                    position: 'top-right',
+                    showHideTransition: 'plain',
+                    loaderBg: '#9EC600'
+                })
+            }
+            console.log(myLikedMovieLC);
+
+        
+    })
 
 
     textfirst3icon.append(button1, button2, button3);
@@ -227,14 +270,14 @@ function playfullscreentrailer(src) {
     console.log(frame)
     document.getElementById('movies-cont').style.display = "none";
     document.getElementById('footer').style.display = "none";
-    
+
     document.getElementById('video').innerHTML = frame;
 
     document.addEventListener('keydown', (event) => {
         if (event.key == 'Escape') {
             const frame = `<iframe id="iframe" width="800" height="500" src="">
             </iframe>`
-          
+
             console.log("Inside")
             // alert("Escape")
             document.getElementById('video').innerHTML = null;

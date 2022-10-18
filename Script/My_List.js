@@ -226,7 +226,39 @@ function buildMovieSection(item) {
     const i3 = document.createElement('i');
     i3.className = 'fa-1x fa-solid fa-thumbs-up';
     button3.append(i3);
+    button3.addEventListener('click', function () {
+        const myLikedMovieLC = JSON.parse(localStorage.getItem("myLikedMovie")) || [];
+       
+            if (!myLikedMovieLC.includes(item.id)) {
+                myLikedMovieLC.push(item.id);
+                localStorage.setItem('myLikedMovie', JSON.stringify(myLikedMovieLC));
+                
+                const i = `<i class="fa fa-check" aria-hidden="true"></i>`;
+                button3.innerHTML = i;
+                $.toast({
+                    heading: 'Added To My Liked',
+                    hideAfter: 3000,
+                    icon: 'success',
+                    position: 'top-right',
+                    showHideTransition: 'plain',
+                    loaderBg: '#9EC600'
+                })
+            }
+            else {
 
+                $.toast({
+                    heading: 'Already Added My Liked',
+                    hideAfter: 3000,
+                    icon: 'warning',
+                    position: 'top-right',
+                    showHideTransition: 'plain',
+                    loaderBg: '#9EC600'
+                })
+            }
+            console.log(myLikedMovieLC);
+
+        
+    })
 
     textfirst3icon.append(button1, button2, button3);
 
