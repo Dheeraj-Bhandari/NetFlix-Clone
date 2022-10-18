@@ -125,16 +125,7 @@ function buildMovieSection(item) {
         savedlist.splice(index, 1);
         localStorage.setItem('myLikedMovie', JSON.stringify(savedlist));
         location.reload();
-        $.toast({
-            heading: 'Added To My WishList',
-            hideAfter: 3000,
-            icon: 'danger',
-            position: 'top-right',
-            showHideTransition: 'plain',
-            loaderBg: '#9EC600'
-
-        })
-
+        
     });
     const i2 = document.createElement('i');
     i2.className = 'fa fa-trash';
@@ -150,7 +141,7 @@ function buildMovieSection(item) {
        
             if (!myLikedMovieLC.includes(item.id)) {
                 myLikedMovieLC.push(item.id);
-                localStorage.setItem('myLikedMovie', JSON.stringify(myLikedMovieLC));
+                localStorage.setItem('SavedList', JSON.stringify(myLikedMovieLC));
                 
                 const i = `<i class="fa fa-check" aria-hidden="true"></i>`;
                 button3.innerHTML = i;
