@@ -96,7 +96,7 @@
   const app = initializeApp(firebaseConfig);
   const auth = getAuth();
 
-  console.log(app)
+  // console.log(app)
 
   document.getElementById('btn1').addEventListener('click', (e) => {
     console.log("inside firebase auth func")
@@ -110,7 +110,6 @@
         // ... user.uid
         localStorage.setItem('login_user', true);
         
-       
         $.toast({
           text: 'Checking Credentials  ! Please wait..',
           position: 'top-center',
@@ -118,8 +117,8 @@
         })
         setTimeout(SigninSuccesToast, 2000);
         function SigninSuccesToast() {
-
-          $.toast({
+          if(userCredential.user.emailVerified==true){
+            $.toast({
             heading: 'Welcome To Netflix Clone',
             hideAfter: 3000,
             icon: 'success',
@@ -127,11 +126,25 @@
             showHideTransition: 'plain',
             loaderBg: '#9EC600'
           })
+          setTimeout(redirectToSignIn, 3000)
+          }
+          else{
+            $.toast({
+            heading: 'Please Verify Your mail First',
+            hideAfter: 3000,
+            icon: 'warning',
+            position: 'top-center',
+            showHideTransition: 'plain',
+            loaderBg: '#9EC600'
+          })
+          }
+         
         }
 
-        setTimeout(redirectToSignIn, 4000)
+        
         function redirectToSignIn() {
           location.href = "/Pages/Manage_profilesection.html"
+          
         }
       })
       .catch((error) => {

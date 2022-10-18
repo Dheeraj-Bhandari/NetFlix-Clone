@@ -81,7 +81,7 @@
 
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendEmailVerification } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -99,7 +99,7 @@
   const app = initializeApp(firebaseConfig);
   const auth = getAuth();
 
-  console.log(app)
+  // console.log(app)
 
   document.getElementById('btn1').addEventListener('click', (e) => {
     console.log("inside firebase auth func")
@@ -109,8 +109,10 @@
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in 
+        sendEmailVerification(auth.currentUser)
         const user = userCredential.user;
         // ... user.uid
+        console.log(userCredential)
         $.toast({
           text: 'Processing! Please wait..',
           position: 'top-center',
@@ -129,7 +131,7 @@
           })
         }
 
-        setTimeout(redirectToSignIn, 5000)
+        setTimeout(redirectToSignIn, 4000)
         function redirectToSignIn() {
           location.href = '/Signup/Sign_in.html';
         }
