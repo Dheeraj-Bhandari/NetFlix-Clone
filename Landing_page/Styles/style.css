@@ -507,11 +507,11 @@ img{
     }
     .showcase-content .btn-lg{
      
-        font-size: 1.15rem;
-       
-        height: 31.5px;
+        font-size: 1.0rem;
+        height: 37.5px;
         width: 30%;
-        font-weight:lighter;
+        font-weight: lighter;
+        padding: 5px;
     
     }
 
@@ -534,7 +534,7 @@ img{
         font-size: 1rem;
        
         height: 31.7px;
-        width: 30%;
+        width: 20%;
         
     
     }
@@ -570,7 +570,7 @@ img{
     .showcase-content .btn-lg{
      
         font-size: 0.7rem;
-       
+       right: -17%;
         height: 31.7px;
         width: 15%;
         font-weight: bolder;
