@@ -71,8 +71,8 @@ document.querySelector("#mail").addEventListener("keypress",(e)=>{
 })
 document.querySelector(".btn-lg").addEventListener("click",(e)=>{
 		let give_mail=document.querySelector("#mail").value;
-		localStorage.setItem("netflix_email",give_mail);
-		window.location.href="./Signup/Sign_in.html"
+		localStorage.setItem("emailSignup",give_mail);
+		window.location.href="./Signup/signup.html"
 })
 document.querySelector(".btn-rounded").addEventListener("click",(e)=>{
 		window.location.href="./Signup/Sign_in.html"

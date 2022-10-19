@@ -78,7 +78,8 @@
   document.getElementById('SignupNowbtn').addEventListener('click', function () {
     location.href = "/Signup/Sign_in.html"
   })
-
+const emailField = document.getElementById('email');
+emailField.value = localStorage.getItem('emailSignup');
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
   import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendEmailVerification } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
@@ -104,7 +105,7 @@
   document.getElementById('btn1').addEventListener('click', (e) => {
     console.log("inside firebase auth func")
     var email = document.getElementById('email').value;
-
+    localStorage.setItem('emailSignup', email);
     var password = document.getElementById('password').value;
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -133,7 +134,7 @@
 
         setTimeout(redirectToSignIn, 4000)
         function redirectToSignIn() {
-          location.href = '/Signup/Sign_in.html';
+          location.href = '/login_index.html';
         }
       })
       .catch((error) => {
