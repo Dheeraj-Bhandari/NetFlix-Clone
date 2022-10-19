@@ -672,3 +672,47 @@ img{
  
     
 }
+@media (min-width:1601px){
+    .showcase{
+        width:110%;
+        height:125%;
+       
+    }
+    .showcase-content input{
+        
+        width:90%;
+        height: 3rem;
+       
+    }
+    .showcase-content .btn-lg{
+     
+        /* font-size: 0.7rem;
+       
+        height: 31.7px;
+        width: 15%;
+        font-weight: bolder; */
+        
+    
+    }
+    .showcase-content h1 {
+        font-weight: 700px;
+        font-size: 28px;
+        margin: -30px 10px;
+        width: 100%;
+        line-height: 50.5px;
+    }
+    
+.showcase-content h3 {
+    color: white;
+    font-size: 20px;
+    padding-top: 10px;
+    margin: 16px 0;
+}
+.showcase-top{
+    /* border: 2px solid rgb(27, 24, 24); */
+    /* margin-top: -500px; */
+}
+.btn-rounded{
+    margin-right: 500px;
+}
+}
