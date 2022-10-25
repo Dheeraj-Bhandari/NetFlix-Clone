@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Netflix Signup</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- Jquery Script -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -41,10 +42,75 @@
       <input type="password" id="password" placeholder="Enter password">
       <!-- <label for="password" id="pass">password</label> -->
       <button type="button" id="btn1">Sign In</button>
+      <h3 style="font-size: small;" >Forgot Password ! <a id="now"> <button type="button" style="font-size: small;" class="btn btn-outline-danger" data-toggle="modal"
+            data-target="#exampleModalCenter">
+            Reset Password
+          </button></a></h3>
       <h3>New to Netflix? <a id="now"> <span id="SignupNowbtn">Sign Up now.</span></a></h3>
       <p>This page is protected by Google reCAPTCHA to ensure you're not a bot. <a id="more" href=""> Learn more</a></p>
     </form>
   </div>
+  <div class="passwordResetModel">
+   
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Enter Your Registred Email</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                
+                <input type="email" class="form-control" id="passwordresetEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll share you password reset email.</small>
+              </div>
+             
+              <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button"  class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" id="passwordresetbutton" data-toggle="modal" data-dismiss="modal" data-target="#exampleModal" class="btn btn-primary">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="passwordSentModal">
+    <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalLabel"></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5 id="passwordSentBodyMessage" ></h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+
   <div id="mainfooter">
     <!-- <div id="footer">
           <div class="para"><span>Questions? Call 000-800-040-1843</span></div>
@@ -68,8 +134,13 @@
 
 </html>
 <!-- Toast msg cdn script -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js" integrity="sha512-zlWWyZq71UMApAjih4WkaRpikgY9Bz1oXIW5G0fED4vk14JjGlQ1UmkGM392jEULP8jbNMiwLWdM8Z87Hu88Fw==" crossorigin="anonymous" referrerpolicy="no-referrer" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"
+  integrity="sha512-zlWWyZq71UMApAjih4WkaRpikgY9Bz1oXIW5G0fED4vk14JjGlQ1UmkGM392jEULP8jbNMiwLWdM8Z87Hu88Fw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" type="text/javascript"></script>
 <!-- Toast msg cdn end script -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="module">
 
   document.getElementById('SignupNowbtn').addEventListener('click', function () {
@@ -78,7 +149,7 @@
 
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, sendPasswordResetEmail  } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -109,7 +180,7 @@
         const user = userCredential.user;
         // ... user.uid
         localStorage.setItem('login_user', true);
-        
+
         $.toast({
           text: 'Checking Credentials  ! Please wait..',
           position: 'top-center',
@@ -117,34 +188,34 @@
         })
         setTimeout(SigninSuccesToast, 2000);
         function SigninSuccesToast() {
-          if(userCredential.user.emailVerified==true){
+          if (userCredential.user.emailVerified == true) {
             $.toast({
-            heading: 'Welcome To Netflix Clone',
-            hideAfter: 3000,
-            icon: 'success',
-            position: 'top-center',
-            showHideTransition: 'plain',
-            loaderBg: '#9EC600'
-          })
-          setTimeout(redirectToSignIn, 3000)
+              heading: 'Welcome To Netflix Clone',
+              hideAfter: 3000,
+              icon: 'success',
+              position: 'top-center',
+              showHideTransition: 'plain',
+              loaderBg: '#9EC600'
+            })
+            setTimeout(redirectToSignIn, 3000)
           }
-          else{
+          else {
             $.toast({
-            heading: 'Please Verify Your mail First',
-            hideAfter: 3000,
-            icon: 'warning',
-            position: 'top-center',
-            showHideTransition: 'plain',
-            loaderBg: '#9EC600'
-          })
+              heading: 'Please Verify Your mail First',
+              hideAfter: 3000,
+              icon: 'warning',
+              position: 'top-center',
+              showHideTransition: 'plain',
+              loaderBg: '#9EC600'
+            })
           }
-         
+
         }
 
-        
+
         function redirectToSignIn() {
           location.href = "/Pages/Manage_profilesection.html"
-          
+
         }
       })
       .catch((error) => {
@@ -160,5 +231,27 @@
         })
       });
   });
+
+  // Password reset Mail
+
+document.getElementById('passwordresetbutton').addEventListener('click', (e)=>{
+  console.log("inside password reset func")
+  const email = document.getElementById('passwordresetEmail').value;
+  console.log(email);
+  sendPasswordResetEmail(auth, email)
+  .then(() => {
+    // Password reset email sent!
+    document.getElementById('exampleModalLabel').innerText='Password Reset Mail Sent'
+    document.getElementById('passwordSentBodyMessage').innerText="Please Check Your Email and reset Your Password"
+    // ..
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+    document.getElementById('exampleModalLabel').innerText='Something Went Wrong'
+    document.getElementById('passwordSentBodyMessage').innerText = errorMessage;
+  });
+})
 </script>
 <script src="footer2.js" type="module"></script>
