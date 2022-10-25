@@ -69,5 +69,5 @@ if(chk_pass!=null){
 
 document.querySelector("#right_menu").addEventListener("click",()=>{
     event.preventDefault();
-    window.location.href="./Signup/signup.html";
+    window.location.href="/Signup/signup.html";
 })

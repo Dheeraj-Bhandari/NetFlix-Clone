@@ -1,7 +1,7 @@
-import navbar from "../aashu_components/navbar.js";
+import navbar from "/aashu_components/navbar.js";
 document.querySelector("#navbar").innerHTML=navbar();
 
-import {footer} from "../aashu_components/footer.js"
+import {footer} from "/aashu_components/footer.js"
 
 document.querySelector("#footer").innerHTML=footer();
 document.querySelector("#right_menu").innerText="Sign Out"
@@ -26,5 +26,5 @@ document.querySelector("#upi_pay").innerText=upi_text;
 
 document.querySelector("#right_menu").addEventListener("click",()=>{
     event.preventDefault();
-    window.location.href="./Signout/signout.html";
+    window.location.href="/Signout/signout.html";
 })

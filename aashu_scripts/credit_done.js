@@ -1,7 +1,7 @@
-import navbar from "../aashu_components/navbar.js";
+import navbar from "/aashu_components/navbar.js";
 document.querySelector("#navbar").innerHTML=navbar();
 
-import {footer} from "../aashu_components/footer.js"
+import {footer} from "/aashu_components/footer.js"
 
 document.querySelector("#footer").innerHTML=footer();
 
@@ -11,7 +11,7 @@ document.querySelector("#right_menu").innerText="Sign Out"
 
 document.querySelector("#right_menu").addEventListener("click",()=>{
     event.preventDefault();
-    window.location.href="./Signout/signout.html";
+    window.location.href="/Signout/signout.html";
 })
 
 document.querySelector("#next").addEventListener("click",()=>{
@@ -21,7 +21,7 @@ document.querySelector("#next").addEventListener("click",()=>{
     let fourth=document.querySelector("#fourth_input").value;
 
     if(first==="1" && second==="2" && third==="3" && fourth==="4"){
-        window.location.href="./Pages/Manage_profilesection.html";
+        window.location.href="/Pages/Manage_profilesection.html";
         localStorage.setItem("login_user",true);
     }
     else{

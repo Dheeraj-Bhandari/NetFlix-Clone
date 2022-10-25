@@ -1,7 +1,7 @@
-import navbar from "../aashu_components/navbar.js";
+import navbar from "/aashu_components/navbar.js";
 document.querySelector("#navbar").innerHTML=navbar();
 
-import {footer} from "../aashu_components/footer.js"
+import {footer} from "/aashu_components/footer.js"
 
 document.querySelector("#footer").innerHTML=footer();
 
@@ -12,5 +12,5 @@ document.querySelector("#next").addEventListener("click",()=>{
 document.querySelector("#right_menu").addEventListener("click",()=>{
     console.log(1);
     event.preventDefault();
-    window.location.href="./Signup/signup.html";
+    window.location.href="/Signup/signup.html";
 })
