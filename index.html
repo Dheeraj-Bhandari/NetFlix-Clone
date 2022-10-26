@@ -6,9 +6,1107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix </title>
     <link rel="shortcut icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico">
-    <link rel="stylesheet" href="Landing_Page/Styles/style.css">
+    <!-- <link rel="stylesheet" href="Landing_Page/Styles/style.css">
     <link rel="stylesheet" href="Landing_Page/Styles/card/card.css">
-    <link rel="stylesheet" type="text/css" href="Landing_Page/netflex-saved-vedios/ques/ques.css">
+    <link rel="stylesheet" type="text/css" href="Landing_Page/netflex-saved-vedios/ques/ques.css"> -->
+    <style>
+        :root {
+            --primary-color: #e50914;
+            --dark-color: #141414;
+            --light-color: #f4f4f4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #000000;
+            color: #999999;
+
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #ffffff;
+        }
+
+        h3 {
+            font-weight: lighter;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        p {
+            margin: 0.5rem 0;
+            font-weight: bold;
+            color: #ffffff;
+
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .showcase {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: url('https://assets.nflxext.com/ffe/siteui/vlv3/afc06103-4d6a-4236-b496-34b671a7e9ba/383fc36a-aa04-4dfd-95a0-a4b71bc21eed/IN-en-20221003-popsignuptwoweeks-perspective_alpha_website_medium.jpg') no-repeat center center/cover;
+
+        }
+
+        .showcase::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.4);
+            box-shadow: 120px 100px 250px #000000, inset -120px -100px -250px #000000;
+        }
+
+        .showcase-top {
+            position: relative;
+            z-index: 2;
+            height: 90px;
+
+
+        }
+
+        .showcase-top img {
+            width: 160px;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(40%, -50%);
+
+        }
+
+        .showcase-content {
+            position: relative;
+            margin: 0 26%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin-top: 9rem;
+        }
+
+        .showcase-content h1 {
+            font-weight: 700px;
+            font-size: 55px;
+            margin: 0 30px;
+            max-width: 800px;
+            line-height: 74.5px;
+
+        }
+
+        .showcase-content h3 {
+            color: white;
+            font-size: 25px;
+            margin: 16px 0;
+        }
+
+        .showcase-content p {
+            font-size: 19.2px;
+            font-weight: 300;
+            padding-top: 0.5rem;
+            padding-bottom: 1rem;
+        }
+
+        .showcase-content input {
+            position: absolute;
+            left: 0;
+            bottom: -8vh;
+            width: 454px;
+            height: 3rem;
+            font-size: 1rem;
+            padding-left: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            font-size: 1rem;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            border-radius: 2px;
+            margin-right: 0.5rem;
+            outline: none;
+            box-shadow: 0 5px 3px rgba(0, 0, 0, 0.45);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+        }
+
+        .btn-rounded {
+            border-radius: 5px;
+        }
+
+        .showcase-content .btn-lg {
+            position: absolute;
+            right: 0;
+            bottom: -8vh;
+            padding: 0.5 rem 1.2rem;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            height: 31.5px;
+            width: 12rem;
+
+        }
+
+        .showcase-top a {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(-60%, -50%);
+        }
+
+        .card-0,
+        .card-1,
+        .card-2,
+        .card-3 {
+            border-top: 8px rgb(69, 69, 69) solid;
+            padding: 50px;
+        }
+
+        .card-0 {
+            position: relative;
+            display: inline-grid;
+            grid-template-columns: 40% 50%;
+            text-align: left;
+            align-items: center;
+            padding: 25px 45px 50px;
+        }
+
+        .desc-0 {
+            padding-left: 80px;
+        }
+
+        .style-cards h1 {
+            font-size: 3rem;
+            padding: 1rem;
+            padding-left: 0;
+        }
+
+        .style-cards h3 {
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
+
+        .card-0 video {
+            position: relative;
+            width: 100%;
+            height: 54%;
+            grid-column: 2/2;
+            grid-row: 1/2;
+            z-index: -1;
+
+        }
+
+        .card-0 img {
+            grid-column: 2/2;
+            grid-row: 1/2;
+        }
+
+        .card-1 {
+            position: relative;
+            display: inline-grid;
+            grid-template-columns: 50% 40%;
+            text-align: left;
+            align-items: center;
+            padding: 25px 45px 50px;
+        }
+
+        .desc-1 {
+            padding-left: 80px;
+        }
+
+        .card-2 {
+            position: relative;
+            display: inline-grid;
+            grid-template-columns: 40% 50%;
+            text-align: left;
+            align-items: center;
+            padding: 25px 45px 50px;
+        }
+
+        .desc-2 {
+            padding-left: 80px;
+        }
+
+        .card-2 video {
+            position: relative;
+            width: 100%;
+            height: 54%;
+            grid-column: 2/2;
+            grid-row: 1/2;
+            z-index: -1;
+
+        }
+
+        .card-3 {
+            position: relative;
+            display: inline-grid;
+            grid-template-columns: 50% 40%;
+            text-align: left;
+            align-items: center;
+            padding: 25px 45px 50px;
+        }
+
+        .desc-3 {
+            padding-left: 80px;
+        }
+
+        .faq {
+            text-align: center;
+        }
+
+        .faq h1 {
+            padding-bottom: 40px;
+            font-size: 3rem;
+        }
+
+        .questions {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 40%;
+            align-items: center;
+        }
+
+        .questions li {
+            padding: 20px 30px;
+            margin: 5px;
+            font-size: 1.6rem;
+            background-color: rgb(69, 69, 69);
+            color: white;
+            text-align: left;
+            width: 60%;
+        }
+
+        .faq p {
+            padding-top: 60px;
+            align-items: center;
+            grid-template-columns: 50% 40%;
+
+        }
+
+        .card-0 video {
+            position: relative;
+            width: 100%;
+            height: 54%;
+            grid-column: 2/2;
+            grid-row: 1/2;
+            z-index: -1;
+        }
+
+        .card-0 img {
+            grid-column: 2/2;
+            grid-row: 1/2;
+        }
+
+
+
+        /*EMAIL ADDRESS STARTS*/
+        .email-address-container {
+
+            z-index: 1;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            padding-top: 4%;
+            padding-bottom: 4%;
+            background-color: black;
+            font-size: larger;
+
+        }
+
+        .email-address-container input {
+            width: 40%;
+            padding: 22px;
+            border: none;
+            margin-top: 0.5%;
+            outline: none;
+        }
+
+        .email-address-container button {
+            padding: 22px;
+            border: none;
+            width: 15%;
+            height: 65px;
+            background-color: #e50914;
+            color: white;
+            margin-left: -0.3%;
+            font-weight: bold;
+            font-size: medium;
+        }
+
+        /*EMAIL ADDRESS ENDS*/
+
+
+
+        /*RESPONSIVE CSS CODE*/
+
+
+        @media (max-width: 943px) {
+
+            /*ENJOY ON YOUR TV*/
+            .main-section .section-container {
+                display: block;
+            }
+
+            .main-section .section-container .left-column {
+                width: 100%;
+                text-align: center;
+            }
+
+            .main-section .section-container .right-column {
+                width: 100%;
+            }
+
+            /*DOWNLOAD YOU SHOW TO WATCH OFFLINE*/
+            .main-section .section2-container {
+                display: block;
+            }
+
+            .main-section .section2-container .left-column {
+                width: 100%;
+            }
+
+            .main-section .section2-container .right-column {
+                width: 100%;
+                text-align: center;
+            }
+
+        }
+
+        @media (max-width: 774px) {
+
+            /* ENJOY ON YOUR TV */
+            .main-section .section-container {
+                padding-bottom: 0px;
+            }
+        }
+
+
+
+
+
+        @media (max-width: 500px) {
+
+            /*ENJOY ON YOUR TV*/
+            .main-section .section-container .right-column {
+                height: 270px;
+            }
+
+            /* DOWNLOAD YOUR SHOW TO WATCH OFFLINE */
+            .main-section .section2-container .left-column .box {
+                width: 100%;
+            }
+
+        }
+
+
+        /*REsponsive email code*/
+
+        @media (max-width:610px) {
+            .email-address-container {
+
+                width: 100%;
+
+
+
+            }
+
+            .email-address-container>div {
+                display: flex;
+                flex-direction: column;
+
+
+
+                gap: 20px;
+                padding: 10px;
+
+            }
+
+            .email-address-container>div>button {
+                border: 2px solid turquoise;
+                width: 50%;
+                margin-left: 25%;
+                margin-right: 25%;
+
+            }
+
+            .email-address-container>div>input {
+                border: 2px solid turquoise;
+                width: 100%;
+                padding-left: 20%;
+
+
+            }
+        }
+
+
+        /*resopnsive header section*/
+        @media (min-width:1200px) and (max-width: 1245px) {
+            .showcase {
+                width: 100%;
+                height: 130%;
+
+            }
+
+        }
+
+        @media (min-width:1056px) and (max-width: 1200px) {
+            .showcase {
+                width: 100%;
+                height: 140%;
+
+            }
+
+        }
+
+        @media (min-width:1014px) and (max-width: 1056px) {
+            .showcase {
+                width: 100%;
+                height: 140%;
+
+            }
+
+        }
+
+        @media (min-width:942px) and (max-width:1014px) {
+            .showcase {
+                width: 100%;
+                height: 140%;
+
+            }
+
+            .showcase-content input {
+
+                width: 60%;
+                height: 3rem;
+
+            }
+
+            .showcase-content .btn-lg {
+
+                font-size: 1.15rem;
+
+                height: 31.5px;
+                width: 30%;
+                font-weight: bold;
+
+            }
+
+
+        }
+
+        @media (min-width:862px) and (max-width: 942px) {
+            .showcase {
+                width: 100%;
+                height: 140%;
+
+            }
+
+            .showcase-content input {
+
+                width: 60%;
+                height: 3rem;
+
+            }
+
+            .showcase-content .btn-lg {
+
+                font-size: 1.15rem;
+
+                height: 31.5px;
+                width: 30%;
+                font-weight: bold;
+
+            }
+
+
+        }
+
+        @media (min-width:816px) and (max-width: 862px) {
+            .showcase {
+                width: 100%;
+                height: 135%;
+
+            }
+
+            .showcase-content input {
+
+                width: 60%;
+                height: 3rem;
+
+            }
+
+            .showcase-content .btn-lg {
+
+                font-size: 1.15rem;
+
+                height: 31.5px;
+                width: 30%;
+                font-weight: bold;
+
+            }
+
+
+        }
+
+        @media (min-width:700px) and (max-width: 816px) {
+            .showcase {
+                width: 100%;
+                height: 135%;
+
+            }
+
+            .showcase-content input {
+
+                width: 70%;
+                height: 3rem;
+
+            }
+
+            .showcase-content .btn-lg {
+
+                font-size: 1.0rem;
+                height: 37.5px;
+                width: 30%;
+                font-weight: lighter;
+                padding: 5px;
+
+            }
+
+
+        }
+
+        @media (min-width:600px) and (max-width: 700px) {
+            .showcase {
+                width: 100%;
+                height: 125%;
+
+            }
+
+            .showcase-content input {
+
+                width: 70%;
+                height: 3rem;
+
+            }
+
+            .showcase-content .btn-lg {
+
+                font-size: 1rem;
+
+                height: 31.7px;
+                width: 20%;
+
+
+            }
+
+            .showcase-content h1 {
+                font-weight: 700px;
+                font-size: 30px;
+                margin: -30px 10px;
+                max-width: 500px;
+                line-height: 50.5px;
+            }
+
+            .showcase-content h3 {
+                color: white;
+                font-size: 20px;
+                padding-top: 10px;
+                margin: 16px 0;
+            }
+
+
+        }
+
+        @media (min-width:500px) and (max-width: 600px) {
+            .showcase {
+                width: 100%;
+                height: 125%;
+
+            }
+
+            .showcase-content input {
+
+                width: 90%;
+                height: 3rem;
+
+            }
+
+            .showcase-content .btn-lg {
+
+                font-size: 0.7rem;
+                right: -17%;
+                height: 31.7px;
+                width: 15%;
+                font-weight: bolder;
+
+
+            }
+
+            .showcase-content h1 {
+                font-weight: 700px;
+                font-size: 28px;
+                margin: -30px 10px;
+                width: 100%;
+                line-height: 50.5px;
+            }
+
+            .showcase-content h3 {
+                color: white;
+                font-size: 20px;
+                padding-top: 10px;
+                margin: 16px 0;
+            }
+
+
+        }
+
+        @media (min-width:400px) and (max-width: 500px) {
+            .showcase {
+                width: 110%;
+                height: 125%;
+
+            }
+
+            .showcase-content input {
+
+                width: 90%;
+                height: 3rem;
+
+            }
+
+            .showcase-content .btn-lg {
+
+                font-size: 0.7rem;
+
+                height: 31.7px;
+                width: 15%;
+                font-weight: bolder;
+
+
+            }
+
+            .showcase-content h1 {
+                font-weight: 700px;
+                font-size: 28px;
+                margin: -30px 10px;
+                width: 100%;
+                line-height: 50.5px;
+            }
+
+            .showcase-content h3 {
+                color: white;
+                font-size: 20px;
+                padding-top: 10px;
+                margin: 16px 0;
+            }
+
+
+        }
+
+        @media (min-width:360px) and (max-width: 400px) {
+            .showcase {
+                width: 110%;
+                height: 125%;
+
+            }
+
+            .showcase-content input {
+
+                width: 90%;
+                height: 3rem;
+
+            }
+
+            .showcase-content .btn-lg {
+
+                font-size: 0.7rem;
+
+                height: 31.7px;
+                width: 15%;
+                font-weight: bolder;
+
+
+            }
+
+            .showcase-content h1 {
+                font-weight: 700px;
+                font-size: 28px;
+                margin: -30px 10px;
+                width: 100%;
+                line-height: 50.5px;
+            }
+
+            .showcase-content h3 {
+                color: white;
+                font-size: 20px;
+                padding-top: 10px;
+                margin: 16px 0;
+            }
+
+
+        }
+
+        @media (min-width:1601px) {
+            .showcase {
+                width: 110%;
+                height: 125%;
+
+            }
+
+            .showcase-content input {
+
+                width: 80%;
+                height: 3rem;
+
+            }
+
+            .showcase-content .btn-lg {
+
+                /* font-size: 0.7rem;
+       
+        height: 31.7px;
+        width: 15%;
+        font-weight: bolder; */
+
+
+            }
+
+            .showcase-content h1 {
+                font-weight: 700px;
+                font-size: 50px;
+                margin: -30px 10px;
+                width: 100%;
+                line-height: 50.5px;
+            }
+
+            .showcase-content h3 {
+                color: white;
+                font-size: 20px;
+                padding-top: 10px;
+                margin: 16px 0;
+            }
+
+            .showcase-top {
+                /* border: 2px solid rgb(27, 24, 24); */
+                /* margin-top: -500px; */
+            }
+
+            .btn-rounded {
+                margin-right: 500px;
+            }
+
+            .showcase-content {
+                margin-top: 500px;
+                font-weight: bolder;
+                font-size: 500rem;
+            }
+
+            /* .main-section .section-container .right-column .vedio-1 {
+    margin-left: 13%;
+    margin-top: 9%;
+    width: 76%;
+} */
+            #videoSectionparent1 {
+                /* border: 2px solid red; */
+                width: 500px;
+                height: 500px;
+                display: flex;
+            }
+
+            #videoSectionparent1 img {
+                position: absolute;
+                margin-left: 50px;
+                width: 100%;
+                height: 600px;
+            }
+
+            #videoSectionparent1 video {
+                margin-left: 102%;
+                margin-top: 13%;
+                width: 116%;
+            }
+        }
+
+        /*Main section starts*/
+
+        .main-section .section-container {
+            border-top: 8px solid #222;
+            background-color: black;
+            display: flex;
+            padding: 0px 80px;
+            padding-bottom: 70px;
+
+        }
+
+        .main-section .section-container .left-column {
+            padding-top: 13%;
+            padding-right: 2%;
+
+        }
+
+        .main-section .section-container .left-column h1 {
+            color: white;
+        }
+
+        .main-section .section-container .left-column h3 {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: normal;
+            margin-top: 5%;
+        }
+
+        .main-section .section-container .right-column {
+            overflow: hidden;
+            position: relative;
+            width: 80%;
+            height: 500px;
+        }
+
+        .main-section .section-container .right-column img {
+            position: absolute;
+            width: 100%;
+
+        }
+
+        .main-section .section-container .right-column .vedio-1 {
+            margin-left: 13%;
+            margin-top: 16%;
+            width: 73%;
+        }
+
+        /* download your show */
+        .main-section .section2-container {
+            border-top: 8px solid #222;
+            background-color: black;
+            display: flex;
+            padding: 0px 80px;
+            padding-bottom: 90px;
+        }
+
+        .main-section .section2-container .right-column {
+            padding-top: 13%;
+            padding-right: 2%;
+            width: 50%;
+        }
+
+        .main-section .section2-container .left-column img {
+            width: 100%;
+        }
+
+        .main-section .section2-container .right-column h1 {
+            color: white;
+        }
+
+        .main-section .section2-container .right-column h3 {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: normal;
+            margin-top: 5%;
+        }
+
+        .main-section .section2-container .left-column .box {
+            border: 2px solid rgba(255, 255, 255, .25);
+            background-color: black;
+            border-radius: 10px;
+            width: 60%;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            margin-top: -22px;
+        }
+
+        .main-section .section2-container .left-column .box .boxs {
+            width: 15%;
+
+        }
+
+        .main-section .section2-container .left-column .box p {
+            margin-left: 5%;
+            margin-top: 3%;
+        }
+
+        .main-section .section2-container .left-column .box p a {
+            text-decoration: none;
+        }
+
+        .main-section .section-container .right-column .vedio-2 {
+            margin-left: 19%;
+            margin-top: 8%;
+            width: 61%;
+        }
+
+        @media (max-width:944px) {
+
+            .main-section .section-container {
+                display: block;
+                padding-bottom: 0px;
+            }
+
+            .main-section .section-container .right-column {
+
+                width: 100%;
+
+            }
+
+            .main-section .section-container .left-column {
+
+                width: 100%;
+
+            }
+
+            .main-section .section2-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .main-section .section2-container .left-column {
+                width: 100%;
+            }
+
+            .main-section .section2-container .right-column {
+                width: 100%;
+            }
+
+
+
+
+        }
+
+        @media (min-width:328px) and (max-width:414px) {
+
+            .main-section .section-container {
+
+                display: block;
+                margin: 0;
+                padding: 0;
+            }
+
+            .main-section .section-container .right-column {
+
+                width: 100%;
+
+            }
+
+            .main-section .section-container .left-column {
+
+                width: 100%;
+
+
+            }
+
+            .main-section .section2-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .main-section .section2-container .left-column {
+                width: 100%;
+            }
+
+            .main-section .section2-container .right-column {
+                width: 100%;
+            }
+
+
+
+
+        }
+
+        /*QUESTION SECTION STARTS*/
+        .question-container {
+            background-color: black;
+            border-top: 8px solid #222;
+            padding-top: 60px;
+        }
+
+        .question-container h1 {
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 3%;
+        }
+
+        .question-container button {
+            border: none;
+            background-color: #303030;
+            color: white;
+            width: 60%;
+            padding: 16px;
+            font-size: 23px;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .question-container button img {
+            width: 3%;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            position: absolute;
+            right: 20px;
+        }
+
+        .question-container .answer1,
+        .answer2,
+        .answer3,
+        .answer4,
+        .answer5,
+        .answer6 {
+            background-color: #303030;
+            width: 60%;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            padding: 15px;
+            font-size: 20px;
+            display: none;
+
+        }
+
+        .question-container .answer1,
+        .answer2,
+        .answer3,
+        .answer4,
+        .answer5,
+        .answer6 p {
+            color: white;
+        }
+
+        /*QUESTION SECTION ENDS*/
+    </style>
 
 </head>
 
@@ -50,13 +1148,14 @@
             </div>
             <div class="right-column">
                 <div id="videoSectionparent1">
-            
-                <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png">
-                <video class="vedio-1" autoplay="" playinline="" muted="" loop="">
-                    <source
-                        src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
-                        type="video/mp4">
-                </video></div>
+
+                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png">
+                    <video class="vedio-1" autoplay="" playinline="" muted="" loop="">
+                        <source
+                            src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v"
+                            type="video/mp4">
+                    </video>
+                </div>
             </div>
         </div>
 
@@ -219,7 +1318,88 @@
 
 
 
-    <script src="Landing_Page/netflex-saved-vedios/ques/ques.js"></script>
+    <!-- <script src="Landing_Page/netflex-saved-vedios/ques/ques.js"></script> -->
+    <script>
+        // QUESTION 1
+const targetDiv = document.getElementById("answer1");
+const btn = document.getElementById("question1");
+btn.onclick = function () {
+	if(targetDiv.style.display !== "none"){
+		targetDiv.style.display = "none";
+	}else{
+		targetDiv.style.display = "block";
+	}
+};
+// QUESTION 2
+const question2 = document.getElementById("answer2");
+const question2btn = document.getElementById("question2");
+question2btn.onclick = function () {
+	if(question2.style.display !== "none"){
+		question2.style.display = "none";
+	}else{
+		question2.style.display = "block";
+	}
+};
+// QUESTION 3
+const question3 = document.getElementById("answer3");
+const question3btn = document.getElementById("question3");
+question3btn.onclick = function () {
+	if(question3.style.display !== "none"){
+		question3.style.display = "none";
+	}else{
+		question3.style.display = "block";
+	}
+};
+// QUESTION 4
+const question4 = document.getElementById("answer4");
+const question4btn = document.getElementById("question4");
+question4btn.onclick = function () {
+	if(question4.style.display !== "none"){
+		question4.style.display = "none";
+	}else{
+		question4.style.display = "block";
+	}
+};
+// QUESTION 5
+const question5 = document.getElementById("answer5");
+const question5btn = document.getElementById("question5");
+question5btn.onclick = function () {
+	if(question5.style.display !== "none"){
+		question5.style.display = "none";
+	}else{
+		question5.style.display = "block";
+	}
+};
+// QUESTION 6
+const question6 = document.getElementById("answer6");
+const question6btn = document.getElementById("question6");
+question6btn.onclick = function () {
+	if(question6.style.display !== "none"){
+		question6.style.display = "none";
+	}else{
+		question6.style.display = "block";
+	}
+};
+
+// console.log(document.querySelector("#mail"));
+// let give_mail=document.querySelector("#mail").value;
+// console.log(give_mail);
+document.querySelector("#mail").addEventListener("keypress",(e)=>{
+	if(e.key==="Enter"){
+		let give_mail=document.querySelector("#mail").value;
+		localStorage.setItem("netflix_email",give_mail);
+		window.location.href="./Signup/signup.html"
+	}
+})
+document.querySelector(".btn-lg").addEventListener("click",(e)=>{
+		let give_mail=document.querySelector("#mail").value;
+		localStorage.setItem("emailSignup",give_mail);
+		window.location.href="./Signup/signup.html"
+})
+document.querySelector(".btn-rounded").addEventListener("click",(e)=>{
+		window.location.href="./Signup/Sign_in.html"
+})
+    </script>
 </body>
 
 </html>
